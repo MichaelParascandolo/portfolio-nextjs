@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/Hi";
+import { TbSend } from "react-icons/Tb";
 import Socials from "./Socials";
+{
+  /*https://www.youtube.com/watch?v=NgWGllOjkbs
+  https://www.emailjs.com/
+  */
+}
+
 const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
@@ -87,7 +94,10 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <button className="w-full p-4 text-gry-100 mt-4">
-                  Send Message
+                  <span className="flex justify-center">
+                    Send Message&nbsp;
+                    <TbSend size={23} />
+                  </span>
                 </button>
               </form>
             </div>
