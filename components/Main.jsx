@@ -40,7 +40,7 @@ const Main = () => {
             exception digital experiences. I'm focused on building responsive
             front-end web applications using modern technologies.
           </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+          <div className="flex items-center justify-between max-w-[430px] m-auto py-4">
             <Socials size="23" circles="true" />
           </div>
         </div>

@@ -55,11 +55,11 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Mike Parascandolo</h2>
+                <h2 className="py-2">Michael Parascandolo</h2>
                 <p className="tracking-widest">Front-End Developer</p>
                 <p className="py-4">
                   I am available for a full-time position. Contact me and let's
-                  chat!
+                  chat! 😊
                 </p>
               </div>
               <div>
@@ -147,7 +147,7 @@ const Contact = () => {
           </Link>
         </div>
         <span className="flex justify-center text-center pt-5 tracking-widest">
-          {new Date().getFullYear()} Michael Parascandolo
+          © {new Date().getFullYear()} Michael Parascandolo
         </span>
       </div>
     </div>
