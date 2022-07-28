@@ -1,5 +1,7 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Socials from "./Socials";
+
 const Main = () => {
   const quotes = [
     "”Innovation distinguishes between a leader and a follower.” - Steve Jobs",
@@ -19,17 +21,24 @@ const Main = () => {
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <p className="uppercase text-sm tracking-widest text-gray-600">
+          <p className="pt-4 uppercase text-sm tracking-widest text-gray-600">
             {quote}
           </p>
+          <Image
+            src={`/../public/me/memoji${Math.floor(Math.random() * 4)}.png`}
+            alt="/"
+            width="250"
+            height="250"
+            className="hover:scale-110 ease-in duration-300"
+          />
           <h1 className="py-4 text-gray-700">
             Hello👋, I'm <span className="text-[#ee2d2d]">Mike</span>
           </h1>
           <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             I'm a front-end web developer specializing in building and designing
-            exception digital experiences. Currently, I'm focused on building
-            responsive and modern front-end web applications.
+            exception digital experiences. I'm focused on building responsive
+            front-end web applications using modern technologies.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <Socials size="23" circles="true" />

@@ -34,7 +34,8 @@ html {
   li {
     @apply cursor-pointer;
   }
-  button {
+  button,
+  button[type="submit"] {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-white;
   }
 }

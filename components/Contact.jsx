@@ -1,16 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/Hi";
 import { TbSend } from "react-icons/Tb";
 import Socials from "./Socials";
-{
-  /*https://www.youtube.com/watch?v=NgWGllOjkbs
-  https://www.emailjs.com/
-  */
-}
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [message, setMessage] = useState();
+  const form = useRef();
+  const sendEmail = (e) => {
+    setMessage("Sending . . .");
+    e.preventDefault();
+    try {
+      emailjs
+        .sendForm(
+          "service_jbpduud",
+          "template_pulg701",
+          form.current,
+          "e0y8_31rMzRSNpzrq"
+        )
+        .then(
+          (result) => {
+            // console.log(result.text);
+            setMessage("Message Sent!");
+            e.target.reset();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } catch (err) {
+      setMessage("Something Went Wrong :(");
+    }
+  };
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -25,7 +48,7 @@ const Contact = () => {
               <div className="flex text-center justify-center">
                 <Image
                   className="rounded-xl hover:rounded-3xl ease-in duration-300"
-                  src="/../public/me2.jpg"
+                  src="/../public/me/me2.jpg"
                   width="500"
                   height="559"
                   alt="/"
@@ -53,47 +76,60 @@ const Contact = () => {
           {/* Right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
-                    <label className="uppercase text-small py-2">Name</label>
+                    <label className="uppercase text-small py-2">Name:</label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
+                      name="name"
+                      required
                     />
                   </div>
                   <div className="flex flex-col">
                     <label className="uppercase text-small py-2">
-                      Phone Number
+                      Phone Number:
                     </label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="text"
+                      type="tel"
+                      name="phone"
+                      required
                     />
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email</label>
+                  <label className="uppercase text-sm py-2">Email:</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
+                    name="email"
+                    required
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Subject</label>
+                  <label className="uppercase text-sm py-2">Subject:</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
+                    name="subject"
+                    required
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Message</label>
+                  <label className="uppercase text-sm py-2">Message:</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
-                    rows="10"
+                    rows="5"
+                    name="message"
+                    required
                   ></textarea>
                 </div>
-                <button className="w-full p-4 text-gry-100 mt-4">
+                <div className="flex justify-center text-gray-700 tracking-wide">
+                  {message}
+                </div>
+                <button className="w-full p-4 text-gry-100 mt-4" type="submit">
                   <span className="flex justify-center">
                     Send Message&nbsp;
                     <TbSend size={23} />
