@@ -4,8 +4,8 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "./Logo";
 import Socials from "./Socials";
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
+  const [nav, setNav] = useState<boolean>(false);
+  const [shadow, setShadow] = useState<boolean>(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -131,7 +131,7 @@ const Navbar = () => {
                 Let's Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <Socials size="20" circles={false} />
+                <Socials size={20} circles={false} />
               </div>
             </div>
           </div>

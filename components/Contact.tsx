@@ -5,9 +5,10 @@ import { HiOutlineChevronDoubleUp } from "react-icons/Hi";
 import { TbSend } from "react-icons/Tb";
 import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
+import Footer from "./Footer";
 
 const Contact = () => {
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState<string>();
   const form = useRef();
   const sendEmail = (e) => {
     setMessage("Sending . . .");
@@ -121,7 +122,7 @@ const Contact = () => {
                   <label className="uppercase text-sm py-2">Message:</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
-                    rows="5"
+                    rows={5}
                     name="message"
                     required
                   ></textarea>
@@ -146,9 +147,7 @@ const Contact = () => {
             </div>
           </Link>
         </div>
-        <span className="flex justify-center text-center pt-5 tracking-widest">
-          © {new Date().getFullYear()} Michael Parascandolo
-        </span>
+        <Footer />
       </div>
     </div>
   );
