@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Socials from "./Socials";
+import { motion } from "framer-motion";
 
 const Main = () => {
   const quotes: string[] = [
@@ -20,33 +21,51 @@ const Main = () => {
   return (
     <div id="home" className="w-full text-center h-screen">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <div className="mt-[150px] mb-[100px] md:mt-[70px] md:mb-[0px]">
-          <p className="pt-4 uppercase text-sm tracking-widest text-gray-600">
-            {quote}
-          </p>
-          <Image
-            src={`/../public/me/memoji${Math.floor(Math.random() * 4)}.png`}
-            alt="/"
-            width="250"
-            height="250"
-            className="hover:scale-110 ease-in duration-300"
-          />
-          <h1 className="pb-4 text-gray-700">
-            Hello👋, I'm{" "}
-            <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
-              Michael
-            </span>
-          </h1>
-          <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[80%] m-auto">
-            I'm a front-end web developer specializing in building and designing
-            exception digital experiences. I'm focused on building responsive
-            front-end web applications using modern technologies.
-          </p>
-          <div className="flex items-center justify-between max-w-[430px] m-auto py-4">
-            <Socials size={23} circles={true} />
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.7,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.5,
+              },
+            },
+          }}
+        >
+          <div className="mt-[150px] mb-[100px] md:mt-[70px] md:mb-[0px]">
+            <p className="pt-4 uppercase text-sm tracking-widest text-gray-600">
+              {quote}
+            </p>
+            <Image
+              src={`/../public/me/memoji${Math.floor(Math.random() * 4)}.png`}
+              alt="/"
+              width="250"
+              height="250"
+              className="hover:scale-110 ease-in duration-300"
+            />
+            <h1 className="pb-4 text-gray-700">
+              Hello👋, I'm{" "}
+              <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
+                Michael
+              </span>
+            </h1>
+            <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1>
+            <p className="py-4 text-gray-600 max-w-[80%] m-auto">
+              I'm a front-end web developer specializing in building and
+              designing exception digital experiences. I'm focused on building
+              responsive front-end web applications using modern technologies.
+            </p>
+            <div className="flex items-center justify-between max-w-[430px] m-auto py-4">
+              <Socials size={23} circles={true} />
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/Hi";
@@ -6,8 +6,17 @@ import { TbSend } from "react-icons/Tb";
 import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   const [message, setMessage] = useState<string>();
   const form = useRef();
   const sendEmail = (e) => {
@@ -46,15 +55,34 @@ const Contact = () => {
           {/* Left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full">
-              <div className="flex text-center justify-center">
-                <Image
-                  className="rounded-xl hover:rounded-3xl ease-in duration-300"
-                  src="/../public/me/me2.jpg"
-                  width="500"
-                  height="559"
-                  alt="/"
-                />
-              </div>
+              <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                  hidden: {
+                    scale: 0.7,
+                    opacity: 0,
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.5,
+                    },
+                  },
+                }}
+              >
+                <div className="flex text-center justify-center">
+                  <Image
+                    className="rounded-xl hover:rounded-3xl ease-in duration-300"
+                    src="/../public/me/me2.jpg"
+                    width="500"
+                    height="559"
+                    alt="/"
+                  />
+                </div>
+              </motion.div>
               <div>
                 <h2 className="py-2">Michael Parascandolo</h2>
                 <p className="tracking-widest">Front-End Developer</p>
@@ -77,66 +105,88 @@ const Contact = () => {
           {/* Right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form ref={form} onSubmit={sendEmail}>
-                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                  <div className="flex flex-col">
-                    <label className="uppercase text-small py-2">Name:</label>
+              <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                  hidden: {
+                    scale: 0.7,
+                    opacity: 0,
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.5,
+                    },
+                  },
+                }}
+              >
+                <form ref={form} onSubmit={sendEmail}>
+                  <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                    <div className="flex flex-col">
+                      <label className="uppercase text-small py-2">Name:</label>
+                      <input
+                        className="border-2 rounded-lg p-3 flex border-gray-300"
+                        type="text"
+                        name="name"
+                        required
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <label className="uppercase text-small py-2">
+                        Phone Number:
+                      </label>
+                      <input
+                        className="border-2 rounded-lg p-3 flex border-gray-300"
+                        type="tel"
+                        name="phone"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col py-2">
+                    <label className="uppercase text-sm py-2">Email:</label>
+                    <input
+                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      type="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div className="flex flex-col py-2">
+                    <label className="uppercase text-sm py-2">Subject:</label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
-                      name="name"
+                      name="subject"
                       required
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <label className="uppercase text-small py-2">
-                      Phone Number:
-                    </label>
-                    <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="tel"
-                      name="phone"
+                  <div className="flex flex-col py-2">
+                    <label className="uppercase text-sm py-2">Message:</label>
+                    <textarea
+                      className="border-2 rounded-lg p-3 border-gray-300"
+                      rows={5}
+                      name="message"
                       required
-                    />
+                    ></textarea>
                   </div>
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email:</label>
-                  <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="email"
-                    name="email"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Subject:</label>
-                  <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="text"
-                    name="subject"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Message:</label>
-                  <textarea
-                    className="border-2 rounded-lg p-3 border-gray-300"
-                    rows={5}
-                    name="message"
-                    required
-                  ></textarea>
-                </div>
-                <div className="flex justify-center text-gray-700 tracking-wide">
-                  {message}
-                </div>
-                <button className="w-full p-4 text-gry-100 mt-4" type="submit">
-                  <span className="flex justify-center">
-                    Send Message&nbsp;
-                    <TbSend size={23} />
-                  </span>
-                </button>
-              </form>
+                  <div className="flex justify-center text-gray-700 tracking-wide">
+                    {message}
+                  </div>
+                  <button
+                    className="w-full p-4 text-gry-100 mt-4"
+                    type="submit"
+                  >
+                    <span className="flex justify-center">
+                      Send Message&nbsp;
+                      <TbSend size={23} />
+                    </span>
+                  </button>
+                </form>
+              </motion.div>
             </div>
           </div>
         </div>

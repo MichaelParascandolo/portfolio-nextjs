@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
-function MyApp({ Component, pageProps }) {
+import { motion } from "framer-motion";
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
@@ -42,8 +43,22 @@ function MyApp({ Component, pageProps }) {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
-      <Navbar />
-      <Component {...pageProps} />
+      <motion.div
+        key={router.route}
+        initial="pageInitial"
+        animate="pageAnimate"
+        variants={{
+          pageInitial: {
+            opacity: 0,
+          },
+          pageAnimate: {
+            opacity: 1,
+          },
+        }}
+      >
+        <Navbar />
+        <Component {...pageProps} />
+      </motion.div>
     </>
   );
 }

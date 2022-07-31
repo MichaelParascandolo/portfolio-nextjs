@@ -1,8 +1,17 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const About = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
@@ -32,15 +41,34 @@ const About = () => {
             !
           </p>
         </div>
-        <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image
-            src="/../public/me/Me.jpeg"
-            alt="/"
-            width="579"
-            height="772"
-            className="rounded-xl"
-          />
-        </div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={{
+            hidden: {
+              scale: 0.7,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.5,
+              },
+            },
+          }}
+        >
+          <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+            <Image
+              src="/../public/me/Me.jpeg"
+              alt="/"
+              width="579"
+              height="772"
+              className="rounded-xl"
+            />
+          </div>
+        </motion.div>
       </div>
     </div>
   );

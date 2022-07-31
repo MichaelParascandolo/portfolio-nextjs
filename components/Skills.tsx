@@ -15,9 +15,9 @@ const Skills = () => {
           <SkillItem name="TypeScript" />
           <SkillItem name="Tailwind" />
           <SkillItem name="Bootstrap" />
-          <SkillItem name="jQuery" />
-          <SkillItem name="NextJS" />
+          {/* <SkillItem name="jQuery" /> */}
           <SkillItem name="React" />
+          <SkillItem name="NextJS" />
         </div>
         <h2 className="py-4 mt-5">Some Experience With</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
