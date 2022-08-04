@@ -1,6 +1,10 @@
 import React from "react";
 import SkillItem from "./SkillItem";
+
 const Skills = () => {
+  const style: { grid: string } = {
+    grid: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8",
+  };
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
@@ -8,7 +12,7 @@ const Skills = () => {
           Skills
         </p>
         <h2 className="py-4">Experienced With</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className={style.grid}>
           <SkillItem name="HTML" />
           <SkillItem name="CSS" />
           <SkillItem name="JavaScript" />
@@ -20,11 +24,11 @@ const Skills = () => {
           <SkillItem name="NextJS" />
         </div>
         <h2 className="py-4 mt-5">Some Experience With</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className={style.grid}>
           <SkillItem name="SASS" />
           <SkillItem name="Github" />
           <SkillItem name="Electron" />
-          {/* <SkillItem name="Firebase" /> */}
+          <SkillItem name="Firebase" />
         </div>
       </div>
     </div>

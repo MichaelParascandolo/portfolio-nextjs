@@ -4,6 +4,7 @@ import weatherImg from "/public/assets/projects/weather.jpg";
 import ProjectItem from "./ProjectItem";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 const Projects = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();

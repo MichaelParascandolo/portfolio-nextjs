@@ -1,12 +1,14 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "./Logo";
 import Socials from "./Socials";
-const Navbar = () => {
+import React, { useState, useEffect } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
+const Navbar = ({ background }: { background: boolean }) => {
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
-
+  const linkHover: string =
+    "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200";
   const handleNav = () => {
     setNav(!nav);
   };
@@ -22,41 +24,35 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      style={{ backgroundColor: "#ecf0f3" }}
+      style={
+        background || shadow
+          ? { backgroundColor: "#ecf0f3" }
+          : { backgroundColor: "transparent" }
+      }
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100] ease-in duration-300"
-          : "fixed w-full h-20 z-[100]"
+          : "fixed w-full h-20 z-[100] ease-in-out duration-300"
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Logo />
-        <div>
+        <div style={background || shadow ? {} : { color: "white" }}>
           <ul className="mr-2 hidden md:flex">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200">
-                Home
-              </li>
+              <li className={linkHover}>Home</li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200">
-                About
-              </li>
+              <li className={linkHover}>About</li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200">
-                Skills
-              </li>
+              <li className={linkHover}>Skills</li>
             </Link>
             <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200">
-                Projects
-              </li>
+              <li className={linkHover}>Projects</li>
             </Link>
             <Link href="/#contact">
-              <li className="ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200">
-                Contact
-              </li>
+              <li className={linkHover}>Contact</li>
             </Link>
           </ul>
           <div

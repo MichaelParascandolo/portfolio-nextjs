@@ -4,7 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 const About = () => {
+  const style: { p: string } = {
+    p: "py-2 text-gray-600",
+  };
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -23,17 +27,17 @@ const About = () => {
           <p className="py-2 text-gray-600 tracking-widest">
             // I Love Tech ❤️
           </p>
-          <p className="py-2 text-gray-600">
+          <p className={style.p}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
             dolore at nam totam cumque, facere, minima quia velit labore alias
             perferendis, magnam non ullam voluptatum!
           </p>
-          <p className="py-2 text-gray-600">
+          <p className={style.p}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
             dolore at nam totam cumque, facere, minima quia velit labore alias
             perferendis, magnam non ullam voluptatum!
           </p>
-          <p className="py-2 text-gray-600">
+          <p className={style.p}>
             Check out some of my latest{" "}
             <Link href="/#projects">
               <span className="text-[#ee2d2d] cursor-pointer">projects</span>
@@ -59,15 +63,27 @@ const About = () => {
             },
           }}
         >
-          <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-            <Image
-              src="/../public/me/Me.jpeg"
-              alt="/"
-              width="579"
-              height="772"
-              className="rounded-xl"
-            />
-          </div>
+          <motion.div
+            whileHover={{
+              position: "relative",
+              zIndex: 1,
+              scale: [1, 1.2, 1],
+              rotate: [0, 1, -1, 0],
+              transition: {
+                duration: 0.5,
+              },
+            }}
+          >
+            <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 border-solid border-2 border-gray-200">
+              <Image
+                src="/../public/assets/me/Me.jpeg"
+                alt="/"
+                width="579"
+                height="772"
+                className="rounded-xl"
+              />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>

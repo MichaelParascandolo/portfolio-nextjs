@@ -10,6 +10,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
+  const style: { label: string } = {
+    label: "uppercase text-sm py-2",
+  };
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -17,9 +20,9 @@ const Contact = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
-  const [message, setMessage] = useState<string>();
+  const [message, setMessage] = useState<string>("Send Message");
   const form = useRef();
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     setMessage("Sending . . .");
     e.preventDefault();
     try {
@@ -28,11 +31,10 @@ const Contact = () => {
           "service_jbpduud",
           "template_pulg701",
           form.current,
-          "e0y8_31rMzRSNpzrq"
+          process.env.NEXT_PUBLIC_API_KEY
         )
         .then(
           (result) => {
-            // console.log(result.text);
             setMessage("Message Sent!");
             e.target.reset();
           },
@@ -53,7 +55,7 @@ const Contact = () => {
         <h2 className="py-4">Say Hello</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200">
             <div className="lg:p-4 h-full">
               <motion.div
                 ref={ref}
@@ -73,19 +75,33 @@ const Contact = () => {
                   },
                 }}
               >
-                <div className="flex text-center justify-center">
-                  <Image
-                    className="rounded-xl hover:rounded-3xl ease-in duration-300"
-                    src="/../public/me/me2.jpg"
-                    width="500"
-                    height="559"
-                    alt="/"
-                  />
-                </div>
+                <motion.div
+                  whileHover={{
+                    position: "relative",
+                    zIndex: 1,
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 1, -1, 0],
+                    transition: {
+                      duration: 0.5,
+                    },
+                  }}
+                >
+                  <div className="flex text-center justify-center">
+                    <Image
+                      className="rounded-2xl"
+                      src="/../public/assets/me/me2.jpg"
+                      width="500"
+                      height="559"
+                      alt="/"
+                    />
+                  </div>
+                </motion.div>
               </motion.div>
               <div>
-                <h2 className="py-2">Michael Parascandolo</h2>
-                <p className="tracking-widest">Front-End Developer</p>
+                <h2 className="py-2 bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
+                  Michael Parascandolo
+                </h2>
+                <p className="tracking-widest">Front-End Web Developer</p>
                 <p className="py-4">
                   I am available for a full-time position. Contact me and let's
                   chat! 😊
@@ -103,90 +119,63 @@ const Contact = () => {
           </div>
 
           {/* Right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 border-solid border-2 border-gray-200">
             <div className="p-4">
-              <motion.div
-                ref={ref}
-                initial="hidden"
-                animate={controls}
-                variants={{
-                  hidden: {
-                    scale: 0.7,
-                    opacity: 0,
-                  },
-                  visible: {
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.5,
-                    },
-                  },
-                }}
-              >
-                <form ref={form} onSubmit={sendEmail}>
-                  <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                    <div className="flex flex-col">
-                      <label className="uppercase text-small py-2">Name:</label>
-                      <input
-                        className="border-2 rounded-lg p-3 flex border-gray-300"
-                        type="text"
-                        name="name"
-                        required
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <label className="uppercase text-small py-2">
-                        Phone Number:
-                      </label>
-                      <input
-                        className="border-2 rounded-lg p-3 flex border-gray-300"
-                        type="tel"
-                        name="phone"
-                        required
-                      />
-                    </div>
-                  </div>
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
-                    <label className="uppercase text-sm py-2">Email:</label>
-                    <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="email"
-                      name="email"
-                      required
-                    />
-                  </div>
-                  <div className="flex flex-col py-2">
-                    <label className="uppercase text-sm py-2">Subject:</label>
+                    <label className={style.label}>Name:</label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
-                      name="subject"
+                      name="name"
                       required
                     />
                   </div>
                   <div className="flex flex-col py-2">
-                    <label className="uppercase text-sm py-2">Message:</label>
-                    <textarea
-                      className="border-2 rounded-lg p-3 border-gray-300"
-                      rows={5}
-                      name="message"
+                    <label className={style.label}>Phone Number:</label>
+                    <input
+                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      type="tel"
+                      name="phone"
                       required
-                    ></textarea>
+                    />
                   </div>
-                  <div className="flex justify-center text-gray-700 tracking-wide">
-                    {message}
-                  </div>
-                  <button
-                    className="w-full p-4 text-gry-100 mt-4"
-                    type="submit"
-                  >
-                    <span className="flex justify-center">
-                      Send Message&nbsp;
-                      <TbSend size={23} />
-                    </span>
-                  </button>
-                </form>
-              </motion.div>
+                </div>
+                <div className="flex flex-col py-2">
+                  <label className={style.label}>Email:</label>
+                  <input
+                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div className="flex flex-col py-2">
+                  <label className={style.label}>Subject:</label>
+                  <input
+                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    type="text"
+                    name="subject"
+                    required
+                  />
+                </div>
+                <div className="flex flex-col py-2">
+                  <label className={style.label}>Message:</label>
+                  <textarea
+                    className="border-2 rounded-lg p-3 border-gray-300"
+                    rows={5}
+                    name="message"
+                    required
+                  ></textarea>
+                </div>
+                <button className="w-full p-4 text-gry-100 mt-4" type="submit">
+                  <span className="flex justify-center">
+                    {message}&nbsp;
+                    <TbSend size={23} />
+                  </span>
+                </button>
+              </form>
             </div>
           </div>
         </div>

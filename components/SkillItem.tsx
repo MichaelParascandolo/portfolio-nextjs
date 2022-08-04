@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 const SkillItem = ({ name }: { name: string }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -36,14 +36,14 @@ const SkillItem = ({ name }: { name: string }) => {
           position: "relative",
           zIndex: 1,
 
-          scale: [1, 1.2, 1.1],
-          rotate: [0, 10, -10, 0],
+          scale: [1, 1.2, 1],
+          rotate: [0, 5, -5, 0],
           transition: {
-            duration: 0.3,
+            duration: 0.4,
           },
         }}
       >
-        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl">
+        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
               <Image

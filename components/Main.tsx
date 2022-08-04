@@ -1,7 +1,8 @@
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Socials from "./Socials";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const Main = () => {
   const quotes: string[] = [
@@ -13,7 +14,7 @@ const Main = () => {
     "“We’re here to put a dent in the universe. Otherwise why else even be here?” - Steve Jobs",
     "“Have the courage to follow your heart and intuition.” - Steve Jobs",
   ];
-  const [quote, setQuote] = useState("");
+  const [quote, setQuote] = useState<string>("");
   useEffect(
     () => setQuote(quotes[Math.floor(Math.random() * quotes.length)]),
     []
@@ -42,20 +43,43 @@ const Main = () => {
             <p className="pt-4 uppercase text-sm tracking-widest text-gray-600">
               {quote}
             </p>
-            <Image
-              src={`/../public/me/memoji${Math.floor(Math.random() * 4)}.png`}
-              alt="/"
-              width="250"
-              height="250"
-              className="hover:scale-110 ease-in duration-300"
-            />
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+                transition: {
+                  duration: 0.2,
+                },
+              }}
+            >
+              <Image
+                src={`/../public/assets/me/memoji${Math.floor(
+                  Math.random() * 4
+                )}.png`}
+                alt="/"
+                width="250"
+                height="250"
+              />
+            </motion.div>
             <h1 className="pb-4 text-gray-700">
               Hello👋, I'm{" "}
               <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
                 Michael
               </span>
             </h1>
-            <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1>
+            <h1 className="py-2 text-gray-700">
+              <Typewriter
+                options={{
+                  cursor: "",
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("A Front-End Web Developer")
+                    .pauseFor(2500)
+                    .start();
+                }}
+              />
+            </h1>
+            {/* <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1> */}
             <p className="py-4 text-gray-600 max-w-[80%] m-auto">
               I'm a front-end web developer specializing in building and
               designing exception digital experiences. I'm focused on building

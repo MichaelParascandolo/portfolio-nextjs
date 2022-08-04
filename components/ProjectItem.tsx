@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 const ProjectItem = ({
   title,
   backgroundImg,
@@ -8,12 +9,12 @@ const ProjectItem = ({
   projectUrl,
 }: {
   title: string;
-  backgroundImg: any;
+  backgroundImg: string;
   tech: string;
   projectUrl: string;
 }) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#f26969] to-[#ee2d2d]">
+    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group border-solid border-2 border-gray-200 hover:bg-gradient-to-r from-[#f26969] to-[#ee2d2d]">
       <Image
         className="rounded-xl group-hover:opacity-10"
         src={backgroundImg}

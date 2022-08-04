@@ -1,12 +1,12 @@
 import "../styles/globals.css";
-import Navbar from "../components/Navbar";
 import Head from "next/head";
 import { motion } from "framer-motion";
+
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
-        <title>Mike Parascandolo | Front-End Web Developer</title>
+        <title>Michael Parascandolo | Front-End Web Developer</title>
         <meta
           name="description"
           content=" I'm a front-end web developer specializing in building and designing
@@ -56,7 +56,6 @@ function MyApp({ Component, pageProps, router }) {
           },
         }}
       >
-        <Navbar />
         <Component {...pageProps} />
       </motion.div>
     </>
