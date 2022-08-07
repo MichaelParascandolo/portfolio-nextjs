@@ -6,12 +6,12 @@ const Skills = () => {
     grid: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8",
   };
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
+    <div id="skills" className="w-full lg:h-screen p-2 dark:bg-slate-700">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
           Skills
         </p>
-        <h2 className="py-4">Experienced With</h2>
+        <h2 className="py-4 dark:text-white">Experienced With</h2>
         <div className={style.grid}>
           <SkillItem name="HTML" />
           <SkillItem name="CSS" />
@@ -23,7 +23,7 @@ const Skills = () => {
           <SkillItem name="React" />
           <SkillItem name="NextJS" />
         </div>
-        <h2 className="py-4 mt-5">Some Experience With</h2>
+        <h2 className="py-4 mt-5 dark:text-white">Some Experience With</h2>
         <div className={style.grid}>
           <SkillItem name="SASS" />
           <SkillItem name="Github" />

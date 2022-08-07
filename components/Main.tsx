@@ -15,12 +15,21 @@ const Main = () => {
     "“Have the courage to follow your heart and intuition.” - Steve Jobs",
   ];
   const [quote, setQuote] = useState<string>("");
+  const [picture, setPicture] = useState<string>("");
+
   useEffect(
     () => setQuote(quotes[Math.floor(Math.random() * quotes.length)]),
     []
   );
+  useEffect(
+    () =>
+      setPicture(
+        `/../public/assets/me/memoji${Math.floor(Math.random() * 4)}.png`
+      ),
+    []
+  );
   return (
-    <div id="home" className="w-full text-center h-screen">
+    <div id="home" className="w-full text-center md:h-screen dark:bg-slate-700">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <motion.div
           initial="hidden"
@@ -39,8 +48,8 @@ const Main = () => {
             },
           }}
         >
-          <div className="mt-[150px] mb-[100px] md:mt-[70px] md:mb-[0px]">
-            <p className="pt-4 uppercase text-sm tracking-widest text-gray-600">
+          <div className="mt-20 md:mt-0">
+            <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
               {quote}
             </p>
             <motion.div
@@ -51,22 +60,15 @@ const Main = () => {
                 },
               }}
             >
-              <Image
-                src={`/../public/assets/me/memoji${Math.floor(
-                  Math.random() * 4
-                )}.png`}
-                alt="/"
-                width="250"
-                height="250"
-              />
+              <Image src={picture} alt="/" width="250" height="250" />
             </motion.div>
-            <h1 className="pb-4 text-gray-700">
+            <h1 className="pb-4 text-gray-700 dark:text-gray-200">
               Hello👋, I'm{" "}
               <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
                 Michael
               </span>
             </h1>
-            <h1 className="py-2 text-gray-700">
+            <h1 className="py-2 text-gray-700 dark:text-gray-200">
               <Typewriter
                 options={{
                   cursor: "",
@@ -74,13 +76,13 @@ const Main = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString("A Front-End Web Developer")
-                    .pauseFor(2500)
+                    .pauseFor(3500)
                     .start();
                 }}
               />
             </h1>
             {/* <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1> */}
-            <p className="py-4 text-gray-600 max-w-[80%] m-auto">
+            <p className="py-4 text-gray-600 max-w-[80%] m-auto dark:text-gray-300">
               I'm a front-end web developer specializing in building and
               designing exception digital experiences. I'm focused on building
               responsive front-end web applications using modern technologies.

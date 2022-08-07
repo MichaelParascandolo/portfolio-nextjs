@@ -13,7 +13,6 @@ const SkillItem = ({ name }: { name: string }) => {
   }, [controls, inView]);
   return (
     <>
-      {/* maybe p-6 instead? */}
       <motion.div
         className="card"
         ref={ref}
@@ -35,7 +34,6 @@ const SkillItem = ({ name }: { name: string }) => {
         whileHover={{
           position: "relative",
           zIndex: 1,
-
           scale: [1, 1.2, 1],
           rotate: [0, 5, -5, 0],
           transition: {
@@ -43,7 +41,8 @@ const SkillItem = ({ name }: { name: string }) => {
           },
         }}
       >
-        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200">
+        {/* maybe p-6 instead? */}
+        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
               <Image
@@ -53,7 +52,7 @@ const SkillItem = ({ name }: { name: string }) => {
                 alt="/"
               />
             </div>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center dark:text-gray-100">
               <h3>{name}</h3>
             </div>
           </div>

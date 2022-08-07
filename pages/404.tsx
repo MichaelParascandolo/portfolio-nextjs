@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Link from "next/link";
+import { AiFillHome } from "react-icons/ai";
 
 const notFound = () => {
   return (
@@ -19,6 +21,13 @@ const notFound = () => {
             <h3 className="py-2 text-gray-700">
               Here is a picture of Bear instead! ❤️
             </h3>
+            <div className="flex justify-center pt-0">
+              <Link href="/#home">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <AiFillHome size={30} className="text-[#ee2d2d]" />
+                </div>
+              </Link>
+            </div>
             <div className="h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 max-w-[80%]">
               <Image
                 src="/../public/assets/me/Bear.jpeg"

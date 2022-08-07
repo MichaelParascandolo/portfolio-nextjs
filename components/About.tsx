@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const style: { p: string } = {
-    p: "py-2 text-gray-600",
+    p: "py-2 text-gray-600 dark:text-gray-300",
   };
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -17,33 +16,47 @@ const About = () => {
     }
   }, [controls, inView]);
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
+    <div
+      id="about"
+      className="w-full md:h-screen p-2 flex items-center py-16 dark:bg-slate-700"
+    >
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#ee2d2d]">
             About
           </p>
-          <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600 tracking-widest">
-            // I Love Tech ❤️
+          <h2 className="py-4 dark:text-white">Who I Am</h2>
+          <p className={style.p}>
+            I have had a love for technology for as long as I can remember. I
+            received my first desktop computer at a young age. My mind was blown
+            by all of the different things I could create with it. I loved being
+            about to edit photos and create/edit my own movies. In the back of
+            my mind I always wanted to learn how to code websites and apps.
           </p>
           <p className={style.p}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            dolore at nam totam cumque, facere, minima quia velit labore alias
-            perferendis, magnam non ullam voluptatum!
+            In my teenage years and I decided to learn how to code. I started
+            learning HTML and CSS on my own before eventually enrolling in a
+            Computer Science program at Ocean County Vocational School. I
+            learned to make my sites more interactive than ever using
+            JavaScript, jQuery and PHP. I developed and deployed my first
+            website around 2014, which was for my father's pizzeria and italian
+            restaurant.
           </p>
           <p className={style.p}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            dolore at nam totam cumque, facere, minima quia velit labore alias
-            perferendis, magnam non ullam voluptatum!
+            Fast forward to today, my passion and skill for creating experiences
+            on the web has only gotten stronger. I have familiarized myself with
+            modern JavaScript frameworks such as React JS and Next JS, as well
+            as CSS frameworks like Bootstrap and Tailwind. I will also graduate
+            from Stockton University with my bachelor's degree in Computing
+            during the spring of 2023.
           </p>
-          <p className={style.p}>
-            Check out some of my latest{" "}
+          {/* <p className="text-gray-600 tracking-widest pt-3 capitalize">
+            // Check out some of{" "}
             <Link href="/#projects">
-              <span className="text-[#ee2d2d] cursor-pointer">projects</span>
+              <span className="text-[#ee2d2d] cursor-pointer">my projects</span>
             </Link>
-            !
-          </p>
+            😊
+          </p> */}
         </div>
         <motion.div
           ref={ref}
@@ -74,7 +87,7 @@ const About = () => {
               },
             }}
           >
-            <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 border-solid border-2 border-gray-200">
+            <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
               <Image
                 src="/../public/assets/me/Me.jpeg"
                 alt="/"

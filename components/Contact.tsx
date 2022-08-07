@@ -11,7 +11,7 @@ import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const style: { label: string } = {
-    label: "uppercase text-sm py-2",
+    label: "uppercase text-sm py-2 dark:text-gray-200",
   };
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -47,15 +47,15 @@ const Contact = () => {
     }
   };
   return (
-    <div id="contact" className="w-full lg:h-screen">
+    <div id="contact" className="w-full dark:bg-slate-700">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
           Contact
         </p>
-        <h2 className="py-4">Say Hello</h2>
+        <h2 className="py-4 dark:text-white">Say Hello</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
             <div className="lg:p-4 h-full">
               <motion.div
                 ref={ref}
@@ -101,8 +101,10 @@ const Contact = () => {
                 <h2 className="py-2 bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
                   Michael Parascandolo
                 </h2>
-                <p className="tracking-widest">Front-End Web Developer</p>
-                <p className="py-4">
+                <p className="tracking-widest dark:text-gray-200">
+                  Front-End Web Developer
+                </p>
+                <p className="py-4 dark:text-gray-200">
                   I am available for a full-time position. Contact me and let's
                   chat! 😊
                 </p>
@@ -119,14 +121,14 @@ const Contact = () => {
           </div>
 
           {/* Right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 border-solid border-2 border-gray-200">
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
             <div className="p-4">
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
                     <label className={style.label}>Name:</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
                       type="text"
                       name="name"
                       required
@@ -135,7 +137,7 @@ const Contact = () => {
                   <div className="flex flex-col py-2">
                     <label className={style.label}>Phone Number:</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
                       type="tel"
                       name="phone"
                       required
@@ -145,7 +147,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className={style.label}>Email:</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
                     type="email"
                     name="email"
                     required
@@ -154,7 +156,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className={style.label}>Subject:</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
                     type="text"
                     name="subject"
                     required
@@ -163,7 +165,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className={style.label}>Message:</label>
                   <textarea
-                    className="border-2 rounded-lg p-3 border-gray-300"
+                    className="border-2 rounded-lg p-3 border-gray-300 dark:border-gray-900 dark:text-gray-100"
                     rows={5}
                     name="message"
                     required
@@ -181,7 +183,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center pt-10">
           <Link href="/">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-900">
               <HiOutlineChevronDoubleUp size={30} className="text-[#ee2d2d]" />
             </div>
           </Link>
