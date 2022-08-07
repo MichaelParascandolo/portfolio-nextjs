@@ -48,7 +48,7 @@ const Main = () => {
             },
           }}
         >
-          <div className="mt-20 md:mt-0">
+          <div className="mt-20">
             <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
               {quote}
             </p>

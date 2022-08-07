@@ -15,7 +15,7 @@ const surfcitypizza = () => {
   return (
     <>
       <Navbar background={false} />
-      <div className="w-full h-full md:h-screen dark:bg-slate-700">
+      <div className="w-full h-full dark:bg-slate-700">
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
           <Image
@@ -51,7 +51,7 @@ const surfcitypizza = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="px-8 py-2 mt-4 mr-8 tracking-widest dark:text-gray-800">
+                <button className="px-8 py-2 mt-4 mr-8 tracking-widest dark:text-gray-900">
                   Live Site
                 </button>
               </a>
@@ -60,7 +60,7 @@ const surfcitypizza = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="px-8 py-2 mt-4 tracking-widest dark:text-gray-800">
+                <button className="px-8 py-2 mt-4 tracking-widest dark:text-gray-900">
                   View Code
                 </button>
               </a>
