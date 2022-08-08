@@ -27,29 +27,31 @@ const About = () => {
           </p>
           <h2 className="py-4 dark:text-white">Who I Am</h2>
           <p className={style.p}>
-            I have had a love for technology for as long as I can remember. I
-            received my first desktop computer at a young age, my mind was blown
-            by all of the different things I could create with it. I loved being
-            about to edit photos and create/edit my own movies. In the back of
-            my mind I always wanted to learn how to code.
+            I have had a love for technology for as long as I can remember. When
+            I received my first desktop computer at a young age, my mind was
+            blown by all of the different things I could create with it. I loved
+            being able to edit photos and create/edit my own movies. In the back
+            of my mind, I always wanted to learn how to code.
           </p>
           <p className={style.p}>
-            In my teenage years and I decided it was time to learn. I started
-            with HTML and CSS, learning on my own before enrolling in the
-            Computer Science program at Ocean County Vocational School. I
-            learned to make my sites more interactive than ever using JavaScript
-            and jQuery. I developed and deployed my first website around 2014,
-            which was for my family's pizzeria and italian restaurant. I was
-            absolutely in love with coding.
+            In my teenage years, I decided it was time to learn. I started with
+            HTML and CSS, learning on my own before enrolling in the Computer
+            Science program at Ocean County Vocational School. I learned to make
+            my sites more interactive than ever using JavaScript and jQuery. I
+            developed and deployed my first website around 2014, which was for
+            my family's pizzeria and Italian restaurant. I was absolutely in
+            love with coding.
           </p>
           <p className={style.p}>
-            Fast forward to today, my passion and skill for creating experiences
-            on the web has only gotten stronger. I develop beautiful,
-            responsive, SEO optimized web applications. I work with modern
-            JavaScript frameworks such as React/Next JS, as well as CSS
-            frameworks like Bootstrap and Tailwind. I will also graduate from
-            Stockton University with my bachelor's degree in Computing during
-            the spring of 2023.
+            Fast forward to today, and my passion and skill for creating
+            experiences on the web has only gotten stronger. I develop
+            beautiful, responsive, SEO optimized web applications. I work with
+            modern JavaScript frameworks such as React and Next JS, as well as
+            CSS frameworks like Bootstrap and Tailwind.
+          </p>
+          <p className={style.p}>
+            I will graduate from Stockton University with my bachelor's degree
+            in computing in the spring of 2023.
           </p>
           <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
             Check out some of{" "}

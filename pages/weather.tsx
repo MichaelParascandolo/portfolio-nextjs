@@ -42,11 +42,11 @@ const surfcitypizza = () => {
               to see weather information such as temperature (celsius or
               fahrenheit), max/min temperature, humidity, wind speed, as well as
               a brief description of the current weather conditions. The icons
-              are updated accordingly based on the weather conditions. You are
+              are updated accordingly based on the weather conditions. Users are
               able to search via the name of a city, zip code, or even using
-              your current location determined from the browser. This site was
-              built completely with vanilla html, css, and typescript, no
-              frameworks were used.
+              your current location as determined by the browser. This site was
+              built completely with vanilla HTML, CSS, and TypeScript. Data is
+              pulled from the OpenWeather API.
             </p>
             <div className="flex justify-center md:justify-start">
               <a

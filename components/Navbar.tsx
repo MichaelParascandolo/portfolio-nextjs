@@ -35,16 +35,6 @@ const Navbar = ({ background }: { background: boolean }) => {
     // #ecf0f3 light color
     // #334155 dark color
     <div
-      // style={
-      //   background || shadow
-      //     ? { backgroundColor: "#ecf0f3" }
-      //     : { backgroundColor: "transparent" }
-      // }
-      // className={
-      //   shadow
-      //     ? "fixed w-full h-20 shadow-xl z-[100] ease-in duration-300"
-      //     : "fixed w-full h-20 z-[100] ease-in-out duration-300"
-      // }
       className={
         background && !shadow
           ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-slate-700"
