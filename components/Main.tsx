@@ -75,8 +75,8 @@ const Main = () => {
                 }}
                 onInit={(typewriter) => {
                   typewriter
+                    .pauseFor(500)
                     .typeString("A Front-End Web Developer")
-                    .pauseFor(3500)
                     .start();
                 }}
               />
