@@ -9,26 +9,26 @@ const notFound = () => {
   return (
     <>
       <Navbar background={true} />
-      <div id="home" className="w-full text-center">
+      <div className="w-full text-center dark:bg-slate-700">
         <div className="max-w-[1240px] w-full mx-auto p-2 flex justify-center items-center">
           <div className="mt-[100px]">
             <h1 className="pb-4 text-gray-700 text-[70px]">
               🤔 <span className="text-[#ee2d2d]">Oops!</span>
             </h1>
-            <h2 className="py-2 text-gray-700">
+            <h2 className="py-2 text-gray-700 dark:text-white">
               We can't find the page you're looking for.
             </h2>
-            <h3 className="py-2 text-gray-700">
+            <h3 className="py-2 text-gray-700 dark:text-white">
               Here is a picture of Bear instead! ❤️
             </h3>
             <div className="flex justify-center pt-0">
               <Link href="/#home">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-900">
                   <AiFillHome size={30} className="text-[#ee2d2d]" />
                 </div>
               </Link>
             </div>
-            <div className="h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 max-w-[80%]">
+            <div className="h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 max-w-[80%] dark:shadow-gray-900">
               <Image
                 src="/../public/assets/me/Bear.jpeg"
                 alt="/"

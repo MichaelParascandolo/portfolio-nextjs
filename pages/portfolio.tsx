@@ -61,7 +61,7 @@ const surfcitypizza = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="px-8 py-2 mt-4 tracking-widest dark:text-gray-900">
+                <button className="px-8 py-2 mt-4 tracking-widest">
                   View Code
                 </button>
               </a>

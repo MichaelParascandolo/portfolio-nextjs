@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps, router }) {
           <title>Michael Parascandolo | Front-End Web Developer</title>
           <meta
             name="description"
-            content=" I'm a front-end web developer specializing in building and designing
-          exception digital experiences. I'm focused on building responsive
-          front-end web applications using modern technologies."
+            content="I'm a front-end web developer specializing in building and
+            designing exception digital experiences. I'm focused on building
+            responsive front-end web applications using modern technologies."
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
