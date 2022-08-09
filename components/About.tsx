@@ -93,7 +93,7 @@ const About = () => {
           >
             <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
               <Image
-                src="/../public/assets/me/Me.jpeg"
+                src="/../public/assets/me/me.jpeg"
                 alt="/"
                 width="579"
                 height="772"
