@@ -89,7 +89,7 @@ const Contact = () => {
                   <div className="flex text-center justify-center">
                     <Image
                       className="rounded-2xl"
-                      src="/assets/me/me2.jpg"
+                      src="public/assets/me/me2.jpg"
                       width="500"
                       height="559"
                       alt="/"
