@@ -22,10 +22,7 @@ const Main = () => {
     []
   );
   useEffect(
-    () =>
-      setPicture(
-        `/../public/assets/me/memoji${Math.floor(Math.random() * 4)}.png`
-      ),
+    () => setPicture(`/assets/me/memoji${Math.floor(Math.random() * 4)}.png`),
     []
   );
   return (
