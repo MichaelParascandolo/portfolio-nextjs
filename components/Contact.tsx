@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import contactPic from "/public/assets/me/me2.jpg";
 
 const Contact = () => {
   const style: { label: string } = {
@@ -89,7 +90,7 @@ const Contact = () => {
                   <div className="flex text-center justify-center">
                     <Image
                       className="rounded-2xl"
-                      src="public/assets/me/me2.jpg"
+                      src={contactPic}
                       width="500"
                       height="559"
                       alt="/"
