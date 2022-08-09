@@ -30,7 +30,7 @@ const notFound = () => {
             </div>
             <div className="h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 max-w-[80%] dark:shadow-gray-900">
               <Image
-                src="/../public/assets/me/Bear.jpeg"
+                src="/assets/me/Bear.jpeg"
                 alt="/"
                 width="756"
                 height="1008"
