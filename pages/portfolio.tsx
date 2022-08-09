@@ -10,7 +10,7 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiFramer,
-} from "react-icons/Si";
+} from "react-icons/si";
 
 const surfcitypizza = () => {
   const style: { icon: string; color: string } = {
