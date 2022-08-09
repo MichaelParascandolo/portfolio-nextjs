@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import { TbSend } from "react-icons/Tb";
+import { TbSend } from "react-icons/tb";
 import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
