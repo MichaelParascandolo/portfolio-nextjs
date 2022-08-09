@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import profilePic from "../public/assets/me/me.jpeg";
+import profilePic from "/public/assets/me/me.jpeg";
 
 const About = () => {
   const style: { p: string } = {
