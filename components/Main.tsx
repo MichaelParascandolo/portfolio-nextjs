@@ -6,13 +6,13 @@ import Typewriter from "typewriter-effect";
 
 const Main = () => {
   const quotes: string[] = [
-    "Innovation distinguishes between a leader and a follower. - Steve Jobs",
-    "Your time is limited, so don't waste it living someone else's life. - Steve Jobs",
-    "Don’t let the noise of others’ opinions drown out your own inner voice. - Steve Jobs",
-    "You can’t connect the dots looking forward; you can only connect them looking backwards. - Steve Jobs",
-    "Stay hungry. Stay foolish. - Steve Jobs",
-    "We’re here to put a dent in the universe. Otherwise why else even be here? - Steve Jobs",
-    "Have the courage to follow your heart and intuition. - Steve Jobs",
+    "“Innovation distinguishes between a leader and a follower.” - Steve Jobs",
+    "“Your time is limited, so don't waste it living someone else's life.” - Steve Jobs",
+    "“Don’t let the noise of others’ opinions drown out your own inner voice.” - Steve Jobs",
+    "“You can’t connect the dots looking forward; you can only connect them looking backwards.” - Steve Jobs",
+    "“Stay hungry. Stay foolish.” - Steve Jobs",
+    "“We’re here to put a dent in the universe. Otherwise why else even be here?” - Steve Jobs",
+    "“Have the courage to follow your heart and intuition.” - Steve Jobs",
   ];
   const [quote, setQuote] = useState<string>("");
   const [picture, setPicture] = useState<string>("");
