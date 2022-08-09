@@ -4,7 +4,7 @@ import Link from "next/link";
 import portfolioImg from "../public/assets/projects/portfolio.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { HiOutlineChevronDoubleLeft } from "react-icons/Hi";
+import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import {
   SiTypescript,
   SiTailwindcss,

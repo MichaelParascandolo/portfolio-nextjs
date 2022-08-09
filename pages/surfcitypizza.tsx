@@ -4,8 +4,8 @@ import Link from "next/link";
 import surfcitypizzaImg from "../public/assets/projects/surfcitypizza.jpg";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { HiOutlineChevronDoubleLeft } from "react-icons/Hi";
-import { SiTypescript, SiReact, SiBootstrap } from "react-icons/Si";
+import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
+import { SiTypescript, SiReact, SiBootstrap } from "react-icons/si";
 
 const surfcitypizza = () => {
   const style: { icon: string; color: string } = {

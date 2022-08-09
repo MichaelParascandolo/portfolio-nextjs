@@ -4,8 +4,8 @@ import Link from "next/link";
 import weatherImg from "../public/assets/projects/weather.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { HiOutlineChevronDoubleLeft } from "react-icons/Hi";
-import { SiTypescript, SiHtml5, SiCss3 } from "react-icons/Si";
+import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
+import { SiTypescript, SiHtml5, SiCss3 } from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
 
 const surfcitypizza = () => {

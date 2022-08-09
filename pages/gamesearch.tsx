@@ -4,8 +4,8 @@ import Link from "next/link";
 import gamesearchImg from "../public/assets/projects/gamesearch.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { HiOutlineChevronDoubleLeft } from "react-icons/Hi";
-import { SiTypescript, SiReact, SiTailwindcss } from "react-icons/Si";
+import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
+import { SiTypescript, SiReact, SiTailwindcss } from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
 
 const surfcitypizza = () => {
