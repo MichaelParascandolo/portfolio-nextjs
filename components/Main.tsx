@@ -26,7 +26,7 @@ const Main = () => {
     []
   );
   return (
-    <div id="home" className="w-full text-center md:h-screen dark:bg-slate-700">
+    <div id="home" className="w-full text-center md:h-screen dark:bg-[#323232]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <motion.div
           initial="hidden"

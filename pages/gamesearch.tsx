@@ -16,7 +16,7 @@ const surfcitypizza = () => {
   return (
     <>
       <Navbar background={false} />
-      <div className="w-full h-full dark:bg-slate-700">
+      <div className="w-full h-full dark:bg-[#323232]">
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
           <Image
@@ -69,7 +69,7 @@ const surfcitypizza = () => {
               </a>
             </div>
           </div>
-          <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
+          <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-500">
             <div className="p-2">
               <p className="text-center font-bold pb-2 tracking-widest dark:text-white">
                 Technologies
@@ -95,7 +95,7 @@ const surfcitypizza = () => {
         </div>
         <div className="flex justify-center pt-10">
           <Link href="/#projects">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-900 dark:border-gray-800">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-900 dark:border-gray-500">
               <HiOutlineChevronDoubleLeft size={30} className={style.color} />
             </div>
           </Link>

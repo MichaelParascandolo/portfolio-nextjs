@@ -48,7 +48,7 @@ const Contact = () => {
     }
   };
   return (
-    <div id="contact" className="w-full dark:bg-slate-700">
+    <div id="contact" className="w-full dark:bg-[#323232]">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
           Contact
@@ -56,7 +56,7 @@ const Contact = () => {
         <h2 className="py-4 dark:text-white">Say Hello</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-500">
             <div className="lg:p-4 h-full">
               <motion.div
                 ref={ref}
@@ -122,14 +122,14 @@ const Contact = () => {
           </div>
 
           {/* Right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-500">
             <div className="p-4">
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
                     <label className={style.label}>Name:</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
+                      className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-gray-900 dark:text-gray-100"
                       type="text"
                       name="name"
                       required
@@ -138,7 +138,7 @@ const Contact = () => {
                   <div className="flex flex-col py-2">
                     <label className={style.label}>Phone Number:</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
+                      className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-gray-900 dark:text-gray-100"
                       type="tel"
                       name="phone"
                       required
@@ -148,7 +148,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className={style.label}>Email:</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
+                    className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-gray-900 dark:text-gray-100"
                     type="email"
                     name="email"
                     required
@@ -157,7 +157,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className={style.label}>Subject:</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-900 dark:text-gray-100"
+                    className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-gray-900 dark:text-gray-100"
                     type="text"
                     name="subject"
                     required
@@ -166,7 +166,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className={style.label}>Message:</label>
                   <textarea
-                    className="border-2 rounded-lg p-3 border-gray-300 dark:border-gray-900 dark:text-gray-100"
+                    className="border-2 rounded-lg p-3 border-gray-500 dark:border-gray-900 dark:text-gray-100"
                     rows={5}
                     name="message"
                     required

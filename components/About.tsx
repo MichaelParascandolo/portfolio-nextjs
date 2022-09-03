@@ -19,7 +19,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full md:h-screen p-2 flex items-center py-16 dark:bg-slate-700"
+      className="w-full md:h-screen p-2 flex items-center py-16 dark:bg-[#323232]"
     >
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
@@ -92,7 +92,7 @@ const About = () => {
               },
             }}
           >
-            <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-800">
+            <div className="max-w-[90%] h-auto m-auto shadow-xl shadow-gray-500 rounded-xl flex items-center justify-center p-4 border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-500">
               <Image
                 src={profilePic}
                 alt="/"

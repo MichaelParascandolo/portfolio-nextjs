@@ -23,7 +23,7 @@ const ProjectItem = ({
         },
       }}
     >
-      <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 group border-solid border-2 border-gray-200 hover:bg-gradient-to-r from-[#f26969] to-[#ee2d2d] dark:shadow-gray-900 dark:border-gray-800">
+      <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 group border-solid border-2 border-gray-200 hover:bg-gradient-to-r from-[#f26969] to-[#ee2d2d] dark:shadow-gray-900 dark:border-gray-500">
         <Image
           className="rounded-xl group-hover:opacity-10"
           src={backgroundImg}

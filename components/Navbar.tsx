@@ -37,11 +37,11 @@ const Navbar = ({ background }: { background: boolean }) => {
     <div
       className={
         background && !shadow
-          ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-slate-700"
+          ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-[#323232]"
           : background && shadow
-          ? "fixed w-full h-20 shadow-xl z-[100] ease-in duration-300 bg-[#ecf0f3] dark:bg-slate-700"
+          ? "fixed w-full h-20 shadow-xl z-[100] ease-in duration-300 bg-[#ecf0f3] dark:bg-[#323232]"
           : !background && shadow
-          ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-slate-700"
+          ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-[#323232]"
           : "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-transparent"
       }
     >
@@ -93,7 +93,7 @@ const Navbar = ({ background }: { background: boolean }) => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 dark:bg-slate-700"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 dark:bg-[#323232]"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
