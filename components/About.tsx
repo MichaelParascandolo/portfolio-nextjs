@@ -6,8 +6,9 @@ import { useInView } from "react-intersection-observer";
 import profilePic from "/public/assets/me/me.jpeg";
 
 const About = () => {
-  const style: { p: string } = {
+  const style: { p: string; link: string } = {
     p: "py-2 text-gray-600 dark:text-gray-300",
+    link: "text-[#ee2d2d] cursor-pointer border-b-2 border-transparent hover:border-black ease-in duration-200",
   };
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -55,11 +56,19 @@ const About = () => {
             in computing in the spring of 2023.
           </p>
           <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
-            Check out some of{" "}
+            {/* Check out my{" "} */}
+            <a
+              href="https://www.icloud.com/iclouddrive/0371mW9YyRMUhS4Lb5R-5NhwQ#Resume_2022_New"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className={style.link}>resume</span>
+            </a>
+          </p>
+          <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
+            {/* Check out some of{" "} */}
             <Link href="/#projects">
-              <span className="text-[#ee2d2d] cursor-pointer">
-                my latest projects
-              </span>
+              <span className={style.link}>latest projects</span>
             </Link>
           </p>
         </div>

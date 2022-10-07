@@ -67,6 +67,13 @@ const Navbar = ({ background }: { background: boolean }) => {
             <Link href="/#projects">
               <li className={style.linkHover}>Projects</li>
             </Link>
+            <a
+              href="https://www.icloud.com/iclouddrive/0371mW9YyRMUhS4Lb5R-5NhwQ#Resume_2022_New"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className={style.linkHover}>Resume</li>
+            </a>
             <Link href="/#contact">
               <li className={style.linkHover}>Contact</li>
             </Link>
