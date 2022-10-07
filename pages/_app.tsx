@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps, router }) {
       <ThemeProvider attribute="class">
         <Head>
           <title>Michael Parascandolo | Front-End Web Developer</title>
+          <meta charSet="UTF-8" />
           <meta
             name="description"
             content="I'm a front-end web developer specializing in building and
