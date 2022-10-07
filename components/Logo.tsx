@@ -15,8 +15,8 @@ const Logo = () => {
       >
         <Link href="/">
           <span className="font-logoMP text-[#ee2d2d] text-4xl cursor-pointer select-none inline-flex">
-            &#123;Mp&#125;
-            {/* Mp */}
+            {/* &#123;Mp&#125; */}
+            MP
           </span>
         </Link>
       </motion.div>
