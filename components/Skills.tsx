@@ -6,7 +6,7 @@ const Skills = () => {
     grid: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8",
   };
   return (
-    <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#323232]">
+    <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
           Skills

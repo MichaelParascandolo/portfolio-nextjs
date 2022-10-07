@@ -42,7 +42,7 @@ const SkillItem = ({ name }: { name: string }) => {
         }}
       >
         {/* maybe p-6 instead? */}
-        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-500">
+        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200 bg-[#ecf0f3] dark:bg-[#282828] dark:shadow-black dark:border-black">
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
               <Image

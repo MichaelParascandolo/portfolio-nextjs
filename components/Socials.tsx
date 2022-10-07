@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
   const style: { circle: string; color: string } = {
     circle:
-      "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:shadow-gray-900 dark:border-gray-500",
+      "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
     color: "#ee2d2d",
   };
   const circleHover = {

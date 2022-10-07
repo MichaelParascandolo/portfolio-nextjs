@@ -9,7 +9,7 @@ const notFound = () => {
   return (
     <>
       <Navbar background={true} />
-      <div className="w-full text-center dark:bg-[#323232]">
+      <div className="w-full text-center dark:bg-[#1E1E1E]">
         <div className="max-w-[1240px] w-full mx-auto p-2 flex justify-center items-center">
           <div className="mt-[100px]">
             <h1 className="pb-4 text-gray-700 text-[70px]">
