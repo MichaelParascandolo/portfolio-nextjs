@@ -5,21 +5,23 @@ import { motion } from "framer-motion";
 const Logo = () => {
   return (
     <>
-      <motion.div
-        whileHover={{
-          scale: 1.1,
-          transition: {
-            duration: 0.2,
-          },
-        }}
-      >
-        <Link href="/">
-          <span className="font-logoMP text-[#ee2d2d] text-4xl cursor-pointer select-none inline-flex">
-            {/* &#123;Mp&#125; */}
-            MP
-          </span>
-        </Link>
-      </motion.div>
+      <div>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+            transition: {
+              duration: 0.2,
+            },
+          }}
+        >
+          <Link href="/">
+            <span className="font-logoMP text-[#ee2d2d] text-4xl cursor-pointer select-none inline-flex">
+              {/* &#123;Mp&#125; */}
+              MP
+            </span>
+          </Link>
+        </motion.div>
+      </div>
     </>
   );
 };
