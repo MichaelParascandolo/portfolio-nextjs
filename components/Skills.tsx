@@ -27,7 +27,8 @@ const Skills = () => {
         <div className={style.grid}>
           <SkillItem name="SASS" />
           <SkillItem name="Github" />
-          <SkillItem name="Electron" />
+          {/* <SkillItem name="Electron" /> */}
+          <SkillItem name="Java" />
           <SkillItem name="Firebase" />
         </div>
       </div>

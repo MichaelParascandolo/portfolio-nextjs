@@ -144,6 +144,15 @@ const Navbar = ({ background }: { background: boolean }) => {
                   Projects
                 </li>
               </Link>
+              <a
+                href="https://www.icloud.com/iclouddrive/0371mW9YyRMUhS4Lb5R-5NhwQ#Resume_2022_New"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <li onClick={() => setNav(false)} className={style.mobileLink}>
+                  Resume
+                </li>
+              </a>
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className={style.mobileLink}>
                   Contact

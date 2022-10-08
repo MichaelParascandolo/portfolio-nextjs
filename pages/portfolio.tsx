@@ -92,7 +92,7 @@ const surfcitypizza = () => {
         </div>
         <div className="flex justify-center pt-10">
           <Link href="/#projects">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-black dark:border-black">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
               <HiOutlineChevronDoubleLeft size={30} className={style.color} />
             </div>
           </Link>

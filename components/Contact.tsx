@@ -186,7 +186,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center pt-10">
           <Link href="/">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-900">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
               <HiOutlineChevronDoubleUp size={30} className="text-[#ee2d2d]" />
             </div>
           </Link>
