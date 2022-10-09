@@ -1,14 +1,26 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import weatherImg from "../public/assets/projects/weather.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
-import { SiTypescript, SiHtml5, SiCss3 } from "react-icons/si";
-import { AiFillApi } from "react-icons/ai";
 
-const surfcitypizza = () => {
+const ProjectTemplate = ({
+  name,
+  tech,
+  description,
+  img,
+  live,
+  code,
+  icon1,
+  icon1Text,
+  icon2,
+  icon2Text,
+  icon3,
+  icon3Text,
+  icon4,
+  icon4Text,
+}) => {
   const style: { icon: string; color: string } = {
     icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
     color: "text-[#ee2d2d]",
@@ -20,15 +32,15 @@ const surfcitypizza = () => {
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
           <Image
-            className="absolute z-1"
             layout="fill"
             objectFit="cover"
-            src={weatherImg}
+            src={img}
             alt="/"
+            style={{ backgroundPosition: "top" }}
           />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2 uppercase">Weather</h2>
-            <h3>HTML / CSS / TypeScript</h3>
+            <h2 className="py-2 uppercase">{name}</h2>
+            <h3>{tech}</h3>
           </div>
         </div>
 
@@ -37,32 +49,16 @@ const surfcitypizza = () => {
           <div className="col-span-4">
             <p className={style.color}>Project</p>
             <h2 className="dark:text-white">Overview</h2>
-            <p className="text-gray-700 dark:text-gray-300">
-              This site was my first project to utilize an API. Users are able
-              to see weather information such as temperature (celsius or
-              fahrenheit), max/min temperature, humidity, wind speed, as well as
-              a brief description of the current weather conditions. The icons
-              are updated accordingly based on the weather conditions. Users are
-              able to search via the name of a city, zip code, or even using
-              your current location as determined by the browser. This site was
-              built completely with vanilla HTML, CSS, and TypeScript. Data is
-              pulled from the OpenWeather API.
-            </p>
+            <p className="text-gray-700 dark:text-gray-300">{description}</p>
             <div className="flex justify-center md:justify-start">
-              <a
-                href="https://strong-squirrel-06a4ec.netlify.app"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="px-8 py-2 mt-4 mr-8 tracking-widest">
-                  Live Site
-                </button>
-              </a>
-              <a
-                href="https://github.com/MichaelParascandolo/Weather-App-Typescript"
-                target="_blank"
-                rel="noreferrer"
-              >
+              {live == false ? null : (
+                <a href={live} target="_blank" rel="noreferrer">
+                  <button className="px-8 py-2 mt-4 mr-8 tracking-widest">
+                    Live Site
+                  </button>
+                </a>
+              )}
+              <a href={code} target="_blank" rel="noreferrer">
                 <button className="px-8 py-2 mt-4 tracking-widest">
                   View Code
                 </button>
@@ -77,16 +73,20 @@ const surfcitypizza = () => {
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
                   <p className={style.icon}>
-                    <SiHtml5 className="pr-2" size={25} /> HTML5
+                    {icon1}
+                    {icon1Text}
                   </p>
                   <p className={style.icon}>
-                    <SiCss3 className="pr-2" size={25} /> CSS3
+                    {icon2}
+                    {icon2Text}
                   </p>
                   <p className={style.icon}>
-                    <SiTypescript className="pr-2" size={25} /> TypeScript
+                    {icon3}
+                    {icon3Text}
                   </p>
                   <p className={style.icon}>
-                    <AiFillApi className="pr-2" size={25} /> OpenWeather API
+                    {icon4}
+                    {icon4Text}
                   </p>
                 </div>
               </div>
@@ -107,4 +107,4 @@ const surfcitypizza = () => {
   );
 };
 
-export default surfcitypizza;
+export default ProjectTemplate;

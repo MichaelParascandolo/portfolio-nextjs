@@ -35,15 +35,14 @@ function MyApp({ Component, pageProps, router }) {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-          <meta name="theme-color" content="#364151" />
           <meta
             name="theme-color"
-            content="#364151"
+            content="#ecf0f3"
             media="(prefers-color-scheme: light)"
           />
           <meta
             name="theme-color"
-            content="#364151"
+            content="#1E1E1E"
             media="(prefers-color-scheme: dark)"
           />
         </Head>

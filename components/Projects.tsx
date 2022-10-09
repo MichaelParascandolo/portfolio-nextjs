@@ -44,28 +44,28 @@ const Projects = () => {
             <ProjectItem
               title="Surf City Pizza"
               backgroundImg={surfcitypizzaImg}
-              projectUrl="/surfcitypizza"
+              projectUrl="/projects/surfcitypizza"
               tech="React / React Router / Bootstrap"
             />
 
             <ProjectItem
               title="Weather"
               backgroundImg={weatherImg}
-              projectUrl="/weather"
+              projectUrl="/projects/weather"
               tech="HTML / CSS / TypeScript"
             />
 
             <ProjectItem
               title="GameSearch"
               backgroundImg={gamesearchImg}
-              projectUrl="/gamesearch"
+              projectUrl="/projects/gamesearch"
               tech="React / Tailwind / TypeScript"
             />
 
             <ProjectItem
               title="Portfolio"
               backgroundImg={portfolioImg}
-              projectUrl="/portfolio"
+              projectUrl="/projects/portfolio"
               tech="Next JS / Tailwind / TypeScript "
             />
           </div>

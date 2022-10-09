@@ -16,15 +16,14 @@ const Main = () => {
   ];
   const [quote, setQuote] = useState<string>("");
   const [picture, setPicture] = useState<string>("");
-
-  useEffect(
-    () => setQuote(quotes[Math.floor(Math.random() * quotes.length)]),
-    []
-  );
-  useEffect(
-    () => setPicture(`/assets/me/memoji${Math.floor(Math.random() * 4)}.png`),
-    []
-  );
+  const setRandom = () => {
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+    setPicture(`/assets/me/memoji${Math.floor(Math.random() * 4)}.png`);
+  };
+  useEffect(() => {
+    setRandom();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div id="home" className="w-full text-center md:h-screen dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">

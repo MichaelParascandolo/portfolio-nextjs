@@ -28,12 +28,11 @@ const Navbar = ({ background }: { background: boolean }) => {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
-  useEffect(() => {
-    // setTheme("light");
-  }, []);
+  // use to force a theme
+  // useEffect(() => {
+  //   setTheme("light");
+  // }, []);
   return (
-    // #ecf0f3 light color
-    // #334155 dark color
     <div
       className={
         background && !shadow
