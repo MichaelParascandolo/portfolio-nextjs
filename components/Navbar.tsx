@@ -45,7 +45,16 @@ const Navbar = ({ background }: { background: boolean }) => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:text-gray-200">
-        <Logo />
+        <div className="inline-flex">
+          <Logo />
+          <div className="cursor-pointer ml-5 mt-2">
+            <CgDarkMode
+              size={25}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
+          </div>
+        </div>
+
         <div style={background || shadow ? {} : { color: "white" }}>
           {/* Navbar for larger screens */}
           <ul className="mr-2 hidden md:flex">
