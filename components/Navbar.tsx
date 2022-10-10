@@ -47,13 +47,14 @@ const Navbar = ({ background }: { background: boolean }) => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:text-gray-200">
         <Logo />
         <div style={background || shadow ? {} : { color: "white" }}>
+          {/* Navbar for larger screens */}
           <ul className="mr-2 hidden md:flex">
-            <div className="cursor-pointer">
+            {/* <div className="cursor-pointer">
               <CgDarkMode
                 size={25}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               />
-            </div>
+            </div> */}
             <Link href="/">
               <li className={style.linkHover}>Home</li>
             </Link>
@@ -78,19 +79,19 @@ const Navbar = ({ background }: { background: boolean }) => {
             </Link>
           </ul>
           <div className="flex">
-            <div className="md:hidden cursor-pointer mr-5">
+            {/* <div className="md:hidden cursor-pointer mr-5">
               <CgDarkMode
                 size={25}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               />
-            </div>
+            </div> */}
             <div className="md:hidden cursor-pointer" onClick={handleNav}>
               <AiOutlineMenu size={25} />
             </div>
           </div>
         </div>
       </div>
-
+      {/* Navbar for smaller screens */}
       <div
         className={
           nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
@@ -109,7 +110,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                 <Logo />
               </div>
               <div
-                className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer dark:shadow-gray-900 dark:text-gray-200"
+                className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer dark:text-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black"
                 onClick={handleNav}
               >
                 <AiOutlineClose />

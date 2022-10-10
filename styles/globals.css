@@ -9,7 +9,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    @apply bg-[#ecf0f3] dark:bg-[#1E1E1E] text-[#1f2937] tracking-wide;
     user-select: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -36,6 +36,6 @@ html {
   }
   button,
   button[type="submit"] {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-white dark:shadow-gray-900;
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-white dark:shadow-black;
   }
 }
