@@ -2,6 +2,25 @@ import React from "react";
 import SkillItem from "./SkillItem";
 
 const Skills = () => {
+  const experienced: string[] = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind",
+    "Bootstrap",
+    "React JS",
+    "Next JS",
+  ];
+  const familiar: string[] = [
+    "SASS",
+    "Github",
+    "Python",
+    "Java",
+    "Firebase",
+    "React Native",
+  ];
+  // other skills: electron, jQuery
   const styles = {
     grid: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8", // gap 8 or 4
     grid2: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8", // gap 8 or 4...
@@ -14,25 +33,15 @@ const Skills = () => {
         </p>
         <h2 className="py-4 dark:text-white">Experienced With</h2>
         <div className={styles.grid}>
-          <SkillItem name="HTML" />
-          <SkillItem name="CSS" />
-          <SkillItem name="JavaScript" />
-          <SkillItem name="TypeScript" />
-          <SkillItem name="Tailwind" />
-          <SkillItem name="Bootstrap" />
-          {/* <SkillItem name="jQuery" /> */}
-          <SkillItem name="React JS" />
-          <SkillItem name="Next JS" />
+          {experienced.map((item, index) => (
+            <SkillItem name={item} key={index} />
+          ))}
         </div>
         <h2 className="py-4 mt-5 dark:text-white">Some Experience With</h2>
         <div className={styles.grid2}>
-          <SkillItem name="SASS" />
-          <SkillItem name="Github" />
-          {/* <SkillItem name="Electron" /> */}
-          <SkillItem name="Python" />
-          <SkillItem name="Java" />
-          <SkillItem name="Firebase" />
-          <SkillItem name="React Native" />
+          {familiar.map((item, index) => (
+            <SkillItem name={item} key={index} />
+          ))}
         </div>
       </div>
     </div>
