@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { MdComputer, MdSchool, MdWork } from "react-icons/Md";
+import { MdComputer, MdSchool, MdWork } from "react-icons/md";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 
 const resume = () => {
