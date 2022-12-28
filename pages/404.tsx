@@ -31,10 +31,11 @@ const notFound = () => {
             <div className="h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 max-w-[80%] dark:bg-[#282828] dark:shadow-black dark:border-black">
               <Image
                 src="/assets/me/Bear.jpeg"
-                alt="/"
+                alt="Bear"
                 width="756"
                 height="1008"
                 className="rounded-xl"
+                draggable={false}
               />
             </div>
           </div>

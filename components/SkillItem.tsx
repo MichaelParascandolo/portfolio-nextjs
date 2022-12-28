@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 const SkillItem = ({ name }: { name: string }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -46,10 +47,15 @@ const SkillItem = ({ name }: { name: string }) => {
           <div className="grid grid-cols-2 gap-4 justify-center items-center">
             <div className="m-auto">
               <Image
-                src={"/assets/skills/" + name.toLowerCase() + ".png"}
+                src={
+                  "/assets/skills/" +
+                  name.replace(/\s/g, "").toLowerCase() +
+                  ".png"
+                }
                 width="64"
                 height="64"
-                alt="/"
+                alt={name}
+                draggable={false}
               />
             </div>
             <div className="flex flex-col items-center justify-center dark:text-gray-100">

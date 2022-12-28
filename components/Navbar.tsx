@@ -3,14 +3,14 @@ import Logo from "./Logo";
 import Socials from "./Socials";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { CgDarkMode } from "react-icons/cg";
 import { useTheme } from "next-themes";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/Md";
 
 const Navbar = ({ background }: { background: boolean }) => {
   const { theme, setTheme } = useTheme();
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
-  const style = {
+  const styles = {
     linkHover:
       "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200",
     mobileLink: "py-4 text-sm",
@@ -45,55 +45,45 @@ const Navbar = ({ background }: { background: boolean }) => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:text-gray-200">
-        <div className="inline-flex">
+        {/* <div className="inline-flex"> */}
+        <div
+          className={
+            background || shadow ? "inline-flex" : "inline-flex text-white"
+          }
+        >
           <Logo />
-          <div className="cursor-pointer ml-5 mt-2">
-            <CgDarkMode
-              size={25}
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            />
+          <div className="cursor-pointer ml-3 mt-2">
+            {theme == "dark" ? (
+              <MdOutlineLightMode size={25} onClick={() => setTheme("light")} />
+            ) : (
+              <MdOutlineDarkMode size={25} onClick={() => setTheme("dark")} />
+            )}
           </div>
         </div>
 
-        <div style={background || shadow ? {} : { color: "white" }}>
+        <div className={background || shadow ? null : "text-white"}>
           {/* Navbar for larger screens */}
           <ul className="mr-2 hidden md:flex">
-            {/* <div className="cursor-pointer">
-              <CgDarkMode
-                size={25}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              />
-            </div> */}
             <Link href="/">
-              <li className={style.linkHover}>Home</li>
+              <li className={styles.linkHover}>Home</li>
             </Link>
             <Link href="/#about">
-              <li className={style.linkHover}>About</li>
+              <li className={styles.linkHover}>About</li>
             </Link>
             <Link href="/#skills">
-              <li className={style.linkHover}>Skills</li>
+              <li className={styles.linkHover}>Skills</li>
             </Link>
             <Link href="/#projects">
-              <li className={style.linkHover}>Projects</li>
+              <li className={styles.linkHover}>Projects</li>
             </Link>
-            <a
-              href="https://www.icloud.com/iclouddrive/0371mW9YyRMUhS4Lb5R-5NhwQ#Resume_2022_New"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <li className={style.linkHover}>Resume</li>
-            </a>
+            <Link href="/resume">
+              <li className={styles.linkHover}>Resume</li>
+            </Link>
             <Link href="/#contact">
-              <li className={style.linkHover}>Contact</li>
+              <li className={styles.linkHover}>Contact</li>
             </Link>
           </ul>
           <div className="flex">
-            {/* <div className="md:hidden cursor-pointer mr-5">
-              <CgDarkMode
-                size={25}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              />
-            </div> */}
             <div className="md:hidden cursor-pointer" onClick={handleNav}>
               <AiOutlineMenu size={25} />
             </div>
@@ -134,40 +124,46 @@ const Navbar = ({ background }: { background: boolean }) => {
           <div className="py-4 flex flex-col">
             <ul className="uppercase dark:text-gray-200">
               <Link href="/">
-                <li onClick={() => setNav(false)} className={style.mobileLink}>
+                <li onClick={() => setNav(false)} className={styles.mobileLink}>
                   Home
                 </li>
               </Link>
               <Link href="/#about">
-                <li onClick={() => setNav(false)} className={style.mobileLink}>
+                <li onClick={() => setNav(false)} className={styles.mobileLink}>
                   About
                 </li>
               </Link>
               <Link href="/#skills">
-                <li onClick={() => setNav(false)} className={style.mobileLink}>
+                <li onClick={() => setNav(false)} className={styles.mobileLink}>
                   Skills
                 </li>
               </Link>
               <Link href="/#projects">
-                <li onClick={() => setNav(false)} className={style.mobileLink}>
+                <li onClick={() => setNav(false)} className={styles.mobileLink}>
                   Projects
                 </li>
               </Link>
-              <a
-                href="https://www.icloud.com/iclouddrive/0371mW9YyRMUhS4Lb5R-5NhwQ#Resume_2022_New"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <li onClick={() => setNav(false)} className={style.mobileLink}>
+              <Link href={"/resume"}>
+                <li onClick={() => setNav(false)} className={styles.mobileLink}>
                   Resume
                 </li>
-              </a>
+              </Link>
               <Link href="/#contact">
-                <li onClick={() => setNav(false)} className={style.mobileLink}>
+                <li onClick={() => setNav(false)} className={styles.mobileLink}>
                   Contact
                 </li>
               </Link>
             </ul>
+            {/* <div className="cursor-pointer justify-center flex dark:text-gray-200">
+              {theme == "dark" ? (
+                <MdOutlineLightMode
+                  size={25}
+                  onClick={() => setTheme("light")}
+                />
+              ) : (
+                <MdOutlineDarkMode size={25} onClick={() => setTheme("dark")} />
+              )}
+            </div> */}
             <div className="pt-40">
               <p className="uppercase tracking-widest text-[#ee2d2d]">
                 Let's Connect

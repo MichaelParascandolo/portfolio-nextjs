@@ -21,7 +21,7 @@ const ProjectTemplate = ({
   icon4,
   icon4Text,
 }) => {
-  const style: { icon: string; color: string } = {
+  const styles: { icon: string; color: string } = {
     icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
     color: "text-[#ee2d2d]",
   };
@@ -47,11 +47,11 @@ const ProjectTemplate = ({
         {/* <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8"> */}
         <div className="max-w-[90%] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
           <div className="col-span-4">
-            <p className={style.color}>Project</p>
+            <p className={styles.color}>Project</p>
             <h2 className="dark:text-white">Overview</h2>
             <p className="text-gray-700 dark:text-gray-300">{description}</p>
             <div className="flex justify-center md:justify-start">
-              {live == false ? null : (
+              {!live ? null : (
                 <a href={live} target="_blank" rel="noreferrer">
                   <button className="px-8 py-2 mt-4 mr-8 tracking-widest">
                     Live Site
@@ -72,19 +72,19 @@ const ProjectTemplate = ({
               </p>
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
-                  <p className={style.icon}>
+                  <p className={styles.icon}>
                     {icon1}
                     {icon1Text}
                   </p>
-                  <p className={style.icon}>
+                  <p className={styles.icon}>
                     {icon2}
                     {icon2Text}
                   </p>
-                  <p className={style.icon}>
+                  <p className={styles.icon}>
                     {icon3}
                     {icon3Text}
                   </p>
-                  <p className={style.icon}>
+                  <p className={styles.icon}>
                     {icon4}
                     {icon4Text}
                   </p>
@@ -96,7 +96,7 @@ const ProjectTemplate = ({
         <div className="flex justify-center pt-10">
           <Link href="/#projects">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
-              <HiOutlineChevronDoubleLeft size={30} className={style.color} />
+              <HiOutlineChevronDoubleLeft size={30} className={styles.color} />
             </div>
           </Link>
         </div>

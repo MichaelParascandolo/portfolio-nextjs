@@ -11,7 +11,7 @@ import { useInView } from "react-intersection-observer";
 import contactPic from "/public/assets/me/me2.jpg";
 
 const Contact = () => {
-  const style: { label: string; textField: string } = {
+  const styles: { label: string; textField: string } = {
     label: "uppercase text-sm py-2 dark:text-gray-200",
     textField:
       "border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]",
@@ -31,7 +31,8 @@ const Contact = () => {
     try {
       emailjs
         .sendForm(
-          "service_jbpduud",
+          "default_service",
+          // "service_c2r48uu",
           "template_pulg701",
           form.current,
           process.env.NEXT_PUBLIC_API_KEY
@@ -39,6 +40,7 @@ const Contact = () => {
         .then(
           (result) => {
             setMessage("Message Sent!");
+            console.log(result.status);
             e.target.reset();
           },
           (error) => {
@@ -46,7 +48,7 @@ const Contact = () => {
           }
         );
     } catch (err) {
-      setMessage("Something Went Wrong :(");
+      setMessage("Something Went Wrong . . .");
     }
   };
   return (
@@ -95,15 +97,14 @@ const Contact = () => {
                       src={contactPic}
                       width="500"
                       height="559"
-                      alt="/"
+                      alt="Michael Parascandolo"
+                      draggable={false}
                     />
                   </div>
                 </motion.div>
               </motion.div>
               <div>
-                <h2 className="py-2 bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
-                  Michael Parascandolo
-                </h2>
+                <h2 className="text-[#ee2d2d] mt-5">Michael Parascandolo</h2>
                 <p className="tracking-widest dark:text-gray-200">
                   Front-End Web Developer
                 </p>
@@ -129,18 +130,18 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
-                    <label className={style.label}>Name:</label>
+                    <label className={styles.label}>Name:</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]"
+                      className={styles.textField}
                       type="text"
                       name="name"
                       required
                     />
                   </div>
                   <div className="flex flex-col py-2">
-                    <label className={style.label}>Phone Number:</label>
+                    <label className={styles.label}>Phone Number:</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]"
+                      className={styles.textField}
                       type="tel"
                       name="phone"
                       required
@@ -148,25 +149,25 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className={style.label}>Email:</label>
+                  <label className={styles.label}>Email:</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]"
+                    className={styles.textField}
                     type="email"
                     name="email"
                     required
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className={style.label}>Subject:</label>
+                  <label className={styles.label}>Subject:</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]"
+                    className={styles.textField}
                     type="text"
                     name="subject"
                     required
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className={style.label}>Message:</label>
+                  <label className={styles.label}>Message:</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]"
                     rows={5}

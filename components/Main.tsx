@@ -56,24 +56,35 @@ const Main = () => {
                 },
               }}
             >
-              <Image src={picture} alt="/" width="250" height="250" />
+              <Image
+                src={picture}
+                alt="Michael's Emoji"
+                width="250"
+                height="250"
+                draggable={false}
+              />
             </motion.div>
             <h1 className="pb-4 text-gray-700 dark:text-gray-200">
               Hello👋, I'm{" "}
-              <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text">
-                Michael
-              </span>
+              {/* <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text"> */}
+              <span className="text-[#ee2d2d]">Michael</span>
             </h1>
             <h1 className="py-2 text-gray-700 dark:text-gray-200">
               <Typewriter
-                options={{
-                  cursor: "",
-                }}
+                options={
+                  {
+                    // cursor: "",
+                    // loop: true,
+                  }
+                }
                 onInit={(typewriter) => {
                   typewriter
                     .pauseFor(500)
                     .typeString("A Front-End Web Developer")
                     .start();
+                  // .pauseFor(1000);
+                  // .deleteAll()
+                  // .typeString("An Aspiring Full-Stack Developer");
                 }}
               />
             </h1>

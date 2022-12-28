@@ -2,15 +2,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Logo from "./Logo";
 
 const ProjectItem = ({
   title,
   backgroundImg,
+  description,
   tech,
   projectUrl,
 }: {
   title: string;
   backgroundImg: any;
+  description: string;
   tech: string;
   projectUrl: string;
 }) => {
@@ -27,15 +30,27 @@ const ProjectItem = ({
         <Image
           className="rounded-xl group-hover:opacity-10"
           src={backgroundImg}
-          alt="/"
+          draggable={false}
+          alt={title}
         />
         <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <h3 className="text-2xl text-white tracking-wider text-center">
+          {/* <div className="text-center">
+            <span className="font-logoMP text-black text-4xl select-none">
+              MP
+            </span>
+          </div> */}
+          <h3 className="text-4xl text-gray-900 tracking-wider text-center">
             {title}
           </h3>
-          <p className="pb-4 pt-2 text-white text-center">{tech}</p>
+          <p className="pb-0 pt-2 text-gray-900 text-center font-bold text-lg tracking-wide">
+            {description}
+          </p>
+          <p className="pb-4 pt-2 text-gray-900 text-center tracking-wide">
+            {tech}
+          </p>
           <Link href={projectUrl}>
-            <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer tracking-widest">
+            {/* maybe add a shadow to the button? */}
+            <p className="text-center py-3 rounded-lg bg-white/30 text-black font-bold text-lg cursor-pointer tracking-widest border-gray-900 border-2">
               More Info
             </p>
           </Link>
