@@ -15,7 +15,7 @@ const resume = () => {
     colored: "text-[#ee2d2d]", // different shade of red #D40000
     bar: "bg-gray-700 h-0.5 my-3 rounded-lg dark:bg-white",
     grid: "grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-8",
-    icons: "mr-1 mb-1 flex",
+    icons: "mr-1 mb-1 inline-flex",
   };
   return (
     <>
