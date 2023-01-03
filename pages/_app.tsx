@@ -6,7 +6,12 @@ import { ThemeProvider } from "next-themes";
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
-      <ThemeProvider attribute="class">
+      <ThemeProvider
+        attribute="class"
+        enableSystem={false}
+        disableTransitionOnChange
+        defaultTheme="light"
+      >
         <Head>
           <title>Michael Parascandolo | Front-End Web Developer</title>
           <meta charSet="UTF-8" />

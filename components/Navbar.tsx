@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { CgDarkMode } from "react-icons/cg";
 
 const Navbar = ({ background }: { background: boolean }) => {
   const { theme, setTheme } = useTheme();
@@ -15,9 +16,9 @@ const Navbar = ({ background }: { background: boolean }) => {
       "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200",
     mobileLink: "py-4 text-sm",
   };
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  // const handleNav = () => {
+  //   setNav(!nav);
+  // };
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
@@ -45,18 +46,27 @@ const Navbar = ({ background }: { background: boolean }) => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:text-gray-200">
-        {/* <div className="inline-flex"> */}
         <div
           className={
             background || shadow ? "inline-flex" : "inline-flex text-white"
           }
         >
           <Logo />
-          <div className="cursor-pointer ml-3 mt-2">
-            {theme == "dark" ? (
-              <MdOutlineLightMode size={25} onClick={() => setTheme("light")} />
+          <div className="ml-3 mt-2">
+            {theme === "dark" ? (
+              <MdOutlineLightMode
+                size={25}
+                className={"cursor-pointer"}
+                onClick={() => setTheme("light")}
+              />
+            ) : theme === "light" ? (
+              <MdOutlineDarkMode
+                size={25}
+                className={"cursor-pointer"}
+                onClick={() => setTheme("dark")}
+              />
             ) : (
-              <MdOutlineDarkMode size={25} onClick={() => setTheme("dark")} />
+              <CgDarkMode size={25} className={"cursor-pointer"} />
             )}
           </div>
         </div>
@@ -84,7 +94,10 @@ const Navbar = ({ background }: { background: boolean }) => {
             </Link>
           </ul>
           <div className="flex">
-            <div className="md:hidden cursor-pointer" onClick={handleNav}>
+            <div
+              className="md:hidden cursor-pointer"
+              onClick={() => setNav(!nav)}
+            >
               <AiOutlineMenu size={25} />
             </div>
           </div>
@@ -105,12 +118,12 @@ const Navbar = ({ background }: { background: boolean }) => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <div onClick={handleNav}>
+              <div onClick={() => setNav(!nav)}>
                 <Logo />
               </div>
               <div
                 className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer dark:text-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black"
-                onClick={handleNav}
+                onClick={() => setNav(!nav)}
               >
                 <AiOutlineClose />
               </div>
