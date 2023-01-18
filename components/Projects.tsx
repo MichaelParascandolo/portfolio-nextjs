@@ -3,6 +3,8 @@ import surfcitypizzaImg from "../public/assets/projects/cover/surfcitypizza.png"
 import weatherImg from "/public/assets/projects/cover/weather.png";
 import gamesearchImg from "/public/assets/projects/cover/gamesearch.png";
 import portfolioImg from "/public/assets/projects/cover/portfolio.png";
+import coffeeImg from "/public/assets/projects/cover/coffee2.png";
+import comingSoonImg from "/public/assets/projects/cover/comingsoon.png";
 import ProjectItem from "./ProjectItem";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -18,7 +20,7 @@ const Projects = () => {
   return (
     <div id="projects" className="w-full dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
+        <p className="text-xl tracking-widest uppercase text-primary">
           Projects
         </p>
         <h2 className="py-4 dark:text-white">What I&apos;ve Built</h2>
@@ -40,11 +42,21 @@ const Projects = () => {
             },
           }}
         >
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* gap 8 or 10?...... */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* showcase project */}
+            <ProjectItem
+              title="CoolBeans"
+              backgroundImg={coffeeImg}
+              description={"An Imaginary Café"}
+              projectUrl="/projects/coolbeans"
+              tech="Next JS | FireBase | Tailwind"
+            />
+
             <ProjectItem
               title="Surf City Pizza"
               backgroundImg={surfcitypizzaImg}
-              description="The Best Pizza In South Jersey"
+              description="The #1 Pizza In South Jersey"
               projectUrl="/projects/surfcitypizza"
               tech="React | React Router | Bootstrap"
             />
@@ -60,7 +72,7 @@ const Projects = () => {
             <ProjectItem
               title="GameSearch"
               backgroundImg={gamesearchImg}
-              description="Video Game Search Engine"
+              description="A Game Search Engine"
               projectUrl="/projects/gamesearch"
               tech="React | Tailwind | TypeScript"
             />
@@ -72,6 +84,8 @@ const Projects = () => {
               projectUrl="/projects/portfolio"
               tech="Next JS | Tailwind | TypeScript "
             />
+
+            <ProjectItem backgroundImg={comingSoonImg} />
           </div>
         </motion.div>
       </div>

@@ -28,9 +28,7 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
-          Skills
-        </p>
+        <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
         <h2 className="py-4 dark:text-white">Experienced With</h2>
         <div className={styles.grid}>
           {experienced.map((item, index) => (

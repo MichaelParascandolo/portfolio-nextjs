@@ -54,7 +54,7 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="text-xl tracking-widest uppercase text-[#ee2d2d]">
+        <p className="text-xl tracking-widest uppercase text-primary">
           Contact
         </p>
         <h2 className="py-4 dark:text-white">Say Hello</h2>
@@ -104,7 +104,7 @@ const Contact = () => {
                 </motion.div>
               </motion.div>
               <div>
-                <h2 className="text-[#ee2d2d] mt-5">Michael Parascandolo</h2>
+                <h2 className="text-primary mt-5">Michael Parascandolo</h2>
                 <p className="tracking-widest dark:text-gray-200">
                   Front-End Web Developer
                 </p>
@@ -114,7 +114,7 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8 tracking-widest text-[#ee2d2d]">
+                <p className="uppercase pt-8 tracking-widest text-primary">
                   Connect With me
                 </p>
                 <div className="flex items-center justify-between py-4">
@@ -188,7 +188,7 @@ const Contact = () => {
         <div className="flex justify-center pt-10">
           <Link href="/">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
-              <HiOutlineChevronDoubleUp size={30} className="text-[#ee2d2d]" />
+              <HiOutlineChevronDoubleUp size={30} className="text-primary" />
             </div>
           </Link>
         </div>

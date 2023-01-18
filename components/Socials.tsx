@@ -6,7 +6,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
   const style: { circle: string; color: string } = {
     circle:
       "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
-    color: "#ee2d2d",
+    color: "text-primary",
   };
   const circleHover = {
     scale: 1.15,
@@ -23,7 +23,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? style.circle : ""}>
-            <FaLinkedinIn color={style.color} size={size} />
+            <FaLinkedinIn className={style.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -34,7 +34,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? style.circle : ""}>
-            <FaGithub color={style.color} size={size} />
+            <FaGithub className={style.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -45,7 +45,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? style.circle : ""}>
-            <FaTwitter color={style.color} size={size} />
+            <FaTwitter className={style.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -56,7 +56,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? style.circle : ""}>
-            <FaInstagram color={style.color} size={size} />
+            <FaInstagram className={style.color} size={size} />
           </div>
         </a>
       </motion.div>

@@ -13,12 +13,9 @@ const Navbar = ({ background }: { background: boolean }) => {
   const [shadow, setShadow] = useState<boolean>(false);
   const styles = {
     linkHover:
-      "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-[#ee2d2d] ease-in duration-200",
+      "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-primary ease-in duration-200",
     mobileLink: "py-4 text-sm",
   };
-  // const handleNav = () => {
-  //   setNav(!nav);
-  // };
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
@@ -53,21 +50,23 @@ const Navbar = ({ background }: { background: boolean }) => {
         >
           <Logo />
           <div className="ml-3 mt-2">
-            {theme === "dark" ? (
-              <MdOutlineLightMode
-                size={25}
-                className={"cursor-pointer"}
-                onClick={() => setTheme("light")}
-              />
-            ) : theme === "light" ? (
-              <MdOutlineDarkMode
-                size={25}
-                className={"cursor-pointer"}
-                onClick={() => setTheme("dark")}
-              />
-            ) : (
-              <CgDarkMode size={25} className={"cursor-pointer"} />
-            )}
+            <div className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded duration-500 ease-in-out transition-all">
+              {theme === "dark" ? (
+                <MdOutlineLightMode
+                  size={25}
+                  className={"cursor-pointer"}
+                  onClick={() => setTheme("light")}
+                />
+              ) : theme === "light" ? (
+                <MdOutlineDarkMode
+                  size={25}
+                  className={"cursor-pointer"}
+                  onClick={() => setTheme("dark")}
+                />
+              ) : (
+                <CgDarkMode size={25} className={"cursor-pointer"} />
+              )}
+            </div>
           </div>
         </div>
 
@@ -128,7 +127,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-[#ee2d2d] my-4">
+            <div className="border-b border-primary my-4">
               <p className="w-[85%] md:w-[90%] py-4 dark:text-gray-200">
                 Let's build something amazing together.
               </p>
@@ -178,7 +177,7 @@ const Navbar = ({ background }: { background: boolean }) => {
               )}
             </div> */}
             <div className="pt-40">
-              <p className="uppercase tracking-widest text-[#ee2d2d]">
+              <p className="uppercase tracking-widest text-primary">
                 Let's Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">

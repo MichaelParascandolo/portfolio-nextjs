@@ -8,7 +8,7 @@ import profilePic from "/public/assets/me/me.jpeg";
 const About = () => {
   const styles: { p: string; link: string } = {
     p: "py-2 text-gray-600 dark:text-gray-300",
-    link: "text-[#ee2d2d] cursor-pointer border-b-2 border-transparent hover:border-black ease-in duration-200 dark:hover:border-white ease-in duration-200",
+    link: "text-primary cursor-pointer border-b-2 border-transparent hover:border-black ease-in duration-200 dark:hover:border-white ease-in duration-200",
   };
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -24,7 +24,7 @@ const About = () => {
     >
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#ee2d2d]">
+          <p className="uppercase text-xl tracking-widest text-primary">
             About
           </p>
           <h2 className="py-4 dark:text-white">Who I Am</h2>

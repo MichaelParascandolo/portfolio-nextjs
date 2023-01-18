@@ -12,7 +12,7 @@ const resume = () => {
     sub: "text-sm text-gray-700 tracking-widest dark:text-white",
     item: "text-gray-700 dark:text-gray-300",
     skills: "text-gray-700 tracking-widest dark:text-gray-200",
-    colored: "text-[#ee2d2d]", // different shade of red #D40000
+    colored: "text-primary",
     bar: "bg-gray-700 h-0.5 my-3 rounded-lg dark:bg-white",
     grid: "grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-8",
     icons: "mr-1 mb-1 inline-flex",
@@ -24,18 +24,21 @@ const resume = () => {
         <div className="max-w-[1240px] w-full mx-auto p-2 flex justify-center items-center">
           {/* <div className="mt-[100px] w-[90%] md:w-[80%]"> */}
           <div className="mt-[100px] w-[80%]">
-            <h1 className="py-2 text-gray-700 text-[45px] tracking-wide dark:text-gray-200">
-              Michael <p className={styles.colored}>Parascandolo</p>
-            </h1>
-            <p className={styles.sub}>Tuckerton, New Jersey</p>
-            <p className={styles.sub}>
-              <a
-                href="mailto:michaelparascandolo@me.com"
-                className={styles.colored}
-              >
-                michaelparascandolo@me.com
-              </a>
-            </p>
+            <div className="bg-gradient-to-r from-[#f26969] to-primary border-2 border-gray-700 dark:border-gray-300 p-4 rounded-2xl">
+              <h1 className="py-2 text-gray-700 text-[45px] tracking-wide dark:text-gray-200">
+                {/* Michael <p className={styles.colored}>Parascandolo</p> */}
+                Michael Parascandolo
+              </h1>
+              <p className={styles.sub}>Tuckerton, New Jersey</p>
+              <p className={styles.sub}>
+                <a
+                  href="mailto:michaelparascandolo@me.com"
+                  className={styles.sub}
+                >
+                  michaelparascandolo@me.com
+                </a>
+              </p>
+            </div>
             <h3 className="text-gray-700 text-center mt-4 text-3xl tracking-wide dark:text-gray-200">
               <span className={styles.colored}>
                 <MdComputer className={styles.icons} />

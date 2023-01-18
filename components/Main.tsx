@@ -66,8 +66,8 @@ const Main = () => {
             </motion.div>
             <h1 className="pb-4 text-gray-700 dark:text-gray-200">
               Hello👋, I'm{" "}
-              {/* <span className="bg-gradient-to-r from-[#f26969] to-[#ee2d2d] text-transparent bg-clip-text"> */}
-              <span className="text-[#ee2d2d]">Michael</span>
+              {/* <span className="bg-gradient-to-r from-[#f26969] to-primary text-transparent bg-clip-text"> */}
+              <span className="text-primary">Michael</span>
             </h1>
             <h1 className="py-2 text-gray-700 dark:text-gray-200">
               <Typewriter
