@@ -3,6 +3,8 @@ import Image from "next/image";
 import Socials from "./Socials";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 
 const Main = () => {
   const quotes: string[] = [
@@ -94,6 +96,14 @@ const Main = () => {
               designing exception digital experiences. I'm focused on building
               responsive front-end web applications using modern technologies.
             </p>
+            <Link href="/#projects">
+              <div className={"flex justify-center"}>
+                <span className="border-b-2 text-[#ee2d2d] cursor-pointer flex border-transparent tracking-widest font-semibold hover:border-black hover:px-2 dark:hover:border-white ease-in duration-200">
+                  Latest Projects{" "}
+                  <FiArrowRight size={20} className={"mt-[3px]"} />
+                </span>
+              </div>
+            </Link>
             <div className="flex items-center justify-between max-w-[430px] m-auto py-4">
               <Socials size={23} circles={true} />
             </div>

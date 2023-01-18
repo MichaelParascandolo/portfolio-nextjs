@@ -3,7 +3,7 @@ import React from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
-  const style: { circle: string; color: string } = {
+  const styles = {
     circle:
       "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
     color: "#ee2d2d",
@@ -22,8 +22,8 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className={circles ? style.circle : ""}>
-            <FaLinkedinIn color={style.color} size={size} />
+          <div className={circles ? styles.circle : ""}>
+            <FaLinkedinIn color={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -33,8 +33,8 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className={circles ? style.circle : ""}>
-            <FaGithub color={style.color} size={size} />
+          <div className={circles ? styles.circle : ""}>
+            <FaGithub color={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -44,8 +44,8 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className={circles ? style.circle : ""}>
-            <FaTwitter color={style.color} size={size} />
+          <div className={circles ? styles.circle : ""}>
+            <FaTwitter color={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -55,8 +55,8 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className={circles ? style.circle : ""}>
-            <FaInstagram color={style.color} size={size} />
+          <div className={circles ? styles.circle : ""}>
+            <FaInstagram color={styles.color} size={size} />
           </div>
         </a>
       </motion.div>

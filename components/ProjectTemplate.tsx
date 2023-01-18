@@ -21,7 +21,7 @@ const ProjectTemplate = ({
   icon4,
   icon4Text,
 }) => {
-  const styles: { icon: string; color: string } = {
+  const styles = {
     icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
     color: "text-[#ee2d2d]",
   };

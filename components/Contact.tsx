@@ -11,7 +11,7 @@ import { useInView } from "react-intersection-observer";
 import contactPic from "/public/assets/me/me2.jpg";
 
 const Contact = () => {
-  const styles: { label: string; textField: string } = {
+  const styles = {
     label: "uppercase text-sm py-2 dark:text-gray-200",
     textField:
       "border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]",
