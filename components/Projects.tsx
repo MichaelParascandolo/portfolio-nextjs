@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
-import surfcitypizzaImg from "../public/assets/projects/cover/surfcitypizza.png";
-import weatherImg from "/public/assets/projects/cover/weather.png";
-import gamesearchImg from "/public/assets/projects/cover/gamesearch.png";
-import portfolioImg from "/public/assets/projects/cover/portfolio.png";
-import coffeeImg from "/public/assets/projects/cover/coffee2.png";
-import comingSoonImg from "/public/assets/projects/cover/comingsoon.png";
+import surfcitypizzaImg from "../public/assets/projects/devices/pizza-black.png";
+import weatherImg from "/public/assets/projects/devices/weather-black.png";
+import gamesearchImg from "/public/assets/projects/devices/game-white.png";
+import portfolioImg from "/public/assets/projects/devices/portfolio-black.png";
+import coffeeImg from "/public/assets/projects/devices/coffee-white.png";
+import comingSoonImg from "/public/assets/projects/cover/comingsoon-small-2.png";
+// import surfcitypizzaImg from "../public/assets/projects/cover/surfcitypizza.png";
+// import weatherImg from "/public/assets/projects/cover/weather.png";
+// import gamesearchImg from "/public/assets/projects/cover/gamesearch.png";
+// import portfolioImg from "/public/assets/projects/cover/portfolio.png";
+// import coffeeImg from "/public/assets/projects/cover/coffee2.png";
+// import comingSoonImg from "/public/assets/projects/cover/comingsoon.png";
+// https://websitemockupgenerator.com
 import ProjectItem from "./ProjectItem";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
 const Projects = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();

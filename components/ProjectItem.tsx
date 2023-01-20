@@ -39,7 +39,7 @@ const ProjectItem = ({
           draggable={false}
           alt={title}
         />
-        <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <div className="hidden group-hover:block w-[80%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           {/* <div className="text-center">
             <span className="font-logoMP text-black text-4xl select-none">
               MP
@@ -51,14 +51,17 @@ const ProjectItem = ({
           <p className="pb-0 pt-2 text-gray-800 text-center font-bold text-lg tracking-wide">
             {description}
           </p>
-          <p className="pb-4 pt-2 text-gray-800 text-center tracking-wide">
+          <p className="pb-4 pt-2 text-gray-800 text-center tracking-wide font-semibold">
             {tech}
           </p>
+          {/* make this a button */}
           {projectUrl ? (
             <Link href={projectUrl}>
-              <p className="text-center py-3 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer tracking-widest shadow-lg shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
-                More Info
-              </p>
+              <div className="flex justify-center">
+                <p className="text-center py-3 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer w-[200px] tracking-widest shadow-lg shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
+                  More Info
+                </p>
+              </div>
             </Link>
           ) : null}
         </div>
