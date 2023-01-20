@@ -1,4 +1,3 @@
-import React from "react";
 import { SiBootstrap, SiReact, SiTypescript } from "react-icons/si";
 import ProjectTemplate from "../../components/ProjectTemplate";
 import surfcitypizzaImg from "../../public/assets/projects/surfcitypizza.jpg";

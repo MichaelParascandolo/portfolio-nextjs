@@ -1,4 +1,3 @@
-import React from "react";
 import { AiFillApi } from "react-icons/ai";
 import { SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import ProjectTemplate from "../../components/ProjectTemplate";

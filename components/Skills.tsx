@@ -1,4 +1,3 @@
-import React from "react";
 import SkillItem from "./SkillItem";
 
 const Skills = () => {

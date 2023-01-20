@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
