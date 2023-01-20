@@ -14,15 +14,15 @@ const weather = () => {
         tech="HTML / CSS / TypeScript"
         description={description}
         img={weatherImg}
-        live="https://strong-squirrel-06a4ec.netlify.app"
+        live="https://weather-app-typescript-two.vercel.app"
         code="https://github.com/MichaelParascandolo/Weather-App-Typescript"
-        icon1={<SiHtml5 className="pr-2" size={25} />}
+        icon1={<SiHtml5 className="mx-2" size={25} />}
         icon1Text="HTML5"
-        icon2={<SiCss3 className="pr-2" size={25} />}
+        icon2={<SiCss3 className="mx-2" size={25} />}
         icon2Text="CSS3"
-        icon3={<SiTypescript className="pr-2" size={25} />}
+        icon3={<SiTypescript className="mx-2" size={25} />}
         icon3Text="TypeScript"
-        icon4={<AiFillApi className="pr-2" size={25} />}
+        icon4={<AiFillApi className="mx-2" size={25} />}
         icon4Text="OpenWeather API"
       />
     </>

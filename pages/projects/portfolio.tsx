@@ -20,13 +20,13 @@ const portfolio = () => {
         img={portfolioImg}
         live={false}
         code="https://github.com/MichaelParascandolo/portfolio-nextjs"
-        icon1={<SiNextdotjs className="pr-2" size={25} />}
+        icon1={<SiNextdotjs className="mx-2" size={25} />}
         icon1Text="Next JS"
-        icon2={<SiTailwindcss className="pr-2" size={25} />}
+        icon2={<SiTailwindcss className="mx-2" size={25} />}
         icon2Text="Tailwind"
-        icon3={<SiTypescript className="pr-2" size={25} />}
+        icon3={<SiTypescript className="mx-2" size={25} />}
         icon3Text="TypeScript"
-        icon4={<SiFramer className="pr-2" size={25} />}
+        icon4={<SiFramer className="mx-2" size={25} />}
         icon4Text="Framer Motion"
       />
     </>

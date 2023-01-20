@@ -50,23 +50,21 @@ const Navbar = ({ background }: { background: boolean }) => {
         >
           <Logo />
           <div className="ml-3 mt-2">
-            <div className="hover:bg-gray-300 dark:hover:bg-gray-700 rounded duration-500 ease-in-out transition-all">
-              {theme === "dark" ? (
-                <MdOutlineLightMode
-                  size={25}
-                  className={"cursor-pointer"}
-                  onClick={() => setTheme("light")}
-                />
-              ) : theme === "light" ? (
-                <MdOutlineDarkMode
-                  size={25}
-                  className={"cursor-pointer"}
-                  onClick={() => setTheme("dark")}
-                />
-              ) : (
-                <CgDarkMode size={25} className={"cursor-pointer"} />
-              )}
-            </div>
+            {theme === "dark" ? (
+              <MdOutlineLightMode
+                size={25}
+                className={"cursor-pointer"}
+                onClick={() => setTheme("light")}
+              />
+            ) : theme === "light" ? (
+              <MdOutlineDarkMode
+                size={25}
+                className={"cursor-pointer"}
+                onClick={() => setTheme("dark")}
+              />
+            ) : (
+              <CgDarkMode size={25} className={"cursor-pointer"} />
+            )}
           </div>
         </div>
 

@@ -56,7 +56,7 @@ const Projects = () => {
               backgroundImg={coffeeImg}
               description={"An Imaginary Café"}
               projectUrl="/projects/coolbeans"
-              tech="Next JS | FireBase | Tailwind"
+              tech="Next JS | Tailwind | Firebase"
             />
 
             <ProjectItem

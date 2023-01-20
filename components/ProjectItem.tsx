@@ -21,7 +21,7 @@ const ProjectItem = ({
     containerHover:
       "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 group border-solid border-2 border-gray-200 hover:bg-gradient-to-r from-[#f26969] to-primary dark:bg-[#282828] dark:shadow-black dark:border-black",
     container:
-      "relative hidden md:flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
+      "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
   };
   return (
     <motion.div
@@ -58,7 +58,7 @@ const ProjectItem = ({
           {projectUrl ? (
             <Link href={projectUrl}>
               <div className="flex justify-center">
-                <p className="text-center py-3 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer w-[200px] tracking-widest shadow-lg shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
+                <p className="text-center py-3 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer w-[200px] tracking-widest shadow-md shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
                   More Info
                 </p>
               </div>
