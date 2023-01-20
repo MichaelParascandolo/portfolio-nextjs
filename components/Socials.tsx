@@ -23,7 +23,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? styles.circle : ""}>
-            <FaLinkedinIn color={styles.color} size={size} />
+            <FaLinkedinIn className={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -34,7 +34,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? styles.circle : ""}>
-            <FaGithub color={styles.color} size={size} />
+            <FaGithub className={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -45,7 +45,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? styles.circle : ""}>
-            <FaTwitter color={styles.color} size={size} />
+            <FaTwitter className={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
@@ -56,7 +56,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
           rel="noreferrer"
         >
           <div className={circles ? styles.circle : ""}>
-            <FaInstagram color={styles.color} size={size} />
+            <FaInstagram className={styles.color} size={size} />
           </div>
         </a>
       </motion.div>
