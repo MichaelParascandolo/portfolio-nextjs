@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <ThemeProvider
         attribute="class"
-        enableSystem={false}
+        // enableSystem={true}
         disableTransitionOnChange
-        defaultTheme="light"
+        // defaultTheme="dark"
       >
         <Head>
           <title>Michael Parascandolo | Front-End Web Developer</title>

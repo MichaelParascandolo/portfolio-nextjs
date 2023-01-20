@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         logoMP: ['"Pacifico"', "cursive"],
       },
+      colors: {
+        primary: "#ee2d2d", // different shade of red #D40000
+      },
     },
   },
   plugins: [],

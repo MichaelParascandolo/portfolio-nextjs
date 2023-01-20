@@ -23,7 +23,7 @@ const ProjectTemplate = ({
 }) => {
   const styles = {
     icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
-    color: "text-[#ee2d2d]",
+    color: "text-primary",
   };
   return (
     <>

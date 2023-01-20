@@ -14,15 +14,15 @@ const gamesearch = () => {
         tech="React / Tailwind / TypeScript"
         description={description}
         img={gamesearchImg}
-        live="https://zingy-kulfi-79f7c0.netlify.app"
+        live="https://game-search-react.vercel.app"
         code="https://github.com/MichaelParascandolo/game-search-react"
-        icon1={<SiReact className="pr-2" size={25} />}
+        icon1={<SiReact className="mx-2" size={25} />}
         icon1Text="React JS"
-        icon2={<SiTailwindcss className="pr-2" size={25} />}
+        icon2={<SiTailwindcss className="mx-2" size={25} />}
         icon2Text="Tailwind"
-        icon3={<SiTypescript className="pr-2" size={25} />}
+        icon3={<SiTypescript className="mx-2" size={25} />}
         icon3Text="TypeScript"
-        icon4={<AiFillApi className="pr-2" size={25} />}
+        icon4={<AiFillApi className="mx-2" size={25} />}
         icon4Text="RAWG API"
       />
     </>

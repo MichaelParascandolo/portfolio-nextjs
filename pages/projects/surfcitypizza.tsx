@@ -15,13 +15,13 @@ const surfcitypizza = () => {
         img={surfcitypizzaImg}
         live="https://surfcitypizza.com"
         code="https://github.com/MichaelParascandolo/surf-city-pizza"
-        icon1={<SiReact className="pr-2" size={25} />}
+        icon1={<SiReact className="mx-2" size={25} />}
         icon1Text="React JS"
-        icon2={<SiReact className="pr-2" size={25} />}
+        icon2={<SiReact className="mx-2" size={25} />}
         icon2Text="React Router"
-        icon3={<SiTypescript className="pr-2" size={25} />}
+        icon3={<SiTypescript className="mx-2" size={25} />}
         icon3Text="TypeScript"
-        icon4={<SiBootstrap className="pr-2" size={25} />}
+        icon4={<SiBootstrap className="mx-2" size={25} />}
         icon4Text="Bootstrap 5"
       />
     </>

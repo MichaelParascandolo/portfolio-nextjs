@@ -6,7 +6,7 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
   const styles = {
     circle:
       "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
-    color: "#ee2d2d",
+    color: "text-primary",
   };
   const circleHover = {
     scale: 1.15,
