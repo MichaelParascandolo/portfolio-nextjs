@@ -27,6 +27,7 @@ const About = () => {
       opacity: 1,
       transition: {
         delay: 0.6,
+        duration: 0.8,
       },
     },
   };

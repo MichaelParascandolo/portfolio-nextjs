@@ -19,6 +19,7 @@ const Skills = () => {
       transition: {
         delayChildren: 0.3,
         staggerChildren: 0.3,
+        duration: 0.5,
       },
     },
   };

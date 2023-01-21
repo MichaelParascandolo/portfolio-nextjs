@@ -25,9 +25,15 @@ const ProjectItem = ({
   return (
     <motion.div
       whileHover={{
-        scale: 1.05,
+        scale: [1, 1.05],
         transition: {
-          duration: 0.2,
+          duration: 0.3,
+        },
+      }}
+      whileTap={{
+        scale: [1.05, 1, 0.9],
+        transition: {
+          duration: 0.5,
         },
       }}
     >

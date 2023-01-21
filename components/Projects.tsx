@@ -30,14 +30,15 @@ const Projects = () => {
           animate={controls}
           variants={{
             hidden: {
-              scale: 0.7,
+              y: 10,
               opacity: 0,
             },
             visible: {
-              scale: 1,
+              y: 0,
               opacity: 1,
               transition: {
                 delay: 0.5,
+                duration: 0.8,
               },
             },
           }}
