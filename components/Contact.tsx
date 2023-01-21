@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
@@ -16,6 +16,7 @@ const Contact = () => {
     textField:
       "border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]",
   };
+  // animations
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -23,6 +24,20 @@ const Contact = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+  const animateIn = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.7,
+      },
+    },
+  };
+  // email form
   const [message, setMessage] = useState<string>("Send Message");
   const form = useRef();
   const sendEmail = (e: any) => {
@@ -32,7 +47,6 @@ const Contact = () => {
       emailjs
         .sendForm(
           "default_service",
-          // "service_c2r48uu",
           "template_pulg701",
           form.current,
           process.env.NEXT_PUBLIC_API_KEY
@@ -61,31 +75,19 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200 dark:shadow-black dark:border-black">
-            <div className="lg:p-4 h-full">
-              <motion.div
-                ref={ref}
-                initial="hidden"
-                animate={controls}
-                variants={{
-                  hidden: {
-                    scale: 0.7,
-                    opacity: 0,
-                  },
-                  visible: {
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.5,
-                    },
-                  },
-                }}
-              >
+            <motion.div
+              ref={ref}
+              initial="hidden"
+              animate={controls}
+              variants={animateIn}
+            >
+              <div className="lg:p-4 h-full">
                 <motion.div
                   whileHover={{
                     position: "relative",
                     zIndex: 1,
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 1, -1, 0],
+                    scale: [1, 1.1, 1],
+                    // rotate: [0, 1, -1, 0],
                     transition: {
                       duration: 0.5,
                     },
@@ -102,26 +104,26 @@ const Contact = () => {
                     />
                   </div>
                 </motion.div>
-              </motion.div>
-              <div>
-                <h2 className="text-primary mt-5">Michael Parascandolo</h2>
-                <p className="tracking-widest dark:text-gray-200">
-                  Front-End Web Developer
-                </p>
-                <p className="py-4 dark:text-gray-200">
-                  I am available for a full-time position. Contact me and let's
-                  chat! 😊
-                </p>
-              </div>
-              <div>
-                <p className="uppercase pt-8 tracking-widest text-primary">
-                  Connect With me
-                </p>
-                <div className="flex items-center justify-between py-4">
-                  <Socials size={23} circles={true} />
+                <div>
+                  <h2 className="text-primary mt-5">Michael Parascandolo</h2>
+                  <p className="tracking-widest dark:text-gray-200">
+                    Front-End Web Developer
+                  </p>
+                  <p className="py-4 dark:text-gray-200">
+                    I am available for a full-time position. Contact me and
+                    let's chat! 😊
+                  </p>
+                </div>
+                <div>
+                  <p className="uppercase pt-8 tracking-widest text-primary">
+                    Connect With me
+                  </p>
+                  <div className="flex items-center justify-between py-4">
+                    <Socials size={23} circles={true} />
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right */}
