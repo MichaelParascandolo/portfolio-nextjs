@@ -1,42 +1,23 @@
-import React, { useEffect } from "react";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const SkillItem = ({ name }: { name: string }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+  const item = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <>
       <motion.div
-        className="card"
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={{
-          hidden: {
-            scale: 1,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.5,
-            },
-          },
-        }}
+        variants={item}
         whileHover={{
           position: "relative",
           zIndex: 1,
           scale: [1, 1.2, 1],
-          rotate: [0, 5, -5, 0],
+          // rotate: [0, 15, -15, 0],
           transition: {
             duration: 0.4,
           },

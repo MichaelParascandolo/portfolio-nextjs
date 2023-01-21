@@ -1,6 +1,27 @@
 import SkillItem from "./SkillItem";
+import { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.3,
+      },
+    },
+  };
   const experienced: string[] = [
     "HTML",
     "CSS",
@@ -29,17 +50,31 @@ const Skills = () => {
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
         <h2 className="py-4 dark:text-white">Experienced With</h2>
-        <div className={styles.grid}>
-          {experienced.map((item, index) => (
-            <SkillItem name={item} key={index} />
-          ))}
-        </div>
+        <motion.div
+          // ref={ref}
+          variants={container}
+          initial="hidden"
+          animate={controls}
+        >
+          <div className={styles.grid} ref={ref}>
+            {experienced.map((item, index) => (
+              <SkillItem name={item} key={index} />
+            ))}
+          </div>
+        </motion.div>
         <h2 className="py-4 mt-5 dark:text-white">Some Experience With</h2>
-        <div className={styles.grid2}>
-          {familiar.map((item, index) => (
-            <SkillItem name={item} key={index} />
-          ))}
-        </div>
+        <motion.div
+          // ref={ref}
+          variants={container}
+          initial="hidden"
+          animate={controls}
+        >
+          <div className={styles.grid2}>
+            {familiar.map((item, index) => (
+              <SkillItem name={item} key={index} />
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );
