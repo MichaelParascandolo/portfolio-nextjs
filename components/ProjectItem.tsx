@@ -47,17 +47,17 @@ const ProjectItem = ({
           <h3 className="text-4xl text-gray-900 tracking-wide text-center">
             {title}
           </h3>
-          <p className="pb-0 pt-2 text-gray-800 text-center font-bold text-lg tracking-wide">
+          <p className="pb-0 pt-1 text-gray-800 text-center font-bold text-lg tracking-wide">
             {description}
           </p>
-          <p className="pb-4 pt-2 text-gray-800 text-center tracking-wide font-semibold">
+          <p className="py-1 text-gray-800 text-center tracking-wide font-semibold">
             {tech}
           </p>
           {/* make this a button */}
           {projectUrl ? (
             <Link href={projectUrl}>
               <div className="flex justify-center">
-                <p className="text-center py-3 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer w-[200px] tracking-widest shadow-md shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
+                <p className="text-center py-1 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer w-[200px] tracking-widest shadow-md shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
                   More Info
                 </p>
               </div>
