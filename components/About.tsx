@@ -17,6 +17,19 @@ const About = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+  const animation = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.6,
+      },
+    },
+  };
   return (
     <div
       id="about"
@@ -55,36 +68,29 @@ const About = () => {
             I will graduate from Stockton University with my bachelor's degree
             in computing in the spring of 2023.
           </p>
-          <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
-            {/* Check out my{" "} */}
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={animation}
+          >
             <Link href={"/resume"}>
-              <span className={styles.link}>My resume</span>
+              <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
+                <span className={styles.link}>My resume</span>
+              </p>
             </Link>
-          </p>
-          <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
-            {/* Check out some of{" "} */}
             <Link href="/#projects">
-              <span className={styles.link}>latest projects</span>
+              <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
+                <span className={styles.link}>latest projects</span>
+              </p>
             </Link>
-          </p>
+          </motion.div>
         </div>
         <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
-          variants={{
-            hidden: {
-              scale: 0.7,
-              opacity: 0,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.5,
-              },
-            },
-          }}
+          variants={animation}
         >
           <motion.div
             whileHover={{
