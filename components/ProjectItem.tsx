@@ -61,13 +61,13 @@ const ProjectItem = ({
           </p>
           {/* make this a button */}
           {projectUrl ? (
-            <Link href={projectUrl}>
-              <div className="flex justify-center">
-                <p className="text-center py-1 rounded-lg bg-white/60 text-black font-bold text-lg cursor-pointer w-[200px] tracking-widest shadow-md shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
+            <div className="flex justify-center">
+              <Link href={projectUrl}>
+                <button className="text-center py-1 text-lg cursor-pointer w-[200px] tracking-widest shadow-md shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
                   More Info
-                </p>
-              </div>
-            </Link>
+                </button>
+              </Link>
+            </div>
           ) : null}
         </div>
       </div>
