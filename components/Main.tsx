@@ -98,7 +98,7 @@ const Main = () => {
             </p>
             <Link href="/#projects">
               <div className={"flex justify-center"}>
-                <span className="border-b-2 text-[#ee2d2d] cursor-pointer flex border-transparent tracking-widest font-semibold hover:border-black hover:px-2 dark:hover:border-white ease-in duration-200">
+                <span className="border-b-2 text-[#ee2d2d] cursor-pointer flex border-transparent tracking-widest font-semibold hover:border-black dark:hover:border-white ease-in duration-200">
                   Latest Projects{" "}
                   <FiArrowRight size={20} className={"mt-[3px]"} />
                 </span>
