@@ -4,18 +4,12 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  @apply overflow-x-hidden scroll-smooth;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] dark:bg-[#1E1E1E] text-[#1f2937] tracking-wide;
-    user-select: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    @apply bg-[#ecf0f3] dark:bg-[#1E1E1E] text-[#1f2937] tracking-wide select-none;
   }
   h1,
   h2,
