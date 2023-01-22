@@ -48,8 +48,8 @@ const Main = () => {
   return (
     <div id="home" className="w-full text-center md:h-screen dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <motion.div initial="hidden" animate="visible" variants={animate}>
-          <div className="mt-20">
+        <div className="mt-20">
+          <motion.div initial="hidden" animate="visible" variants={animate}>
             <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
               {quote}
             </p>
@@ -100,11 +100,22 @@ const Main = () => {
                 </span>
               </div>
             </Link>
+          </motion.div>
+          <motion.div
+            initial={{ y: 200 }}
+            animate={{ y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              type: "spring",
+              stiffness: 50,
+            }}
+          >
             <div className="flex items-center justify-between max-w-[430px] m-auto py-4">
               <Socials size={23} circles={true} />
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
