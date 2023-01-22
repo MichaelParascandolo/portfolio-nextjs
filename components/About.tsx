@@ -61,8 +61,8 @@ const About = () => {
           <p className={styles.p}>
             Fast forward to today, and my passion and skill for creating
             experiences on the web has only gotten stronger. I develop
-            beautiful, responsive, SEO optimized web applications. I work with
-            modern JavaScript frameworks such as React and Next JS, as well as
+            beautiful, responsive, SEO-optimized web applications. I work with
+            modern JavaScript frameworks such as React and Next.JS, as well as
             CSS frameworks like Bootstrap and Tailwind.
           </p>
           <p className={styles.p}>
