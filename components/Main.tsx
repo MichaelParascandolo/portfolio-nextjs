@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Socials from "./Socials";
 import { motion } from "framer-motion";
@@ -26,38 +26,34 @@ const Main = () => {
     setRandom();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const animate = {
+    hidden: {
+      scale: 0.7,
+      opacity: 0,
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+      },
+    },
+    hover: {
+      scale: 1.1,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
   return (
     <div id="home" className="w-full text-center md:h-screen dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.7,
-              opacity: 0,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.5,
-              },
-            },
-          }}
-        >
+        <motion.div initial="hidden" animate="visible" variants={animate}>
           <div className="mt-20">
             <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
               {quote}
             </p>
-            <motion.div
-              whileHover={{
-                scale: 1.1,
-                transition: {
-                  duration: 0.2,
-                },
-              }}
-            >
+            <motion.div whileHover={animate.hover}>
               <Image
                 src={picture}
                 alt="Michael's Emoji"
