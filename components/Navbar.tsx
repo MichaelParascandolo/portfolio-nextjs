@@ -31,9 +31,9 @@ const Navbar = ({ background }: { background: boolean }) => {
     hidden: {
       opacity: 0,
       x: -1000,
-      transition: {
-        duration: 0.5,
-      },
+      // transition: {
+      //   duration: 0.5,
+      // },
     },
     visible: {
       opacity: 1,
