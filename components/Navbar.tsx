@@ -49,6 +49,7 @@ const Navbar = ({ background }: { background: boolean }) => {
           }
         >
           <Logo />
+          {/* theme toggle */}
           <div className="ml-3 mt-2">
             {theme === "dark" ? (
               <MdOutlineLightMode
@@ -164,16 +165,6 @@ const Navbar = ({ background }: { background: boolean }) => {
                 </li>
               </Link>
             </ul>
-            {/* <div className="cursor-pointer justify-center flex dark:text-gray-200">
-              {theme == "dark" ? (
-                <MdOutlineLightMode
-                  size={25}
-                  onClick={() => setTheme("light")}
-                />
-              ) : (
-                <MdOutlineDarkMode size={25} onClick={() => setTheme("dark")} />
-              )}
-            </div> */}
             <div className="pt-40">
               <p className="uppercase tracking-widest text-primary">
                 Let's Connect

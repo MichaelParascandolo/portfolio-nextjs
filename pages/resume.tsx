@@ -11,7 +11,7 @@ const resume = () => {
     sub: "text-sm text-gray-700 tracking-widest dark:text-white",
     item: "text-gray-700 dark:text-gray-300",
     skills: "text-gray-700 tracking-widest dark:text-gray-200",
-    colored: "text-[#ee2d2d]", // different shade of red #D40000
+    colored: "text-primary", // different shade of red #D40000
     bar: "bg-gray-700 h-0.5 my-3 rounded-lg dark:bg-white",
     grid: "grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-8",
     icons: "mr-1 mb-1 inline-flex",
