@@ -62,12 +62,12 @@ const Main = () => {
                 draggable={false}
               />
             </motion.div>
-            <h1 className="pb-4 text-gray-700 dark:text-gray-200">
-              Hello👋, I'm{" "}
+            <h1 className="pb-2 text-gray-700 tracking-wide dark:text-gray-200">
+              Hello👋, I'm {/* move the hand to the other side of hello? */}
               {/* <span className="bg-gradient-to-r from-[#f26969] to-primary text-transparent bg-clip-text"> */}
               <span className="text-primary">Michael</span>
             </h1>
-            <h1 className="py-2 text-gray-700 dark:text-gray-200">
+            <h1 className="pb-1 text-gray-700 tracking-wide dark:text-gray-200">
               <Typewriter
                 options={
                   {
@@ -78,20 +78,25 @@ const Main = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .pauseFor(500)
-                    .typeString("A Front-End Web Developer")
+                    .typeString(
+                      'A <span style="color: #ee2d2d;">Front-End</span> Developer'
+                    )
                     .start();
                   // .pauseFor(1000);
                   // .deleteAll()
-                  // .typeString("An Aspiring Full-Stack Developer");
                 }}
               />
             </h1>
             {/* <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1> */}
-            <p className="py-4 text-gray-600 max-w-[80%] m-auto dark:text-gray-300">
-              I'm a front-end web developer specializing in building and
-              designing exception digital experiences. I'm focused on building
-              responsive front-end web applications using modern technologies.
+            <p className="pt-4 text-gray-600 dark:text-gray-300">
+              I am a front-end developer, but am always looking to learn new
+              technologies and expand my skill set.
             </p>
+            <p className="pb-4 text-gray-600 dark:text-gray-300">
+              My goal is to deliver high-quality, responsive designs that
+              provide an optimal user experience.
+            </p>
+
             <Link href="/#projects">
               <div className={"flex justify-center"}>
                 <span className="border-b-2 text-primary cursor-pointer flex border-transparent tracking-widest font-semibold hover:border-black dark:hover:border-white ease-in duration-200">
