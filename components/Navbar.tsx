@@ -6,6 +6,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { CgDarkMode } from "react-icons/cg";
+import { motion } from "framer-motion";
 
 const Navbar = ({ background }: { background: boolean }) => {
   const { theme, setTheme } = useTheme();
@@ -26,6 +27,22 @@ const Navbar = ({ background }: { background: boolean }) => {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: -1000,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    visible: {
+      opacity: 1,
+      x: [-10, 30, 0],
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   // use to force a theme
   // useEffect(() => {
   //   setTheme("light");
@@ -104,17 +121,20 @@ const Navbar = ({ background }: { background: boolean }) => {
       {/* Navbar for smaller screens */}
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-out transition-all duration-300"
+            : null
         }
       >
-        <div
-          className={
-            nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 dark:bg-[#1E1E1E]"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-          }
+        <motion.div
+          variants={variants}
+          animate={nav ? variants.visible : variants.hidden}
         >
-          <div>
+          <div
+            className={
+              "w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E]"
+            }
+          >
             <div className="flex w-full items-center justify-between">
               <div onClick={() => setNav(!nav)}>
                 <Logo />
@@ -131,50 +151,68 @@ const Navbar = ({ background }: { background: boolean }) => {
                 Let's build something amazing together.
               </p>
             </div>
-          </div>
-          <div className="py-4 flex flex-col">
-            <ul className="uppercase dark:text-gray-200">
-              <Link href="/">
-                <li onClick={() => setNav(false)} className={styles.mobileLink}>
-                  Home
-                </li>
-              </Link>
-              <Link href="/#about">
-                <li onClick={() => setNav(false)} className={styles.mobileLink}>
-                  About
-                </li>
-              </Link>
-              <Link href="/#skills">
-                <li onClick={() => setNav(false)} className={styles.mobileLink}>
-                  Skills
-                </li>
-              </Link>
-              <Link href="/#projects">
-                <li onClick={() => setNav(false)} className={styles.mobileLink}>
-                  Projects
-                </li>
-              </Link>
-              <Link href={"/resume"}>
-                <li onClick={() => setNav(false)} className={styles.mobileLink}>
-                  Resume
-                </li>
-              </Link>
-              <Link href="/#contact">
-                <li onClick={() => setNav(false)} className={styles.mobileLink}>
-                  Contact
-                </li>
-              </Link>
-            </ul>
-            <div className="pt-40">
-              <p className="uppercase tracking-widest text-primary">
-                Let's Connect
-              </p>
-              <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <Socials size={20} circles={false} />
+            <div className="py-4 flex flex-col">
+              <ul className="uppercase dark:text-gray-200">
+                <Link href="/">
+                  <li
+                    onClick={() => setNav(false)}
+                    className={styles.mobileLink}
+                  >
+                    Home
+                  </li>
+                </Link>
+                <Link href="/#about">
+                  <li
+                    onClick={() => setNav(false)}
+                    className={styles.mobileLink}
+                  >
+                    About
+                  </li>
+                </Link>
+                <Link href="/#skills">
+                  <li
+                    onClick={() => setNav(false)}
+                    className={styles.mobileLink}
+                  >
+                    Skills
+                  </li>
+                </Link>
+                <Link href="/#projects">
+                  <li
+                    onClick={() => setNav(false)}
+                    className={styles.mobileLink}
+                  >
+                    Projects
+                  </li>
+                </Link>
+                <Link href={"/resume"}>
+                  <li
+                    onClick={() => setNav(false)}
+                    className={styles.mobileLink}
+                  >
+                    Resume
+                  </li>
+                </Link>
+                <Link href="/#contact">
+                  <li
+                    onClick={() => setNav(false)}
+                    className={styles.mobileLink}
+                  >
+                    Contact
+                  </li>
+                </Link>
+              </ul>
+              <div className="pt-40">
+                <p className="uppercase tracking-widest text-primary">
+                  Let's Connect
+                </p>
+                <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                  <Socials size={20} circles={false} />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
