@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { TbSend } from "react-icons/tb";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import Link from "next/link";
 import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import contactPic from "/public/assets/me/me2.jpg";
 
 const Contact = () => {

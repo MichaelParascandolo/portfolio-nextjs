@@ -1,8 +1,8 @@
+import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 
 const ProjectTemplate = ({
   name,

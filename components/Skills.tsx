@@ -1,7 +1,7 @@
-import SkillItem from "./SkillItem";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SkillItem from "./SkillItem";
 
 const Skills = () => {
   const controls = useAnimation();

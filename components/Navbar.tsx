@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Logo from "./Logo";
-import Socials from "./Socials";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { CgDarkMode } from "react-icons/cg";
+import Link from "next/link";
+import Logo from "./Logo";
+import Socials from "./Socials";
 
 const Navbar = ({ background }: { background: boolean }) => {
   const { theme, setTheme } = useTheme();

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { FiArrowRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Socials from "./Socials";
-import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
 
 const Main = () => {
   const quotes: string[] = [
