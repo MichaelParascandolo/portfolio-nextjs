@@ -57,14 +57,12 @@ const Navbar = ({ background }: { background: boolean }) => {
                 className={"cursor-pointer"}
                 onClick={() => setTheme("light")}
               />
-            ) : theme === "light" ? (
+            ) : (
               <MdOutlineDarkMode
                 size={25}
                 className={"cursor-pointer"}
                 onClick={() => setTheme("dark")}
               />
-            ) : (
-              <CgDarkMode size={25} className={"cursor-pointer"} />
             )}
           </div>
         </div>
