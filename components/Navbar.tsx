@@ -30,16 +30,16 @@ const Navbar = ({ background }: { background: boolean }) => {
   const variants = {
     hidden: {
       opacity: 0,
-      x: -1000,
-      // transition: {
-      //   duration: 0.5,
-      // },
+      x: -100,
+      transition: {
+        duration: 0.5,
+      },
     },
     visible: {
       opacity: 1,
-      x: [-10, 30, 0],
+      x: [-10, 10, 0],
       transition: {
-        duration: 0.5,
+        duration: 0.6,
       },
     },
   };
@@ -126,93 +126,95 @@ const Navbar = ({ background }: { background: boolean }) => {
             : null
         }
       >
-        <motion.div
-          variants={variants}
-          animate={nav ? variants.visible : variants.hidden}
-        >
-          <div
-            className={
-              "w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E]"
-            }
+        {nav ? (
+          <motion.div
+            variants={variants}
+            animate={nav ? variants.visible : variants.hidden}
           >
-            <div className="flex w-full items-center justify-between">
-              <div onClick={() => setNav(!nav)}>
-                <Logo />
+            <div
+              className={
+                "w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E]"
+              }
+            >
+              <div className="flex w-full items-center justify-between">
+                <div onClick={() => setNav(!nav)}>
+                  <Logo />
+                </div>
+                <div
+                  className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer dark:text-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black"
+                  onClick={() => setNav(!nav)}
+                >
+                  <AiOutlineClose />
+                </div>
               </div>
-              <div
-                className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer dark:text-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black"
-                onClick={() => setNav(!nav)}
-              >
-                <AiOutlineClose />
-              </div>
-            </div>
-            <div className="border-b border-primary my-4">
-              <p className="w-[85%] md:w-[90%] py-4 dark:text-gray-200">
-                Let's build something amazing together.
-              </p>
-            </div>
-            <div className="py-4 flex flex-col">
-              <ul className="uppercase dark:text-gray-200">
-                <Link href="/">
-                  <li
-                    onClick={() => setNav(false)}
-                    className={styles.mobileLink}
-                  >
-                    Home
-                  </li>
-                </Link>
-                <Link href="/#about">
-                  <li
-                    onClick={() => setNav(false)}
-                    className={styles.mobileLink}
-                  >
-                    About
-                  </li>
-                </Link>
-                <Link href="/#skills">
-                  <li
-                    onClick={() => setNav(false)}
-                    className={styles.mobileLink}
-                  >
-                    Skills
-                  </li>
-                </Link>
-                <Link href="/#projects">
-                  <li
-                    onClick={() => setNav(false)}
-                    className={styles.mobileLink}
-                  >
-                    Projects
-                  </li>
-                </Link>
-                <Link href={"/resume"}>
-                  <li
-                    onClick={() => setNav(false)}
-                    className={styles.mobileLink}
-                  >
-                    Resume
-                  </li>
-                </Link>
-                <Link href="/#contact">
-                  <li
-                    onClick={() => setNav(false)}
-                    className={styles.mobileLink}
-                  >
-                    Contact
-                  </li>
-                </Link>
-              </ul>
-              <div className="pt-40">
-                <p className="uppercase tracking-widest text-primary">
-                  Let's Connect
+              <div className="border-b border-primary my-4">
+                <p className="w-[85%] md:w-[90%] py-4 dark:text-gray-200">
+                  Let's build something amazing together.
                 </p>
-                <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                  <Socials size={20} circles={false} />
+              </div>
+              <div className="py-4 flex flex-col">
+                <ul className="uppercase dark:text-gray-200">
+                  <Link href="/">
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.mobileLink}
+                    >
+                      Home
+                    </li>
+                  </Link>
+                  <Link href="/#about">
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.mobileLink}
+                    >
+                      About
+                    </li>
+                  </Link>
+                  <Link href="/#skills">
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.mobileLink}
+                    >
+                      Skills
+                    </li>
+                  </Link>
+                  <Link href="/#projects">
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.mobileLink}
+                    >
+                      Projects
+                    </li>
+                  </Link>
+                  <Link href={"/resume"}>
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.mobileLink}
+                    >
+                      Resume
+                    </li>
+                  </Link>
+                  <Link href="/#contact">
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.mobileLink}
+                    >
+                      Contact
+                    </li>
+                  </Link>
+                </ul>
+                <div className="pt-40">
+                  <p className="uppercase tracking-widest text-primary">
+                    Let's Connect
+                  </p>
+                  <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                    <Socials size={20} circles={false} />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        ) : null}
       </div>
     </div>
   );
