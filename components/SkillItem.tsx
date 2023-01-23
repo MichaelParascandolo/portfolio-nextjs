@@ -40,7 +40,7 @@ const SkillItem = ({ name }: { name: string }) => {
               />
             </div>
             <div className="flex flex-col items-center justify-center dark:text-gray-100">
-              <h3>{name}</h3>
+              <h3 className="tracking-wider">{name}</h3>
             </div>
           </div>
         </div>
