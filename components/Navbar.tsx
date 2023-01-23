@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { CgDarkMode } from "react-icons/cg";
 import Link from "next/link";
 import Logo from "./Logo";
 import Socials from "./Socials";
 
 const Navbar = ({ background }: { background: boolean }) => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState<boolean>();
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
   const styles = {
@@ -25,11 +25,13 @@ const Navbar = ({ background }: { background: boolean }) => {
       }
     };
     window.addEventListener("scroll", handleShadow);
+    setMounted(true); // prevents theme switcher button from being wrong
+    // use to force a theme
+    // setTheme("light");
   }, []);
-  // use to force a theme
-  // useEffect(() => {
-  //   setTheme("light");
-  // }, []);
+  if (!mounted) {
+    return null;
+  }
   return (
     <div
       className={
