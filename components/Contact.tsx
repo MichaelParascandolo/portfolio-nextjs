@@ -109,9 +109,11 @@ const Contact = () => {
                   <p className="tracking-widest dark:text-gray-200">
                     Front-End Web Developer
                   </p>
-                  <p className="py-4 dark:text-gray-200">
-                    I am available for a full-time position. Contact me and
-                    let's chat! 😊
+                  <p className="pt-4 dark:text-gray-200">
+                    I am available for a full-time position.
+                  </p>
+                  <p className="pb-4 dark:text-gray-200">
+                    Contact me and let's chat! 😊
                   </p>
                 </div>
                 <div>
