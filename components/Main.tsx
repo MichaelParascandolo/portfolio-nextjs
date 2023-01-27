@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
+// import GraphemeSplitter from "grapheme-splitter";
 import Link from "next/link";
 
 const Main = () => {
@@ -58,11 +59,11 @@ const Main = () => {
                 draggable={false}
               />
             </motion.div>
-            <h1 className="pb-2 text-gray-700 tracking-wide dark:text-gray-200">
+            {/*<h1 className="pb-2 text-gray-700 tracking-wide dark:text-gray-200">
               Hello👋, I'm {/* move the hand to the other side of hello? */}
-              {/* <span className="bg-gradient-to-r from-[#f26969] to-primary text-transparent bg-clip-text"> */}
-              <span className="text-primary">Michael</span>
-            </h1>
+            {/* <span className="bg-gradient-to-r from-[#f26969] to-primary text-transparent bg-clip-text"> */}
+            {/* <span className="text-primary">Michael</span>
+            </h1>  */}
             <h1 className="pb-1 text-gray-700 tracking-wide dark:text-gray-200">
               <Typewriter
                 options={
@@ -74,12 +75,16 @@ const Main = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .pauseFor(500)
+                    .typeString("Hello,")
+                    .pauseFor(500)
                     .typeString(
-                      'A <span style="color: #ee2d2d;">Front-End</span> Developer'
+                      'I&apos;m <span style="color: #ee2d2d;">Michael</span>'
+                    )
+                    .pauseFor(1000)
+                    .typeString(
+                      '<br/>A <span style="color: #ee2d2d;">Front-End</span> Developer'
                     )
                     .start();
-                  // .pauseFor(1000);
-                  // .deleteAll()
                 }}
               />
             </h1>
