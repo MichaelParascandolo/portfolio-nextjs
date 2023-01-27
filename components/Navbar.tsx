@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import {
+  MdOutlineDarkMode,
+  MdOutlineLightMode,
+  MdChevronRight,
+} from "react-icons/md";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "./Logo";
@@ -15,7 +19,7 @@ const Navbar = ({ background }: { background: boolean }) => {
   const styles = {
     linkHover:
       "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-primary ease-in duration-200",
-    mobileLink: "py-4 text-sm",
+    mobileLink: "py-4 text-sm flex justify-between",
   };
   useEffect(() => {
     const handleShadow = () => {
@@ -154,6 +158,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                         className={styles.mobileLink}
                       >
                         Home
+                        <MdChevronRight size={20} />
                       </li>
                     </Link>
                     <Link href="/#about">
@@ -162,6 +167,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                         className={styles.mobileLink}
                       >
                         About
+                        <MdChevronRight size={20} />
                       </li>
                     </Link>
                     <Link href="/#skills">
@@ -170,6 +176,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                         className={styles.mobileLink}
                       >
                         Skills
+                        <MdChevronRight size={20} />
                       </li>
                     </Link>
                     <Link href="/#projects">
@@ -178,6 +185,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                         className={styles.mobileLink}
                       >
                         Projects
+                        <MdChevronRight size={20} />
                       </li>
                     </Link>
                     <Link href={"/resume"}>
@@ -186,6 +194,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                         className={styles.mobileLink}
                       >
                         Resume
+                        <MdChevronRight size={20} />
                       </li>
                     </Link>
                     <Link href="/#contact">
@@ -194,6 +203,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                         className={styles.mobileLink}
                       >
                         Contact
+                        <MdChevronRight size={20} />
                       </li>
                     </Link>
                   </ul>
