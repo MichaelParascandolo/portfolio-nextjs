@@ -93,14 +93,14 @@ const Main = () => {
               provide an optimal user experience.
             </p>
 
-            <Link href="/#projects">
-              <div className={"flex justify-center"}>
+            <div className={"flex justify-center"}>
+              <Link href="/#projects">
                 <span className="border-b-2 text-primary cursor-pointer flex border-transparent tracking-widest font-semibold hover:border-black dark:hover:border-white ease-in duration-200">
                   Latest Projects{" "}
                   <FiArrowRight size={20} className={"mt-[3px]"} />
                 </span>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 200 }}
