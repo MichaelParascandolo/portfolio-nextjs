@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
-// import GraphemeSplitter from "grapheme-splitter";
 import Link from "next/link";
 
 const Main = () => {
@@ -78,7 +77,7 @@ const Main = () => {
                     .typeString("Hello,")
                     .pauseFor(500)
                     .typeString(
-                      'I&apos;m <span style="color: #ee2d2d;">Michael</span>'
+                      ' I&apos;m <span style="color: #ee2d2d;">Michael</span>'
                     )
                     .pauseFor(1000)
                     .typeString(
