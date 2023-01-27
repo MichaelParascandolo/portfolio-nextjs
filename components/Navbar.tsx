@@ -1,12 +1,12 @@
-import Link from "next/link";
-import Logo from "./Logo";
-import Socials from "./Socials";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { CgDarkMode } from "react-icons/cg";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Logo from "./Logo";
+import Socials from "./Socials";
 
 const Navbar = ({ background }: { background: boolean }) => {
   const { theme, setTheme } = useTheme();
@@ -116,19 +116,13 @@ const Navbar = ({ background }: { background: boolean }) => {
       <div
         className={
           nav
-            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in-out transition-all duration-300"
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in-out transition-all duration-500"
             : null
         }
       >
         {nav ? (
           <motion.div animate={nav ? variants.visible : variants.hidden}>
-            <div
-              className={
-                nav
-                  ? "h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E] opacity-100 ease-in-out transition-all duration-500"
-                  : "h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E] opacity-0 ease-in-out transition-all duration-500"
-              }
-            >
+            <div className="h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E]">
               <div className="flex w-full items-center justify-between">
                 <div onClick={() => setNav(!nav)}>
                   <Logo />
@@ -203,7 +197,7 @@ const Navbar = ({ background }: { background: boolean }) => {
                       </li>
                     </Link>
                   </ul>
-                  <div className="pt-40">
+                  <div className="pt-20">
                     <p className="uppercase tracking-widest text-primary">
                       Let's Connect
                     </p>

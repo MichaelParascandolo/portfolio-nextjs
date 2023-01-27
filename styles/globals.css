@@ -5,12 +5,12 @@
 
 html,
 body {
-  @apply scroll-smooth overflow-x-hidden;
+  @apply overflow-x-hidden scroll-smooth;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] dark:bg-[#1E1E1E] text-[#1f2937] tracking-wide select-none overflow-x-hidden;
+    @apply bg-[#ecf0f3] dark:bg-[#1E1E1E] text-[#1f2937] tracking-wide select-none;
   }
   h1,
   h2,
