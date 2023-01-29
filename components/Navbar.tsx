@@ -31,8 +31,6 @@ const Navbar = ({ background }: { background: boolean }) => {
     };
     window.addEventListener("scroll", handleShadow);
     setMounted(true); // prevents theme switcher button from being wrong
-    // use to force a theme
-    // setTheme("light");
   }, []);
   const variants = {
     hidden: {
@@ -51,12 +49,12 @@ const Navbar = ({ background }: { background: boolean }) => {
     <div
       className={
         background && !shadow
-          ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-[#1E1E1E]"
+          ? "fixed w-full h-20 z-[100] ease-in-out border-b-2 border-transparent duration-300 transition-all bg-[#ecf0f3] dark:bg-[#1E1E1E]"
           : background && shadow
-          ? "fixed w-full h-20 shadow-xl z-[100] ease-in duration-300 bg-[#ecf0f3] dark:bg-[#1E1E1E]"
+          ? "fixed w-full h-20 shadow-xl z-[100] border-b-2 border-primary ease-in-out duration-300 transition-all bg-[#ecf0f3] dark:bg-[#1E1E1E] dark:shadow-2xl"
           : !background && shadow
-          ? "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-[#ecf0f3] dark:bg-[#1E1E1E]"
-          : "fixed w-full h-20 z-[100] ease-in-out duration-300 bg-transparent"
+          ? "fixed w-full h-20 z-[100] shadow-xl ease-in-out duration-300 transition-all border-b-2 border-primary bg-[#ecf0f3] dark:bg-[#1E1E1E] dark:shadow-2xl"
+          : "fixed w-full h-20 z-[100] ease-in-out border-b-2 border-transparent duration-300 transition-all bg-transparent"
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:text-gray-200">
