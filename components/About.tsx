@@ -44,11 +44,9 @@ const About = () => {
             <p className={styles.p}>
               I have had a love for technology for as long as I can remember.
               When I received my first desktop computer at a young age, my mind
-              was blown by all of the different things I could create with it. I
-              loved being able to edit photos and create/edit my own movies. In
-              the back of my mind, I always wanted to learn how to code.
+              was blown by all of the different things I could create with it.
             </p>
-            <p className={styles.p}>
+            {/* <p className={styles.p}>
               In my teenage years, I decided it was time to learn. I started
               with HTML and CSS, learning on my own before enrolling in the
               Computer Science program at Ocean County Vocational School. I
@@ -56,7 +54,7 @@ const About = () => {
               JavaScript and jQuery. I developed and deployed my first website
               around 2014, which was for my family's pizzeria and Italian
               restaurant. I was absolutely in love with coding.
-            </p>
+            </p> */}
             <p className={styles.p}>
               Fast forward to today, and my passion and skill for creating
               experiences on the web has only gotten stronger. I develop
@@ -66,7 +64,7 @@ const About = () => {
             </p>
             <p className={styles.p}>
               I will graduate from Stockton University with my bachelor's degree
-              in computing in the spring of 2023.
+              in computing during the spring of 2023.
             </p>
             <motion.div
               ref={ref}
