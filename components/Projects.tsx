@@ -17,6 +17,20 @@ const Projects = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+  const variants = {
+    hidden: {
+      y: 20,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        duration: 0.8,
+      },
+    },
+  };
   const projects: {
     title?: string;
     background: any;
@@ -74,20 +88,7 @@ const Projects = () => {
           ref={ref}
           initial="hidden"
           animate={controls}
-          variants={{
-            hidden: {
-              y: 10,
-              opacity: 0,
-            },
-            visible: {
-              y: 0,
-              opacity: 1,
-              transition: {
-                delay: 0.5,
-                duration: 0.8,
-              },
-            },
-          }}
+          variants={variants}
         >
           {/* gap 8 or 10?...... */}
           <div className="grid md:grid-cols-2 gap-8">

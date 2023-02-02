@@ -11,7 +11,7 @@ const Skills = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
-  const container = {
+  const variants = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
       opacity: 1,
@@ -41,23 +41,6 @@ const Skills = () => {
     "Firebase",
     "React Native",
   ];
-  const skills: { title: string; experienced: boolean }[] = [
-    { title: "HTML", experienced: true },
-    { title: "HTML", experienced: true },
-    { title: "CSS", experienced: true },
-    { title: "JavaScript", experienced: true },
-    { title: "TypeScript", experienced: true },
-    { title: "Tailwind", experienced: true },
-    { title: "Bootstrap", experienced: true },
-    { title: "React JS", experienced: true },
-    { title: "Next JS", experienced: true },
-    { title: "SASS", experienced: false },
-    { title: "Github", experienced: false },
-    { title: "Python", experienced: false },
-    { title: "Java", experienced: false },
-    { title: "Firebase", experienced: false },
-    { title: "React Native", experienced: false },
-  ];
   // other skills: electron, jQuery
   const styles = {
     grid: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8", // gap 8 or 4
@@ -70,7 +53,7 @@ const Skills = () => {
         <h2 className="py-4 dark:text-white">Experienced With</h2>
         <motion.div
           // ref={ref}
-          variants={container}
+          variants={variants}
           initial="hidden"
           animate={controls}
         >
@@ -83,7 +66,7 @@ const Skills = () => {
         <h2 className="py-4 mt-5 dark:text-white">Some Experience With</h2>
         <motion.div
           // ref={ref}
-          variants={container}
+          variants={variants}
           initial="hidden"
           animate={controls}
         >

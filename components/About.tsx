@@ -41,30 +41,29 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3">
           <div className="cols-span-1 md:col-span-2">
             <h2 className="py-4 dark:text-white">Who I Am</h2>
-            <p className={styles.p}>
-              I have had a love for technology for as long as I can remember.
-              When I received my first desktop computer at a young age, my mind
-              was blown by all of the different things I could create with it.
-            </p>
             {/* <p className={styles.p}>
-              In my teenage years, I decided it was time to learn. I started
-              with HTML and CSS, learning on my own before enrolling in the
-              Computer Science program at Ocean County Vocational School. I
-              learned to make my sites more interactive than ever using
-              JavaScript and jQuery. I developed and deployed my first website
-              around 2014, which was for my family's pizzeria and Italian
-              restaurant. I was absolutely in love with coding.
+              My name is Michael and I have always had a passion for technology.
             </p> */}
             <p className={styles.p}>
-              Fast forward to today, and my passion and skill for creating
-              experiences on the web has only gotten stronger. I develop
-              beautiful, responsive, SEO-optimized web applications. I work with
-              modern JavaScript frameworks such as React and Next.JS, as well as
-              CSS frameworks like Bootstrap and Tailwind.
+              I was fascinated with software development and knew I wanted to
+              learn how to code. After teaching myself, I enrolled in the
+              Computer Science program at Ocean County Vocational School.
             </p>
             <p className={styles.p}>
-              I will graduate from Stockton University with my bachelor's degree
-              in computing during the spring of 2023.
+              Fast forward to today, I am about to graduate with my bachelors in
+              Computing from Stockton University (Spring 2023). I develop
+              beautiful, responsive, SEO-optimized web applications using modern
+              technologies.
+            </p>
+            {/* <p className={styles.p}>
+              Fast forward to today, I graduated with my bachelors in Computing
+              from Stockton University. I develop beautiful, responsive,
+              SEO-optimized web applications using modern technologies.
+            </p> */}
+            <p className={styles.p}>
+              I am always looking to learn new technologies and enjoy expanding
+              my skill set. Right now, I am learning backend technologies and
+              also dabbling with mobile/desktop development.
             </p>
             <motion.div
               ref={ref}
