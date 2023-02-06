@@ -49,7 +49,10 @@ const Main = () => {
             <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
               {quote}
             </p>
-            <motion.div whileHover={animate.hover}>
+            <motion.div
+              whileHover={animate.hover}
+              className="flex justify-center"
+            >
               <Image
                 src={picture}
                 alt="Michael's Emoji"
