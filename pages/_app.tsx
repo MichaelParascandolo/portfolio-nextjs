@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import { motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import { Pacifico } from "@next/font/google";
@@ -73,6 +74,7 @@ function MyApp({ Component, pageProps, router }) {
             <Component {...pageProps} />
           </main>
         </motion.div>
+        <Analytics />
       </ThemeProvider>
     </>
   );
