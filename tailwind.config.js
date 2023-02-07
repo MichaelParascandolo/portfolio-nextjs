@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        logoMP: ['"Pacifico"', "cursive"],
+        logoMP: ["var(--font-pacifico)"], // google pacifico font
       },
       colors: {
         primary: "#ee2d2d", // different shade of red #D40000

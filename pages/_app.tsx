@@ -2,7 +2,13 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
+import { Pacifico } from "@next/font/google";
 
+const pacifico = Pacifico({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pacifico",
+});
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
@@ -10,7 +16,6 @@ function MyApp({ Component, pageProps, router }) {
         attribute="class"
         enableSystem={true}
         disableTransitionOnChange
-        // defaultTheme="light"
       >
         <Head>
           <title>Michael Parascandolo | Front-End Web Developer</title>
@@ -64,7 +69,9 @@ function MyApp({ Component, pageProps, router }) {
             },
           }}
         >
-          <Component {...pageProps} />
+          <main className={`${pacifico.variable}`}>
+            <Component {...pageProps} />
+          </main>
         </motion.div>
       </ThemeProvider>
     </>
