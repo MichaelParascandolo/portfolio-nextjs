@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
