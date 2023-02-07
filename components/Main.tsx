@@ -1,15 +1,25 @@
 import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Image from "next/legacy/image";
+import Image, { StaticImageData } from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
+import picture0 from "public/assets/me/memoji0.png";
+import picture1 from "public/assets/me/memoji1.png";
+import picture2 from "public/assets/me/memoji2.png";
+import picture3 from "public/assets/me/memoji3.png";
 
 const Main = () => {
   const [quote, setQuote] = useState<string>("");
-  const [picture, setPicture] = useState<string>("");
+  const [picture, setPicture] = useState<StaticImageData>();
   useEffect(() => {
+    const pictures: StaticImageData[] = [
+      picture0,
+      picture1,
+      picture2,
+      picture3,
+    ];
     const quotes: string[] = [
       "“Innovation distinguishes between a leader and a follower.” - Steve Jobs",
       "“Your time is limited, so don't waste it living someone else's life.” - Steve Jobs",
@@ -20,7 +30,8 @@ const Main = () => {
       "“Have the courage to follow your heart and intuition.” - Steve Jobs",
     ];
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-    setPicture(`/assets/me/memoji${Math.floor(Math.random() * 4)}.png`);
+    setPicture(pictures[Math.floor(Math.random() * pictures.length)]);
+    // setPicture(`/assets/me/memoji${Math.floor(Math.random() * 4)}.png`);
   }, []);
   const animate = {
     hidden: {
