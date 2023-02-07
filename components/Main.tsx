@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import picture0 from "public/assets/me/memoji0.png";
-import picture1 from "public/assets/me/memoji1.png";
-import picture2 from "public/assets/me/memoji2.png";
-import picture3 from "public/assets/me/memoji3.png";
+import picture0 from "/assets/me/memoji0.png";
+import picture1 from "/assets/me/memoji1.png";
+import picture2 from "/assets/me/memoji2.png";
+import picture3 from "/assets/me/memoji3.png";
 
 const Main = () => {
   const [quote, setQuote] = useState<string>("");
