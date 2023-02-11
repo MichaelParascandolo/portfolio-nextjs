@@ -16,11 +16,32 @@ const Navbar = ({ background }: { background: boolean }) => {
   const [mounted, setMounted] = useState<boolean>();
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
-  const styles = {
-    linkHover:
-      "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-primary ease-in duration-200",
-    mobileLink: "py-4 text-sm flex justify-between",
-  };
+  const navLinks: { title: string; path: string }[] = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "About",
+      path: "/#about",
+    },
+    {
+      title: "Skills",
+      path: "/#skills",
+    },
+    {
+      title: "Projects",
+      path: "/#projects",
+    },
+    {
+      title: "Resume",
+      path: "/resume",
+    },
+    {
+      title: "Contact",
+      path: "/#contact",
+    },
+  ];
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
@@ -85,24 +106,17 @@ const Navbar = ({ background }: { background: boolean }) => {
         <div className={background || shadow ? null : "text-white"}>
           {/* Navbar for larger screens */}
           <ul className="mr-2 hidden md:flex">
-            <Link href="/">
-              <li className={styles.linkHover}>Home</li>
-            </Link>
-            <Link href="/#about">
-              <li className={styles.linkHover}>About</li>
-            </Link>
-            <Link href="/#skills">
-              <li className={styles.linkHover}>Skills</li>
-            </Link>
-            <Link href="/#projects">
-              <li className={styles.linkHover}>Projects</li>
-            </Link>
-            <Link href="/resume">
-              <li className={styles.linkHover}>Resume</li>
-            </Link>
-            <Link href="/#contact">
-              <li className={styles.linkHover}>Contact</li>
-            </Link>
+            {navLinks.map((item, index) => (
+              <Link href={item.path} key={index}>
+                <li
+                  className={
+                    "ml-10 text-sm uppercase border-b-2 border-transparent hover:border-primary ease-in duration-200"
+                  }
+                >
+                  {item.title}
+                </li>
+              </Link>
+            ))}
           </ul>
           <div className="flex">
             <div
@@ -150,60 +164,17 @@ const Navbar = ({ background }: { background: boolean }) => {
                 </div>
                 <div className="py-4 flex flex-col">
                   <ul className="uppercase dark:text-gray-200">
-                    <Link href="/">
-                      <li
-                        onClick={() => setNav(false)}
-                        className={styles.mobileLink}
-                      >
-                        Home
-                        <MdChevronRight size={20} />
-                      </li>
-                    </Link>
-                    <Link href="/#about">
-                      <li
-                        onClick={() => setNav(false)}
-                        className={styles.mobileLink}
-                      >
-                        About
-                        <MdChevronRight size={20} />
-                      </li>
-                    </Link>
-                    <Link href="/#skills">
-                      <li
-                        onClick={() => setNav(false)}
-                        className={styles.mobileLink}
-                      >
-                        Skills
-                        <MdChevronRight size={20} />
-                      </li>
-                    </Link>
-                    <Link href="/#projects">
-                      <li
-                        onClick={() => setNav(false)}
-                        className={styles.mobileLink}
-                      >
-                        Projects
-                        <MdChevronRight size={20} />
-                      </li>
-                    </Link>
-                    <Link href={"/resume"}>
-                      <li
-                        onClick={() => setNav(false)}
-                        className={styles.mobileLink}
-                      >
-                        Resume
-                        <MdChevronRight size={20} />
-                      </li>
-                    </Link>
-                    <Link href="/#contact">
-                      <li
-                        onClick={() => setNav(false)}
-                        className={styles.mobileLink}
-                      >
-                        Contact
-                        <MdChevronRight size={20} />
-                      </li>
-                    </Link>
+                    {navLinks.map((item, index) => (
+                      <Link href={item.path} key={index}>
+                        <li
+                          className={"py-4 text-sm flex justify-between"}
+                          onClick={() => setNav(false)}
+                        >
+                          {item.title}
+                          <MdChevronRight size={20} />
+                        </li>
+                      </Link>
+                    ))}
                   </ul>
                   <div className="pt-20">
                     <p className="uppercase tracking-widest text-primary">
