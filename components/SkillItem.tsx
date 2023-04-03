@@ -24,9 +24,9 @@ const SkillItem = ({ name }: { name: string }) => {
         }}
       >
         {/* maybe p-6 instead? */}
-        <div className="p-3 shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200 bg-[#ecf0f3] dark:bg-[#282828] dark:shadow-black dark:border-black">
-          <div className="grid grid-cols-2 gap-4 justify-center items-center">
-            <div className="m-auto">
+        <div className="p-3 h-full shadow-xl shadow-gray-400 rounded-xl border-solid border-2 border-gray-200 bg-[#ecf0f3] dark:bg-[#282828] dark:shadow-black dark:border-black">
+          <div className="flex flex-col md:flex-row justify-around w-full h-full">
+            <div className="my-auto flex justify-center">
               <Image
                 src={
                   "/assets/skills/" +
@@ -39,7 +39,7 @@ const SkillItem = ({ name }: { name: string }) => {
                 draggable={false}
               />
             </div>
-            <div className="flex flex-col items-center justify-center dark:text-gray-100">
+            <div className="mt-2 md:my-auto text-center dark:text-gray-100">
               <h3 className="tracking-wider">{name}</h3>
             </div>
           </div>
