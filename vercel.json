@@ -1,8 +1,20 @@
 {
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [],
+  "env": {},
   "github": {
-    "enabled": false
-  },
-  "git": {
-    "branches": ["main"]
+    "enabled": true,
+    "autoAlias": true,
+    "silent": false,
+    "deployments": {
+      "production": {
+        "branches": ["main"]
+      }
+    }
   }
 }
