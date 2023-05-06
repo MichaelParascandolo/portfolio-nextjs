@@ -41,29 +41,43 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3">
           <div className="cols-span-1 md:col-span-2">
             <h2 className="py-4 dark:text-white">Who I Am</h2>
-            {/* <p className={styles.p}>
-              My name is Michael and I have always had a passion for technology.
-            </p> */}
             <p className={styles.p}>
-              I was fascinated with software development and knew I wanted to
-              learn how to code. After teaching myself, I enrolled in the
-              Computer Science program at Ocean County Vocational School.
+              Hello, I'm <span className="text-primary">Michael</span>, a{" "}
+              <span className="text-primary">front-end</span> developer with a
+              passion for developing high-quality web applications. I graduated
+              with a <span className="text-primary">Bachelor's degree</span> in
+              Computing from{" "}
+              <span className="text-primary">Stockton University</span>.
             </p>
             <p className={styles.p}>
-              Fast forward to today, I am about to graduate with my bachelors in
-              Computing from Stockton University (Spring 2023). I develop
-              beautiful, responsive, SEO-optimized web applications using modern
-              technologies.
+              Recently, I had the opportunity to work with a group of other
+              developers to create a{" "}
+              <span className="text-primary">full-stack</span> web application
+              for a <span className="text-primary">commercial client</span>. I
+              was responsible for developing and designing the user interface,
+              ensuring that the website was visually appealing and
+              user-friendly, as well as ensuring the{" "}
+              <span className="text-primary">front-end</span> and{" "}
+              <span className="text-primary">back-end</span> communicate
+              effectively.
             </p>
-            {/* <p className={styles.p}>
-              Fast forward to today, I graduated with my bachelors in Computing
-              from Stockton University. I develop beautiful, responsive,
-              SEO-optimized web applications using modern technologies.
-            </p> */}
             <p className={styles.p}>
-              I am always looking to learn new technologies and enjoy expanding
-              my skill set. Right now, I am learning backend technologies and
-              also dabbling with mobile/desktop development.
+              Currently, I'm expanding my knowledge of{" "}
+              <span className="text-primary">back-end</span> development and{" "}
+              <span className="text-primary">database</span> design /
+              implementation. I believe that having a well-rounded skill set is
+              essential for building high-quality web applications.
+            </p>
+            <p className={styles.p}>
+              Reach out on social media or use the{" "}
+              <a href="#contact" className={styles.link}>
+                contact
+              </a>{" "}
+              form below to get in touch.
+            </p>
+            <p className={styles.p}>
+              Let's build something{" "}
+              <span className="text-primary">amazing</span> together!
             </p>
             <motion.div
               ref={ref}
@@ -77,8 +91,11 @@ const About = () => {
                 </Link>
               </p>
               <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
-                <Link href="/#projects">
-                  <span className={styles.link}>latest projects</span>
+                <Link
+                  href="/#projects"
+                  className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300"
+                >
+                  <span className={styles.link}>Latest projects</span>
                 </Link>
               </p>
             </motion.div>
