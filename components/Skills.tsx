@@ -33,13 +33,21 @@ const Skills = () => {
     "React JS",
     "Next JS",
     "Git",
+    "Python",
+    "Flask",
     "Java",
   ];
-  const familiar: string[] = ["SASS", "Python", "Firebase", "React Native"];
+  const familiar: string[] = [
+    "Angular",
+    "SQL",
+    "PHP",
+    "Firebase",
+    "React Native",
+  ];
   // other skills: electron, jQuery, GitHub
   const styles = {
-    grid: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8", // gap 8 or 4
-    grid2: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8", // gap 8 or 4...
+    grid: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8", // gap 8 or 4
+    grid2: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8", // gap 8 or 4...
   };
   return (
     <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#1E1E1E]">
