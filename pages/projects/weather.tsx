@@ -1,10 +1,10 @@
 import { AiFillApi } from "react-icons/ai";
-import { SiCss3, SiHtml5, SiTypescript } from "react-icons/si";
+import { SiAngular, SiCss3, SiHtml5 } from "react-icons/si";
 import ProjectTemplate from "../../components/ProjectTemplate";
 import weatherImg from "../../public/assets/projects/weather.png";
 
 const description =
-  "This site was my first project to utilize an API. Users are able to see weather information such as temperature (celsius or fahrenheit), max/min temperature, humidity, wind speed, as well as a brief description of the current weather conditions. The icons are updated accordingly based on the weather conditions. Users are able to search via the name of a city, zip code, or even using your current location as determined by the browser. This site was built completely with vanilla HTML, CSS, and TypeScript. Data is pulled from the OpenWeather API.";
+  "This site was my first project built with Angular, and uses the OpenWeather API. Users are able to see weather information such as temperature (celsius or fahrenheit), max/min temperature, humidity, wind speed, as well as a brief description of the current weather conditions. Users are able to search via the name of a city, zip code, or their your current location.";
 const weather = () => {
   return (
     <>
@@ -13,14 +13,14 @@ const weather = () => {
         tech="HTML / CSS / TypeScript"
         description={description}
         img={weatherImg}
-        live="https://weather-app-typescript-two.vercel.app"
-        code="https://github.com/MichaelParascandolo/Weather-App-Typescript"
-        icon1={<SiHtml5 className="mx-2" size={25} />}
-        icon1Text="HTML5"
-        icon2={<SiCss3 className="mx-2" size={25} />}
-        icon2Text="CSS3"
-        icon3={<SiTypescript className="mx-2" size={25} />}
-        icon3Text="TypeScript"
+        live="https://weather-angular-six.vercel.app"
+        code="https://github.com/MichaelParascandolo/weather-angular"
+        icon1={<SiAngular className="mx-2" size={25} />}
+        icon1Text="Angular"
+        icon2={<SiHtml5 className="mx-2" size={25} />}
+        icon2Text="HTML5"
+        icon3={<SiCss3 className="mx-2" size={25} />}
+        icon3Text="CSS3"
         icon4={<AiFillApi className="mx-2" size={25} />}
         icon4Text="OpenWeather API"
       />
