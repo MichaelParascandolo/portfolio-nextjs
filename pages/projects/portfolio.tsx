@@ -17,7 +17,6 @@ const portfolio = () => {
         tech="Next JS / Tailwind / TypeScript"
         description={description}
         img={portfolioImg}
-        live={false}
         code="https://github.com/MichaelParascandolo/portfolio-nextjs"
         icon1={<SiNextdotjs className="mx-2" size={25} />}
         icon1Text="Next JS"

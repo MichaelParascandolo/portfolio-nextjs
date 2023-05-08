@@ -12,7 +12,6 @@ const projectmanager = () => {
         tech="React / Flask / Tailwind / Sqlite"
         description={description}
         img={projectManagerImg}
-        live={false}
         code="https://github.com/MichaelParascandolo/project-manager-react-flask"
         icon1={<SiReact className="mx-2" size={25} />}
         icon1Text="React JS"

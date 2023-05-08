@@ -1,28 +1,29 @@
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-const ProjectTemplate = ({
-  name,
-  tech,
-  description,
-  img,
-  live,
-  code,
-  icon1,
-  icon1Text,
-  icon2,
-  icon2Text,
-  icon3,
-  icon3Text,
-  icon4,
-  icon4Text,
-}) => {
+interface ProjectData {
+  name: string;
+  tech: string;
+  description: string;
+  img: StaticImageData;
+  live?: string;
+  code: string;
+  icon1: React.ReactNode;
+  icon1Text: string;
+  icon2?: React.ReactNode;
+  icon2Text?: string;
+  icon3?: React.ReactNode;
+  icon3Text?: string;
+  icon4?: React.ReactNode;
+  icon4Text?: string;
+}
+
+const ProjectTemplate = (props: ProjectData) => {
   const styles = {
     icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
-    color: "text-primary",
   };
   return (
     <>
@@ -31,33 +32,31 @@ const ProjectTemplate = ({
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
           <Image
-            layout="fill"
-            objectFit="cover"
-            src={img}
+            src={props.img}
             alt="/"
             style={{ backgroundPosition: "top" }}
           />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2 uppercase">{name}</h2>
-            <h3>{tech}</h3>
+            <h2 className="py-2 uppercase">{props.name}</h2>
+            <h3>{props.tech}</h3>
           </div>
         </div>
-
-        {/* <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8"> */}
         <div className="max-w-[90%] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
           <div className="col-span-4">
-            <p className={styles.color}>Project</p>
-            <h2 className="dark:text-white">Overview</h2>
-            <p className="text-gray-700 dark:text-gray-300">{description}</p>
+            <p className="text-primary">Project</p>
+            <h2 className="dark:text-white mb-2">Overview</h2>
+            <p className="text-gray-700 dark:text-gray-300">
+              {props.description}
+            </p>
             <div className="flex justify-center md:justify-start">
-              {!live ? null : (
-                <a href={live} target="_blank" rel="noreferrer">
+              {props.live ? (
+                <a href={props.live} target="_blank" rel="noreferrer">
                   <button className="px-8 py-2 mt-4 mr-8 tracking-widest">
                     Live Site
                   </button>
                 </a>
-              )}
-              <a href={code} target="_blank" rel="noreferrer">
+              ) : null}
+              <a href={props.code} target="_blank" rel="noreferrer">
                 <button className="px-8 py-2 mt-4 tracking-widest">
                   View Code
                 </button>
@@ -72,20 +71,20 @@ const ProjectTemplate = ({
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
                   <p className={styles.icon}>
-                    {icon1}
-                    {icon1Text}
+                    {props.icon1}
+                    {props.icon1Text}
                   </p>
                   <p className={styles.icon}>
-                    {icon2}
-                    {icon2Text}
+                    {props.icon2}
+                    {props.icon2Text}
                   </p>
                   <p className={styles.icon}>
-                    {icon3}
-                    {icon3Text}
+                    {props.icon3}
+                    {props.icon3Text}
                   </p>
                   <p className={styles.icon}>
-                    {icon4}
-                    {icon4Text}
+                    {props.icon4}
+                    {props.icon4Text}
                   </p>
                 </div>
               </div>
@@ -95,7 +94,7 @@ const ProjectTemplate = ({
         <div className="flex justify-center pt-10">
           <Link href="/#projects">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
-              <HiOutlineChevronDoubleLeft size={30} className={styles.color} />
+              <HiOutlineChevronDoubleLeft size={30} className="text-primary" />
             </div>
           </Link>
         </div>
