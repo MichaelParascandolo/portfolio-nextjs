@@ -1,12 +1,25 @@
-import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
-  const styles = {
-    circle:
-      "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
-    color: "text-primary",
-  };
+  const socialLinks: { icon: JSX.Element; link: string }[] = [
+    {
+      icon: <FaLinkedinIn className="text-primary" size={size} />,
+      link: "https://www.linkedin.com/in/michael-parascandolo-774725226/",
+    },
+    {
+      icon: <FaGithub className="text-primary" size={size} />,
+      link: "https://github.com/michaelparascandolo",
+    },
+    {
+      icon: <FaTwitter className="text-primary" size={size} />,
+      link: "https://twitter.com/mikejpara",
+    },
+    {
+      icon: <FaInstagram className="text-primary" size={size} />,
+      link: "https://www.instagram.com/mikejpara/",
+    },
+  ];
   const circleHover = {
     scale: 1.15,
     transition: {
@@ -21,50 +34,21 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
   };
   return (
     <>
-      <motion.div whileHover={circleHover} whileTap={circleTap}>
-        <a
-          href="https://www.linkedin.com/in/michael-parascandolo-774725226/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className={circles ? styles.circle : null}>
-            <FaLinkedinIn className={styles.color} size={size} />
-          </div>
-        </a>
-      </motion.div>
-      <motion.div whileHover={circleHover} whileTap={circleTap}>
-        <a
-          href="https://github.com/michaelparascandolo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className={circles ? styles.circle : null}>
-            <FaGithub className={styles.color} size={size} />
-          </div>
-        </a>
-      </motion.div>
-      <motion.div whileHover={circleHover} whileTap={circleTap}>
-        <a
-          href="https://twitter.com/mikejpara"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className={circles ? styles.circle : null}>
-            <FaTwitter className={styles.color} size={size} />
-          </div>
-        </a>
-      </motion.div>
-      <motion.div whileHover={circleHover} whileTap={circleTap}>
-        <a
-          href="https://www.instagram.com/mikejpara/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className={circles ? styles.circle : null}>
-            <FaInstagram className={styles.color} size={size} />
-          </div>
-        </a>
-      </motion.div>
+      {socialLinks.map((item, index) => (
+        <motion.div whileHover={circleHover} whileTap={circleTap} key={index}>
+          <a href={item.link} target="_blank" rel="noreferrer">
+            <div
+              className={
+                circles
+                  ? "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black"
+                  : null
+              }
+            >
+              {item.icon}
+            </div>
+          </a>
+        </motion.div>
+      ))}
     </>
   );
 };
