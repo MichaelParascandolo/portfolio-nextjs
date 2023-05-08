@@ -32,8 +32,10 @@ const ProjectTemplate = (props: ProjectData) => {
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
           <Image
+            fill={true}
+            objectFit="cover"
             src={props.img}
-            alt="/"
+            alt={props.name}
             style={{ backgroundPosition: "top" }}
           />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
