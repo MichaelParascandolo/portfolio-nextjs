@@ -22,9 +22,6 @@ interface ProjectData {
 }
 
 const ProjectTemplate = (props: ProjectData) => {
-  const styles = {
-    icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
-  };
   return (
     <>
       <Navbar background={false} />
@@ -32,9 +29,10 @@ const ProjectTemplate = (props: ProjectData) => {
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
           <Image
+            fill={true}
+            objectFit="cover"
             src={props.img}
-            alt="/"
-            style={{ backgroundPosition: "top" }}
+            alt={props.name}
           />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
             <h2 className="py-2 uppercase">{props.name}</h2>
@@ -71,7 +69,10 @@ const ProjectTemplate = (props: ProjectData) => {
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
                   {props.icons.map((item, index) => (
-                    <p className={styles.icon} key={index}>
+                    <p
+                      className="text-gray-600 py-2 flex items-center dark:text-gray-300"
+                      key={index}
+                    >
                       {item.icon}
                       {item.name}
                     </p>
