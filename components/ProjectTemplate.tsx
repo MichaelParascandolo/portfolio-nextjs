@@ -4,6 +4,13 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
+export const iconSize: number = 25;
+
+export interface IconData {
+  icon: JSX.Element;
+  name: string;
+}
+
 interface ProjectData {
   name: string;
   tech: string;
@@ -11,20 +18,10 @@ interface ProjectData {
   img: StaticImageData;
   live?: string;
   code: string;
-  icon1: React.ReactNode;
-  icon1Text: string;
-  icon2?: React.ReactNode;
-  icon2Text?: string;
-  icon3?: React.ReactNode;
-  icon3Text?: string;
-  icon4?: React.ReactNode;
-  icon4Text?: string;
+  icons: IconData[];
 }
 
 const ProjectTemplate = (props: ProjectData) => {
-  const styles = {
-    icon: "text-gray-600 py-2 flex items-center dark:text-gray-300",
-  };
   return (
     <>
       <Navbar background={false} />
@@ -72,22 +69,15 @@ const ProjectTemplate = (props: ProjectData) => {
               </p>
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
-                  <p className={styles.icon}>
-                    {props.icon1}
-                    {props.icon1Text}
-                  </p>
-                  <p className={styles.icon}>
-                    {props.icon2}
-                    {props.icon2Text}
-                  </p>
-                  <p className={styles.icon}>
-                    {props.icon3}
-                    {props.icon3Text}
-                  </p>
-                  <p className={styles.icon}>
-                    {props.icon4}
-                    {props.icon4Text}
-                  </p>
+                  {props.icons.map((item, index) => (
+                    <p
+                      className="text-gray-600 py-2 flex items-center dark:text-gray-300"
+                      key={index}
+                    >
+                      {item.icon}
+                      {item.name}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-interface ProjectItemData {
+export interface ProjectItemData {
   title?: string;
-  backgroundImg: any;
+  backgroundImg: StaticImageData;
   description?: string;
   tech?: string;
   projectUrl?: string;

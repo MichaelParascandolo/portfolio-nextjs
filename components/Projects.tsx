@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import { ProjectItemData } from "./ProjectItem";
 import surfcitypizzaImg from "../public/assets/projects/devices/pizza-black.png";
 import weatherImg from "/public/assets/projects/devices/weather-black.png";
 import gamesearchImg from "/public/assets/projects/devices/game-black.png";
@@ -32,44 +33,38 @@ const Projects = () => {
       },
     },
   };
-  const projects: {
-    title?: string;
-    background: any;
-    description?: string;
-    projectUrl?: string;
-    tech?: string;
-  }[] = [
+  const projects: ProjectItemData[] = [
     {
       title: "Project Manager",
-      background: projectManagerImg,
+      backgroundImg: projectManagerImg,
       description: "An Internal scheduler for Quality Electric",
       projectUrl: "/projects/projectmanager",
       tech: "React / Flask / Tailwind / Sqlite",
     },
     {
       title: "Surf City Pizza",
-      background: surfcitypizzaImg,
+      backgroundImg: surfcitypizzaImg,
       description: "The #1 Pizza In South Jersey",
       projectUrl: "/projects/surfcitypizza",
       tech: "React / Bootstrap / CSS",
     },
     {
       title: "CoolBeans",
-      background: coffeeImg,
+      backgroundImg: coffeeImg,
       description: "An Imaginary Café",
       projectUrl: "/projects/coolbeans",
       tech: "Next JS / Tailwind / Firebase",
     },
     {
       title: "GameSearch",
-      background: gamesearchImg,
+      backgroundImg: gamesearchImg,
       description: "A Game Search Engine",
       projectUrl: "/projects/gamesearch",
       tech: "React / Tailwind / TypeScript",
     },
     {
       title: "Weather",
-      background: weatherImg,
+      backgroundImg: weatherImg,
       description: "A Simple Weather Site",
       projectUrl: "/projects/weather",
       tech: "Angular / HTML / CSS ",
@@ -82,7 +77,7 @@ const Projects = () => {
     //   tech: "Next JS | Tailwind | TypeScript",
     // },
     {
-      background: comingSoonImg,
+      backgroundImg: comingSoonImg,
     },
   ];
   return (
@@ -103,7 +98,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <ProjectItem
                 title={project.title}
-                backgroundImg={project.background}
+                backgroundImg={project.backgroundImg}
                 description={project.description}
                 projectUrl={project.projectUrl}
                 tech={project.tech}
