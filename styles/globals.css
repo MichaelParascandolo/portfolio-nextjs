@@ -29,6 +29,6 @@ html {
   }
   button,
   button[type="submit"] {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-primary text-white dark:shadow-black dark:text-black;
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-primary text-white dark:shadow-black;
   }
 }

@@ -10,10 +10,16 @@ export interface ProjectItemData {
   projectUrl?: string;
 }
 
-const ProjectItem = (props: ProjectItemData) => {
+const ProjectItem = ({
+  title,
+  projectUrl,
+  description,
+  tech,
+  backgroundImg,
+}: ProjectItemData) => {
   const styles = {
     containerHover:
-      "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 group border-solid border-2 border-gray-200 hover:bg-gradient-to-r from-[#f26969] to-primary/70 dark:bg-[#282828] dark:shadow-black dark:border-black",
+      "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 group border-solid border-2 border-gray-200 hover:bg-gradient-to-t from-primary/20 to-primary dark:bg-[#282828] dark:shadow-black dark:border-black",
     container:
       "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
   };
@@ -32,30 +38,28 @@ const ProjectItem = (props: ProjectItemData) => {
         },
       }}
     >
-      <div
-        className={props.projectUrl ? styles.containerHover : styles.container}
-      >
+      <div className={projectUrl ? styles.containerHover : styles.container}>
         <Image
           className="rounded-xl group-hover:opacity-10"
-          src={props.backgroundImg}
+          src={backgroundImg}
           draggable={false}
-          alt={props.title}
+          alt={title}
         />
         <div className="hidden group-hover:block w-[80%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <h3 className="text-xl md:text-4xl text-gray-900 tracking-wide text-center">
-            {props.title}
+          <h3 className="text-xl md:text-4xl font-medium text-white tracking-wide text-center">
+            {title}
           </h3>
-          <p className="text-[12px] text-gray-800 text-center font-semibold md:text-lg tracking-wide">
-            {props.description}
-          </p>
-          <p className="mb-2 text-[10px] text-gray-800 text-sm md:text-[15px] text-center tracking-wide">
-            {props.tech}
+          {/* <p className="text-[12px] text-gray-100  text-center md:text-lg tracking-wide">
+            {description}
+          </p> */}
+          <p className="mb-2 text-[10px] text-white font-thin text-sm md:text-[15px] text-center tracking-widest">
+            {tech}
           </p>
           {/* make this a button */}
-          {props.projectUrl ? (
+          {projectUrl ? (
             <div className="flex justify-center">
-              <Link href={props.projectUrl}>
-                <button className="text-center py-1 text-sm md:text-lg cursor-pointer w-[200px] tracking-widest shadow-md shadow-gray-900 border-gray-900 border-2 hover:bg-white/40 duration-300 ease-in-out transition-all">
+              <Link href={projectUrl}>
+                <button className="text-center p-2 text-sm md:text-lg cursor-pointer w-[250px] tracking-widest shadow-lg shadow-black/80 border-black border-2 hover:scale-105 ease-in-out duration-300 transition-all">
                   More Info
                 </button>
               </Link>

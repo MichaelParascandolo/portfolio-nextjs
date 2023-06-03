@@ -7,7 +7,7 @@ import weatherImg from "/public/assets/projects/devices/weather-black.png";
 import gamesearchImg from "/public/assets/projects/devices/game-black.png";
 import projectManagerImg from "/public/assets/projects/devices/project-black.png";
 import coffeeImg from "/public/assets/projects/devices/coffee-black.png";
-import comingSoonImg from "/public/assets/projects/comingsoon-small.png";
+import comingSoonImg from "/public/assets/projects/comingsoon-small-white.png";
 import ProjectItem from "./ProjectItem";
 import Link from "next/link";
 
