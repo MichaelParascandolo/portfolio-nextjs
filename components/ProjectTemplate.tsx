@@ -36,13 +36,7 @@ const ProjectTemplate = ({
       <div className="w-full h-full dark:bg-[#1E1E1E]">
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
-          <Image
-            fill={true}
-            objectFit="cover"
-            src={img}
-            alt={name}
-            style={{ backgroundPosition: "top" }}
-          />
+          <Image fill={true} src={img} alt={name} className="object-cover" />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
             <h2 className="py-2 uppercase">{name}</h2>
             <h3>{tech}</h3>
