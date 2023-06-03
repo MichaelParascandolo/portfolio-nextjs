@@ -21,7 +21,15 @@ interface ProjectData {
   icons: IconData[];
 }
 
-const ProjectTemplate = (props: ProjectData) => {
+const ProjectTemplate = ({
+  name,
+  tech,
+  description,
+  img,
+  live,
+  code,
+  icons,
+}: ProjectData) => {
   return (
     <>
       <Navbar background={false} />
@@ -31,31 +39,29 @@ const ProjectTemplate = (props: ProjectData) => {
           <Image
             fill={true}
             objectFit="cover"
-            src={props.img}
-            alt={props.name}
+            src={img}
+            alt={name}
             style={{ backgroundPosition: "top" }}
           />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2 uppercase">{props.name}</h2>
-            <h3>{props.tech}</h3>
+            <h2 className="py-2 uppercase">{name}</h2>
+            <h3>{tech}</h3>
           </div>
         </div>
         <div className="max-w-[90%] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
           <div className="col-span-4">
             <p className="text-primary">Project</p>
             <h2 className="dark:text-white mb-2">Overview</h2>
-            <p className="text-gray-700 dark:text-gray-300">
-              {props.description}
-            </p>
+            <p className="text-gray-700 dark:text-gray-300">{description}</p>
             <div className="flex justify-center md:justify-start">
-              {props.live ? (
-                <a href={props.live} target="_blank" rel="noreferrer">
+              {live ? (
+                <a href={live} target="_blank" rel="noreferrer">
                   <button className="px-8 py-2 mt-4 mr-8 tracking-widest">
                     Live Site
                   </button>
                 </a>
               ) : null}
-              <a href={props.code} target="_blank" rel="noreferrer">
+              <a href={code} target="_blank" rel="noreferrer">
                 <button className="px-8 py-2 mt-4 tracking-widest">
                   View Code
                 </button>
@@ -69,7 +75,7 @@ const ProjectTemplate = (props: ProjectData) => {
               </p>
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
-                  {props.icons.map((item, index) => (
+                  {icons.map((item, index) => (
                     <p
                       className="text-gray-600 py-2 flex items-center dark:text-gray-300"
                       key={index}

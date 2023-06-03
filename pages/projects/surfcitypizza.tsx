@@ -1,22 +1,25 @@
 import { SiBootstrap, SiReact, SiTypescript } from "react-icons/si";
-import ProjectTemplate, { IconData } from "../../components/ProjectTemplate";
+import ProjectTemplate, {
+  IconData,
+  iconSize,
+} from "../../components/ProjectTemplate";
 import surfcitypizzaImg from "../../public/assets/projects/surfcitypizza.jpg";
 
 const icons: IconData[] = [
   {
-    icon: <SiReact className="mx-2" size={25} />,
+    icon: <SiReact className="mx-2" size={iconSize} />,
     name: "React JS",
   },
   {
-    icon: <SiReact className="mx-2" size={25} />,
+    icon: <SiReact className="mx-2" size={iconSize} />,
     name: "React Router",
   },
   {
-    icon: <SiTypescript className="mx-2" size={25} />,
+    icon: <SiTypescript className="mx-2" size={iconSize} />,
     name: "TypeScript",
   },
   {
-    icon: <SiBootstrap className="mx-2" size={25} />,
+    icon: <SiBootstrap className="mx-2" size={iconSize} />,
     name: "Bootstrap 5",
   },
 ];

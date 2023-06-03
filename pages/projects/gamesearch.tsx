@@ -1,23 +1,26 @@
 import { AiFillApi } from "react-icons/ai";
 import { SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
-import ProjectTemplate, { IconData } from "../../components/ProjectTemplate";
+import ProjectTemplate, {
+  IconData,
+  iconSize,
+} from "../../components/ProjectTemplate";
 import gamesearchImg from "../../public/assets/projects/gamesearch.png";
 
 const icons: IconData[] = [
   {
-    icon: <SiReact className="mx-2" size={25} />,
+    icon: <SiReact className="mx-2" size={iconSize} />,
     name: "React JS",
   },
   {
-    icon: <SiTailwindcss className="mx-2" size={25} />,
+    icon: <SiTailwindcss className="mx-2" size={iconSize} />,
     name: "Tailwind",
   },
   {
-    icon: <SiTypescript className="mx-2" size={25} />,
+    icon: <SiTypescript className="mx-2" size={iconSize} />,
     name: "TypeScript",
   },
   {
-    icon: <AiFillApi className="mx-2" size={25} />,
+    icon: <AiFillApi className="mx-2" size={iconSize} />,
     name: "RAWG API",
   },
 ];

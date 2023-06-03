@@ -1,23 +1,26 @@
 import { AiFillApi } from "react-icons/ai";
 import { SiAngular, SiCss3, SiHtml5 } from "react-icons/si";
-import ProjectTemplate, { IconData } from "../../components/ProjectTemplate";
+import ProjectTemplate, {
+  IconData,
+  iconSize,
+} from "../../components/ProjectTemplate";
 import weatherImg from "../../public/assets/projects/weather.png";
 
 const icons: IconData[] = [
   {
-    icon: <SiAngular className="mx-2" size={25} />,
+    icon: <SiAngular className="mx-2" size={iconSize} />,
     name: "Angular",
   },
   {
-    icon: <SiHtml5 className="mx-2" size={25} />,
+    icon: <SiHtml5 className="mx-2" size={iconSize} />,
     name: "HTML5",
   },
   {
-    icon: <SiCss3 className="mx-2" size={25} />,
+    icon: <SiCss3 className="mx-2" size={iconSize} />,
     name: "CSS3",
   },
   {
-    icon: <AiFillApi className="mx-2" size={25} />,
+    icon: <AiFillApi className="mx-2" size={iconSize} />,
     name: "OpenWeather API",
   },
 ];

@@ -4,24 +4,27 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import ProjectTemplate, { IconData } from "../../components/ProjectTemplate";
+import ProjectTemplate, {
+  IconData,
+  iconSize,
+} from "../../components/ProjectTemplate";
 import portfolioImg from "../../public/assets/projects/portfolio.png";
 
 const icons: IconData[] = [
   {
-    icon: <SiNextdotjs className="mx-2" size={25} />,
+    icon: <SiNextdotjs className="mx-2" size={iconSize} />,
     name: "Next JS",
   },
   {
-    icon: <SiTailwindcss className="mx-2" size={25} />,
+    icon: <SiTailwindcss className="mx-2" size={iconSize} />,
     name: "Tailwind",
   },
   {
-    icon: <SiTypescript className="mx-2" size={25} />,
+    icon: <SiTypescript className="mx-2" size={iconSize} />,
     name: "TypeScript",
   },
   {
-    icon: <SiFramer className="mx-2" size={25} />,
+    icon: <SiFramer className="mx-2" size={iconSize} />,
     name: "Framer Motion",
   },
 ];

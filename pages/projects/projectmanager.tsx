@@ -1,22 +1,25 @@
 import { SiReact, SiFlask, SiTailwindcss, SiSqlite } from "react-icons/si";
-import ProjectTemplate, { IconData } from "../../components/ProjectTemplate";
+import ProjectTemplate, {
+  IconData,
+  iconSize,
+} from "../../components/ProjectTemplate";
 import projectManagerImg from "../../public/assets/projects/projectmanager.png";
 
 const icons: IconData[] = [
   {
-    icon: <SiReact className="mx-2" size={25} />,
+    icon: <SiReact className="mx-2" size={iconSize} />,
     name: "React JS",
   },
   {
-    icon: <SiTailwindcss className="mx-2" size={25} />,
+    icon: <SiTailwindcss className="mx-2" size={iconSize} />,
     name: "Tailwind",
   },
   {
-    icon: <SiFlask className="mx-2" size={25} />,
+    icon: <SiFlask className="mx-2" size={iconSize} />,
     name: "Flask",
   },
   {
-    icon: <SiSqlite className="mx-2" size={25} />,
+    icon: <SiSqlite className="mx-2" size={iconSize} />,
     name: "Sqlite",
   },
 ];
