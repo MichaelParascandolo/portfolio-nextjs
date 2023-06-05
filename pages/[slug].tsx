@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import projectData from "../public/projects.json";
 import Image, { StaticImageData } from "next/image";
+import { SiReact, SiFlask, SiTailwindcss, SiSqlite } from "react-icons/si";
 import Navbar from "../components/Navbar";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import Link from "next/link";
@@ -8,10 +9,6 @@ import Footer from "../components/Footer";
 
 export default function ProjectPage({ project }) {
   const router = useRouter();
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <>
@@ -26,7 +23,9 @@ export default function ProjectPage({ project }) {
             className="object-cover"
           />
           <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2 uppercase">{project.name}</h2>
+            <h2 className="py-2 uppercase">
+              {router.isFallback ? "Loading..." : project.name}
+            </h2>
             <h3>{project.tech}</h3>
           </div>
         </div>
@@ -59,15 +58,25 @@ export default function ProjectPage({ project }) {
               </p>
               <div className="flex justify-center md:justify-start">
                 <div className="grid grid-cols-2 md:grid-cols-1">
-                  {project.icons.map((item, index) => (
-                    <p
-                      className="text-gray-600 py-2 flex items-center dark:text-gray-300"
-                      key={index}
-                    >
-                      {item.icon}
-                      {item.name}
-                    </p>
-                  ))}
+                  {project.icons.map((item, index) => {
+                    return (
+                      <p
+                        className="text-gray-600 py-2 flex items-center dark:text-gray-300"
+                        key={index}
+                      >
+                        {item.icon === "SiReact" ? (
+                          <SiReact size={20} className="mr-2" />
+                        ) : item.icon === "SiFlask" ? (
+                          <SiFlask size={20} className="mr-2" />
+                        ) : item.icon === "SiTailwindcss" ? (
+                          <SiTailwindcss size={20} className="mr-2" />
+                        ) : item.icon === "SiSqlite" ? (
+                          <SiSqlite size={20} className="mr-2" />
+                        ) : null}
+                        {item.name}
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
             </div>

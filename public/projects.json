@@ -8,7 +8,11 @@
     "description": "I've always wanted to open my own coffee shop, maybe one day that will happen but for now I created a website for my imaginary café. The foundation of this project of this project was Next JS because of it's great features like a build in router and lazy image loading. All of the styling is done using Tailwind css as it makes it easy and quick to create a beautiful design. I wanted to get some practice in with Firebase so the site has some basic integration. All of the items on the menu are read from the Firebase database and then displayed on the page.",
     "live": "https://coffeeshop-nextjs-rho.vercel.app",
     "code": "https://github.com/MichaelParascandolo/coffeeshop-nextjs",
-    "icons": ["Next JS", "Tailwind", "TypeScript", "Firebase"]
+    "icons": [
+      { "name": "Next JS", "icon": "AiFillApi" },
+      { "name": "Tailwind", "icon": "AiFillHtml5" },
+      { "name": "Firebase", "icon": "AiOutlineApi" }
+    ]
   },
   {
     "id": 2,
@@ -19,18 +23,26 @@
     "description": "This site was created for the #1 pizzeria in South Jersey, Surf City Pizza. Users are able to see the restaurant's entire menu as well as their basic info such as phone number, address, etc. The site is fully mobile responsive and is built using React JS. React Router Dom is used to route users to different pages such as the menu, about, and home. This was my first project to utilize Bootstrap for a clean and cohesive design.",
     "live": "https://surfcitypizza.com",
     "code": "https://github.com/MichaelParascandolo/surf-city-pizza",
-    "icons": ["React JS", "React Router", "TypeScript", "Bootstrap 5"]
+    "icons": [
+      { "name": "React JS", "icon": "AiFillApi" },
+      { "name": "React Router", "icon": "AiFillApi" },
+      { "name": "Bootstrap 5", "icon": "AiFillBootstrap" }
+    ]
   },
   {
     "id": 3,
     "slug": "gamesearch",
     "name": "GameSearch",
-    "tech": "React / Tailwind / TypeScript",
+    "tech": "React JS / RAWG API / CSS",
     "img": "/../public/assets/projects/gamesearch.png",
-    "description": "This site was created because I wanted to do a project around something I am passionate about, which is video games! Users are able to search for video games by title name. The title, photo, release date, ESRB rating, metacritic score, and platform(s) of the game are displayed on cards organized in a grid. Users are shown the total number of results and are able to go back and forth through various pages to see more. This site was built using React JS, Tailwind, and TypeScript. Data is pulled from the RAWG API.",
+    "description": "This site was created to search for video games using the RAWG API. Users are able to search for games by name, and the site will display a list of games that match the search query. The site is built using React JS and CSS. The RAWG API is used to fetch the game data and display it on the page.",
     "live": "https://game-search-react.vercel.app",
     "code": "https://github.com/MichaelParascandolo/game-search-react",
-    "icons": ["React JS", "Tailwind", "TypeScript", "RAWG API"]
+    "icons": [
+      { "name": "React JS", "icon": "AiFillApi" },
+      { "name": "RAWG API", "icon": "AiOutlineApi" },
+      { "name": "CSS3", "icon": "AiFillHtml5" }
+    ]
   },
   {
     "id": 4,
@@ -41,7 +53,12 @@
     "description": "This site was my first project built with Angular, and uses the OpenWeather API. Users are able to see weather information such as temperature (celsius or fahrenheit), max/min temperature, humidity, wind speed, as well as a brief description of the current weather conditions. Users are able to search via the name of a city, zip code, or their your current location.",
     "live": "https://weather-angular-six.vercel.app",
     "code": "https://github.com/MichaelParascandolo/weather-angular",
-    "icons": ["Angular", "HTML5", "CSS3", "OpenWeather API"]
+    "icons": [
+      { "name": "Angular", "icon": "AiFillApi" },
+      { "name": "HTML5", "icon": "AiFillHtml5" },
+      { "name": "CSS3", "icon": "AiFillHtml5" },
+      { "name": "OpenWeather API", "icon": "AiOutlineApi" }
+    ]
   },
   {
     "id": 5,
@@ -51,7 +68,12 @@
     "img": "/../public/assets/projects/projectmanager.png",
     "description": "This full-stack web application was developed as a group project for Quality Electric Services during my college studies. The application serves as an internal tool for the company’s employees, providing an easy way to schedule jobs and manage customer records. Its features include user creation and management, customizable user permissions, client creation, job scheduling, and customer history viewing. The application was built using React JS and Tailwind for the front-end, Flask for the back-end, and Sqlite for data storage. While the project is not currently hosted, screenshots of the application can be found in the GitHub repository linked below.",
     "code": "https://github.com/MichaelParascandolo/project-manager-react-flask",
-    "icons": ["React JS", "Tailwind", "Flask", "Sqlite"]
+    "icons": [
+      { "name": "React JS", "icon": "AiFillApi" },
+      { "name": "Flask", "icon": "AiOutlineApi" },
+      { "name": "Tailwind", "icon": "AiFillHtml5" },
+      { "name": "Sqlite", "icon": "AiOutlineDatabase" }
+    ]
   },
   {
     "id": 6,
@@ -59,8 +81,12 @@
     "name": "Portfolio",
     "tech": "Next JS / Tailwind / TypeScript",
     "img": "/../public/assets/projects/portfolio.png",
-    "description": "For this site, I wanted to learn and use a new framework, and I chose NextJS. Tailwind was used to help easily create a clean and cohesive design. TypeScript was added to create a more reliable codebase. Framer-motion was used to create all of the nice transitions and hover effects that you see on the site. EmailJS handles the contact form and makes it functional. Out of all my projects, this is by far the one I am most proud of as it fully expresses the love I have for creating amazing experiences on the web.",
+    "description": "For this site, I wanted to learn and use a new framework, and I chose NextJS. Tailwind was used to help easily create a clean and cohesive design. TypeScript was added to create a more",
     "code": "https://github.com/MichaelParascandolo/portfolio-nextjs",
-    "icons": ["Next JS", "Tailwind", "TypeScript", "Framer Motion"]
+    "icons": [
+      { "name": "Next JS", "icon": "AiFillApi" },
+      { "name": "Tailwind", "icon": "AiFillHtml5" },
+      { "name": "TypeScript", "icon": "AiOutlineApi" }
+    ]
   }
 ]
