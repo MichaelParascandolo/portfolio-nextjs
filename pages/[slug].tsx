@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import projectData from "../public/projects.json";
 import Image, { StaticImageData } from "next/image";
-import { SiReact, SiFlask, SiTailwindcss, SiSqlite } from "react-icons/si";
 import Navbar from "../components/Navbar";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import Link from "next/link";
@@ -64,15 +63,7 @@ export default function ProjectPage({ project }) {
                         className="text-gray-600 py-2 flex items-center dark:text-gray-300"
                         key={index}
                       >
-                        {item.icon === "SiReact" ? (
-                          <SiReact size={20} className="mr-2" />
-                        ) : item.icon === "SiFlask" ? (
-                          <SiFlask size={20} className="mr-2" />
-                        ) : item.icon === "SiTailwindcss" ? (
-                          <SiTailwindcss size={20} className="mr-2" />
-                        ) : item.icon === "SiSqlite" ? (
-                          <SiSqlite size={20} className="mr-2" />
-                        ) : null}
+                        {item.icon}
                         {item.name}
                       </p>
                     );
