@@ -89,7 +89,7 @@
     "icons": [
       { "name": "Next JS", "icon": "SiNextdotjs" },
       { "name": "Tailwind", "icon": "SiTailwindcss" },
-      { "name": "TypeScript", "icon": "TypeScript" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
       { "name": "Framer Motion", "icon": "SiFramer" }
     ]
   }

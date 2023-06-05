@@ -1,13 +1,26 @@
 import { useRouter } from "next/router";
 import projectData from "../public/projects.json";
 import Image, { StaticImageData } from "next/image";
+import * as Icons from "react-icons/si";
 import Navbar from "../components/Navbar";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import { AiFillApi } from "react-icons/ai";
 
 export default function ProjectPage({ project }) {
   const router = useRouter();
+
+  const DynamicSiIcon = ({ name }) => {
+    const IconComponent = Icons[name];
+
+    if (!IconComponent) {
+      // Return a default one
+      return <AiFillApi size={25} className="mr-2" />;
+    }
+
+    return <IconComponent size={25} className="mr-2" />;
+  };
 
   return (
     <>
@@ -63,7 +76,7 @@ export default function ProjectPage({ project }) {
                         className="text-gray-600 py-2 flex items-center dark:text-gray-300"
                         key={index}
                       >
-                        {item.icon}
+                        <DynamicSiIcon name={item.icon} />
                         {item.name}
                       </p>
                     );
