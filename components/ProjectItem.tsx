@@ -58,7 +58,7 @@ const ProjectItem = ({
           {/* make this a button */}
           {projectUrl ? (
             <div className="flex justify-center">
-              <Link href={projectUrl}>
+              <Link href="/[slug]" as={`/${projectUrl}`}>
                 <button className="text-center p-2 text-sm md:text-lg cursor-pointer w-[250px] tracking-widest shadow-lg shadow-black/80 border-black border-2 hover:scale-105 ease-in-out duration-300 transition-all">
                   More Info
                 </button>
