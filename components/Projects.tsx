@@ -110,7 +110,8 @@ const Projects = () => {
         <p className="text-gray-600 dark:text-gray-300 text-center text-lg tracking-widest mt-8">
           How is this site made?{" "}
           <Link
-            href="/projects/portfolio"
+            href="/[slug]"
+            as="/portfolio"
             className="text-primary cursor-pointer border-b-2 border-transparent hover:border-black dark:hover:border-white ease-in duration-200"
           >
             Learn More
