@@ -9,9 +9,10 @@
     "live": "https://coffeeshop-nextjs-rho.vercel.app",
     "code": "https://github.com/MichaelParascandolo/coffeeshop-nextjs",
     "icons": [
-      { "name": "Next JS", "icon": "AiFillApi" },
-      { "name": "Tailwind", "icon": "AiFillHtml5" },
-      { "name": "Firebase", "icon": "AiOutlineApi" }
+      { "name": "Next JS", "icon": "SiNextdotjs" },
+      { "name": "Tailwind", "icon": "SiTailwindcss" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
+      { "name": "Firebase", "icon": "SiFirebase" }
     ]
   },
   {
@@ -24,9 +25,10 @@
     "live": "https://surfcitypizza.com",
     "code": "https://github.com/MichaelParascandolo/surf-city-pizza",
     "icons": [
-      { "name": "React JS", "icon": "AiFillApi" },
-      { "name": "React Router", "icon": "AiFillApi" },
-      { "name": "Bootstrap 5", "icon": "AiFillBootstrap" }
+      { "name": "React JS", "icon": "SiReact" },
+      { "name": "React Router", "icon": "SiReact" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
+      { "name": "Bootstrap 5", "icon": "SiBootstrap" }
     ]
   },
   {
@@ -39,9 +41,10 @@
     "live": "https://game-search-react.vercel.app",
     "code": "https://github.com/MichaelParascandolo/game-search-react",
     "icons": [
-      { "name": "React JS", "icon": "AiFillApi" },
-      { "name": "RAWG API", "icon": "AiOutlineApi" },
-      { "name": "CSS3", "icon": "AiFillHtml5" }
+      { "name": "React JS", "icon": "SiReact" },
+      { "name": "Tailwind", "icon": "SiTailwindcss" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
+      { "name": "RAWG API", "icon": "AiFillApi" }
     ]
   },
   {
@@ -54,10 +57,10 @@
     "live": "https://weather-angular-six.vercel.app",
     "code": "https://github.com/MichaelParascandolo/weather-angular",
     "icons": [
-      { "name": "Angular", "icon": "AiFillApi" },
-      { "name": "HTML5", "icon": "AiFillHtml5" },
-      { "name": "CSS3", "icon": "AiFillHtml5" },
-      { "name": "OpenWeather API", "icon": "AiOutlineApi" }
+      { "name": "Angular", "icon": "SiAngular" },
+      { "name": "HTML5", "icon": "SiHtml5" },
+      { "name": "CSS3", "icon": "SiCss3" },
+      { "name": "OpenWeather API", "icon": "AiFillApi" }
     ]
   },
   {
@@ -69,10 +72,10 @@
     "description": "This full-stack web application was developed as a group project for Quality Electric Services during my college studies. The application serves as an internal tool for the company’s employees, providing an easy way to schedule jobs and manage customer records. Its features include user creation and management, customizable user permissions, client creation, job scheduling, and customer history viewing. The application was built using React JS and Tailwind for the front-end, Flask for the back-end, and Sqlite for data storage. While the project is not currently hosted, screenshots of the application can be found in the GitHub repository linked below.",
     "code": "https://github.com/MichaelParascandolo/project-manager-react-flask",
     "icons": [
-      { "name": "React JS", "icon": "AiFillApi" },
-      { "name": "Flask", "icon": "AiOutlineApi" },
-      { "name": "Tailwind", "icon": "AiFillHtml5" },
-      { "name": "Sqlite", "icon": "AiOutlineDatabase" }
+      { "name": "React JS", "icon": "SiReact" },
+      { "name": "Tailwind", "icon": "SiTailwindcss" },
+      { "name": "Flask", "icon": "SiFlask" },
+      { "name": "Sqlite", "icon": "SiSqlite" }
     ]
   },
   {
@@ -84,9 +87,10 @@
     "description": "For this site, I wanted to learn and use a new framework, and I chose NextJS. Tailwind was used to help easily create a clean and cohesive design. TypeScript was added to create a more reliable codebase. Framer-motion was used to create all of the nice transitions and hover effects that you see on the site. EmailJS handles the contact form and makes it functional. Out of all my projects, this is by far the one I am most proud of as it fully expresses the love I have for creating amazing experiences on the web.",
     "code": "https://github.com/MichaelParascandolo/portfolio-nextjs",
     "icons": [
-      { "name": "Next JS", "icon": "AiFillApi" },
-      { "name": "Tailwind", "icon": "AiFillHtml5" },
-      { "name": "TypeScript", "icon": "AiOutlineApi" }
+      { "name": "Next JS", "icon": "SiNextdotjs" },
+      { "name": "Tailwind", "icon": "SiTailwindcss" },
+      { "name": "TypeScript", "icon": "TypeScript" },
+      { "name": "Framer Motion", "icon": "SiFramer" }
     ]
   }
 ]
