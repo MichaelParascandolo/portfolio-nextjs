@@ -11,14 +11,14 @@ import { AiFillApi } from "react-icons/ai";
 export default function ProjectPage({ project }) {
   const router = useRouter();
 
-  const DynamicSiIcon = ({ name }) => {
+  const DynamicSiIcon = ({ name }: { name: string }) => {
     const IconComponent = Icons[name];
 
     if (!IconComponent) {
-      // Return a default one
+      // returns default icon if icon not found
       return <AiFillApi size={25} className="mr-2" />;
     }
-
+    // returns icon if icon is found
     return <IconComponent size={25} className="mr-2" />;
   };
 

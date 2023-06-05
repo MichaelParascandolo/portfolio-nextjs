@@ -1,9 +1,15 @@
 [
   {
+    "id": 0,
+    "slug": "comingsoon",
+    "img": "/../public/assets/projects/comingsoon-small-white.png"
+  },
+  {
     "id": 1,
     "slug": "coolbeans",
     "name": "CoolBeans",
     "img": "/../public/assets/projects/coffee.png",
+    "thumbnail": "/../public/assets/projects/devices/coffee-black.png",
     "tech": "Next JS / Tailwind / FireBase",
     "description": "I've always wanted to open my own coffee shop, maybe one day that will happen but for now I created a website for my imaginary café. The foundation of this project of this project was Next JS because of it's great features like a build in router and lazy image loading. All of the styling is done using Tailwind css as it makes it easy and quick to create a beautiful design. I wanted to get some practice in with Firebase so the site has some basic integration. All of the items on the menu are read from the Firebase database and then displayed on the page.",
     "live": "https://coffeeshop-nextjs-rho.vercel.app",
@@ -20,6 +26,7 @@
     "slug": "surfcitypizza",
     "name": "surfcitypizza.com",
     "tech": "React JS / React Router / Bootstrap",
+    "thumbnail": "/../public/assets/projects/devices/pizza-black.png",
     "img": "/../public/assets/projects/surfcitypizza.jpg",
     "description": "This site was created for the #1 pizzeria in South Jersey, Surf City Pizza. Users are able to see the restaurant's entire menu as well as their basic info such as phone number, address, etc. The site is fully mobile responsive and is built using React JS. React Router Dom is used to route users to different pages such as the menu, about, and home. This was my first project to utilize Bootstrap for a clean and cohesive design.",
     "live": "https://surfcitypizza.com",
@@ -37,6 +44,7 @@
     "name": "GameSearch",
     "tech": "React JS / RAWG API / CSS",
     "img": "/../public/assets/projects/gamesearch.png",
+    "thumbnail": "/../public/assets/projects/devices/game-black.png",
     "description": "This site was created to search for video games using the RAWG API. Users are able to search for games by name, and the site will display a list of games that match the search query. The site is built using React JS and CSS. The RAWG API is used to fetch the game data and display it on the page.",
     "live": "https://game-search-react.vercel.app",
     "code": "https://github.com/MichaelParascandolo/game-search-react",
@@ -53,6 +61,7 @@
     "name": "Weather",
     "tech": "Angular / HTML / CSS",
     "img": "/../public/assets/projects/weather.png",
+    "thumbnail": "/../public/assets/projects/devices/weather-black.png",
     "description": "This site was my first project built with Angular, and uses the OpenWeather API. Users are able to see weather information such as temperature (celsius or fahrenheit), max/min temperature, humidity, wind speed, as well as a brief description of the current weather conditions. Users are able to search via the name of a city, zip code, or their your current location.",
     "live": "https://weather-angular-six.vercel.app",
     "code": "https://github.com/MichaelParascandolo/weather-angular",
@@ -69,6 +78,7 @@
     "name": "Project Manager",
     "tech": "React / Flask / Tailwind / Sqlite",
     "img": "/../public/assets/projects/projectmanager.png",
+    "thumbnail": "/../public/assets/projects/devices/project-black.png",
     "description": "This full-stack web application was developed as a group project for Quality Electric Services during my college studies. The application serves as an internal tool for the company’s employees, providing an easy way to schedule jobs and manage customer records. Its features include user creation and management, customizable user permissions, client creation, job scheduling, and customer history viewing. The application was built using React JS and Tailwind for the front-end, Flask for the back-end, and Sqlite for data storage. While the project is not currently hosted, screenshots of the application can be found in the GitHub repository linked below.",
     "code": "https://github.com/MichaelParascandolo/project-manager-react-flask",
     "icons": [
