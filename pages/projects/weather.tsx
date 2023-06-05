@@ -31,7 +31,7 @@ const weather = () => {
     <>
       <ProjectTemplate
         name="Weather"
-        tech="HTML / CSS / TypeScript"
+        tech="Angular / HTML / CSS"
         description={description}
         img={weatherImg}
         live="https://weather-angular-six.vercel.app"
