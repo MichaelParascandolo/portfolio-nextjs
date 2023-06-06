@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export interface ProjectItemData {
   title?: string;
-  backgroundImg: StaticImageData;
+  backgroundImg?: any; // fix this later
   description?: string;
   tech?: string;
   projectUrl?: string;

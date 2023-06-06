@@ -10,6 +10,7 @@ import coffeeImg from "/public/assets/projects/devices/coffee-black.png";
 import comingSoonImg from "/public/assets/projects/comingsoon-small-white.png";
 import ProjectItem from "./ProjectItem";
 import Link from "next/link";
+import projectData from "../public/projects.json";
 
 const Projects = () => {
   const controls = useAnimation();
@@ -33,53 +34,7 @@ const Projects = () => {
       },
     },
   };
-  const projects: ProjectItemData[] = [
-    {
-      title: "Project Manager",
-      backgroundImg: projectManagerImg,
-      description: "An Internal scheduler for Quality Electric",
-      projectUrl: "projectmanager",
-      tech: "React / Flask / Tailwind / Sqlite",
-    },
-    {
-      title: "Surf City Pizza",
-      backgroundImg: surfcitypizzaImg,
-      description: "The #1 Pizza In South Jersey",
-      projectUrl: "surfcitypizza",
-      tech: "React / Bootstrap / CSS",
-    },
-    {
-      title: "CoolBeans",
-      backgroundImg: coffeeImg,
-      description: "An Imaginary Café",
-      projectUrl: "coolbeans",
-      tech: "Next JS / Tailwind / Firebase",
-    },
-    {
-      title: "GameSearch",
-      backgroundImg: gamesearchImg,
-      description: "A Game Search Engine",
-      projectUrl: "gamesearch",
-      tech: "React / Tailwind / TypeScript",
-    },
-    {
-      title: "Weather",
-      backgroundImg: weatherImg,
-      description: "A Simple Weather Site",
-      projectUrl: "weather",
-      tech: "Angular / HTML / CSS ",
-    },
-    // {
-    //   title: "Portfolio",
-    //   background: portfolioImg,
-    //   description: "My Personal Portfolio",
-    //   projectUrl: "/projects/portfolio",
-    //   tech: "Next JS | Tailwind | TypeScript",
-    // },
-    {
-      backgroundImg: comingSoonImg,
-    },
-  ];
+
   return (
     <div id="projects" className="w-full dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
@@ -95,12 +50,12 @@ const Projects = () => {
         >
           {/* gap 8 or 10?...... */}
           <div className="grid md:grid-cols-2 gap-10">
-            {projects.map((project, index) => (
+            {projectData.map((project, index) => (
               <ProjectItem
-                title={project.title}
-                backgroundImg={project.backgroundImg}
+                title={project.name}
+                backgroundImg={project.thumbnail}
                 description={project.description}
-                projectUrl={project.projectUrl}
+                projectUrl={project.live}
                 tech={project.tech}
                 key={index}
               />
