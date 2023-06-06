@@ -1,19 +1,18 @@
 [
   {
     "id": 1,
-    "slug": "coolbeans",
-    "name": "CoolBeans",
-    "img": "/../public/assets/projects/coffee.png",
-    "thumbnail": "/../public/assets/projects/devices/coffee-black.png",
-    "tech": "Next JS / Tailwind / FireBase",
-    "description": "I've always wanted to open my own coffee shop, maybe one day that will happen but for now I created a website for my imaginary café. The foundation of this project of this project was Next JS because of it's great features like a build in router and lazy image loading. All of the styling is done using Tailwind css as it makes it easy and quick to create a beautiful design. I wanted to get some practice in with Firebase so the site has some basic integration. All of the items on the menu are read from the Firebase database and then displayed on the page.",
-    "live": "https://coffeeshop-nextjs-rho.vercel.app",
-    "code": "https://github.com/MichaelParascandolo/coffeeshop-nextjs",
+    "slug": "projectmanager",
+    "name": "Project Manager",
+    "tech": "React / Flask / Tailwind / Sqlite",
+    "img": "/../public/assets/projects/projectmanager.png",
+    "thumbnail": "/../public/assets/projects/devices/project-black.png",
+    "description": "This full-stack web application was developed as a group project for Quality Electric Services during my college studies. The application serves as an internal tool for the company’s employees, providing an easy way to schedule jobs and manage customer records. Its features include user creation and management, customizable user permissions, client creation, job scheduling, and customer history viewing. The application was built using React JS and Tailwind for the front-end, Flask for the back-end, and Sqlite for data storage. While the project is not currently hosted, screenshots of the application can be found in the GitHub repository linked below.",
+    "code": "https://github.com/MichaelParascandolo/project-manager-react-flask",
     "icons": [
-      { "name": "Next JS", "icon": "SiNextdotjs" },
+      { "name": "React JS", "icon": "SiReact" },
       { "name": "Tailwind", "icon": "SiTailwindcss" },
-      { "name": "TypeScript", "icon": "SiTypescript" },
-      { "name": "Firebase", "icon": "SiFirebase" }
+      { "name": "Flask", "icon": "SiFlask" },
+      { "name": "Sqlite", "icon": "SiSqlite" }
     ]
   },
   {
@@ -35,6 +34,23 @@
   },
   {
     "id": 3,
+    "slug": "coolbeans",
+    "name": "CoolBeans",
+    "img": "/../public/assets/projects/coffee.png",
+    "thumbnail": "/../public/assets/projects/devices/coffee-black.png",
+    "tech": "Next JS / Tailwind / FireBase",
+    "description": "I've always wanted to open my own coffee shop, maybe one day that will happen but for now I created a website for my imaginary café. The foundation of this project of this project was Next JS because of it's great features like a build in router and lazy image loading. All of the styling is done using Tailwind css as it makes it easy and quick to create a beautiful design. I wanted to get some practice in with Firebase so the site has some basic integration. All of the items on the menu are read from the Firebase database and then displayed on the page.",
+    "live": "https://coffeeshop-nextjs-rho.vercel.app",
+    "code": "https://github.com/MichaelParascandolo/coffeeshop-nextjs",
+    "icons": [
+      { "name": "Next JS", "icon": "SiNextdotjs" },
+      { "name": "Tailwind", "icon": "SiTailwindcss" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
+      { "name": "Firebase", "icon": "SiFirebase" }
+    ]
+  },
+  {
+    "id": 4,
     "slug": "gamesearch",
     "name": "GameSearch",
     "tech": "React JS / RAWG API / CSS",
@@ -51,7 +67,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "slug": "weather",
     "name": "Weather",
     "tech": "Angular / HTML / CSS",
@@ -65,22 +81,6 @@
       { "name": "HTML5", "icon": "SiHtml5" },
       { "name": "CSS3", "icon": "SiCss3" },
       { "name": "OpenWeather API", "icon": "AiFillApi" }
-    ]
-  },
-  {
-    "id": 5,
-    "slug": "projectmanager",
-    "name": "Project Manager",
-    "tech": "React / Flask / Tailwind / Sqlite",
-    "img": "/../public/assets/projects/projectmanager.png",
-    "thumbnail": "/../public/assets/projects/devices/project-black.png",
-    "description": "This full-stack web application was developed as a group project for Quality Electric Services during my college studies. The application serves as an internal tool for the company’s employees, providing an easy way to schedule jobs and manage customer records. Its features include user creation and management, customizable user permissions, client creation, job scheduling, and customer history viewing. The application was built using React JS and Tailwind for the front-end, Flask for the back-end, and Sqlite for data storage. While the project is not currently hosted, screenshots of the application can be found in the GitHub repository linked below.",
-    "code": "https://github.com/MichaelParascandolo/project-manager-react-flask",
-    "icons": [
-      { "name": "React JS", "icon": "SiReact" },
-      { "name": "Tailwind", "icon": "SiTailwindcss" },
-      { "name": "Flask", "icon": "SiFlask" },
-      { "name": "Sqlite", "icon": "SiSqlite" }
     ]
   },
   {

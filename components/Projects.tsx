@@ -50,16 +50,20 @@ const Projects = () => {
         >
           {/* gap 8 or 10?...... */}
           <div className="grid md:grid-cols-2 gap-10">
-            {projectData.map((project, index) => (
-              <ProjectItem
-                title={project.name}
-                backgroundImg={project.thumbnail}
-                description={project.description}
-                projectUrl={project.live}
-                tech={project.tech}
-                key={index}
-              />
-            ))}
+            {projectData.map((project, index) =>
+              project.name !== "Portfolio" ? (
+                <ProjectItem
+                  title={project.name}
+                  backgroundImg={project.thumbnail}
+                  description={project.description}
+                  projectUrl={project.slug}
+                  tech={project.tech}
+                  key={index}
+                />
+              ) : null
+            )}
+            {/* coming soon image */}
+            <ProjectItem backgroundImg={comingSoonImg} />
           </div>
         </motion.div>
         <p className="text-gray-600 dark:text-gray-300 text-center text-lg tracking-widest mt-8">

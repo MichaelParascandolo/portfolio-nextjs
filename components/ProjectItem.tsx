@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export interface ProjectItemData {
   title?: string;
-  backgroundImg?: any; // fix this later
+  backgroundImg: StaticImageData | string;
   description?: string;
   tech?: string;
   projectUrl?: string;
@@ -13,7 +13,6 @@ export interface ProjectItemData {
 const ProjectItem = ({
   title,
   projectUrl,
-  description,
   tech,
   backgroundImg,
 }: ProjectItemData) => {
@@ -43,6 +42,8 @@ const ProjectItem = ({
           className="rounded-xl group-hover:opacity-10"
           src={backgroundImg}
           draggable={false}
+          width={1800}
+          height={1760}
           alt={title}
         />
         <div className="hidden group-hover:block w-[80%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
