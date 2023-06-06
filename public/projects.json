@@ -1,10 +1,5 @@
 [
   {
-    "id": 0,
-    "slug": "comingsoon",
-    "img": "/../public/assets/projects/comingsoon-small-white.png"
-  },
-  {
     "id": 1,
     "slug": "coolbeans",
     "name": "CoolBeans",
@@ -45,7 +40,7 @@
     "tech": "React JS / RAWG API / CSS",
     "img": "/../public/assets/projects/gamesearch.png",
     "thumbnail": "/../public/assets/projects/devices/game-black.png",
-    "description": "This site was created to search for video games using the RAWG API. Users are able to search for games by name, and the site will display a list of games that match the search query. The site is built using React JS and CSS. The RAWG API is used to fetch the game data and display it on the page.",
+    "description": "This site was created because I wanted to do a project around something I am passionate about, which is video games! Users are able to search for video games by title name. The title, photo, release date, ESRB rating, metacritic score, and platform(s) of the game are displayed on cards organized in a grid. Users are shown the total number of results and are able to go back and forth through various pages to see more. This site was built using React JS, Tailwind, and TypeScript. Data is pulled from the RAWG API.",
     "live": "https://game-search-react.vercel.app",
     "code": "https://github.com/MichaelParascandolo/game-search-react",
     "icons": [
