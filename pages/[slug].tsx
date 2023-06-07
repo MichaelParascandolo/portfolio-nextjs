@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
-import projectData from "../public/projects.json";
 import Image, { StaticImageData } from "next/image";
-import * as Icons from "react-icons/si";
-import Navbar from "../components/Navbar";
+import { AiFillApi } from "react-icons/ai";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
+import * as Icons from "react-icons/si";
+import projectData from "../public/projects.json";
+import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { AiFillApi } from "react-icons/ai";
 
 export default function ProjectPage({ project }) {
   const router = useRouter();
