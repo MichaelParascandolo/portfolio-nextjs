@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { AiFillApi } from "react-icons/ai";
 import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import * as Icons from "react-icons/si";
@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Footer from "../components/Footer";
 
-export default function ProjectPage({ project }) {
+const ProjectPage = ({ project }) => {
   const router = useRouter();
 
   const DynamicSiIcon = ({ name }: { name: string }) => {
@@ -98,18 +98,20 @@ export default function ProjectPage({ project }) {
       </div>
     </>
   );
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const paths = projectData.map((project) => ({
     params: { slug: project.slug },
   }));
 
   return { paths, fallback: true };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps = async ({ params }) => {
   const project = projectData.find((project) => project.slug === params.slug);
 
   return { props: { project } };
-}
+};
+
+export default ProjectPage;
