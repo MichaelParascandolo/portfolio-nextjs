@@ -13,7 +13,8 @@ import picture3 from "public/assets/me/memoji3.png";
 const Main = () => {
   const [quote, setQuote] = useState<string>("");
   const [picture, setPicture] = useState<StaticImageData>();
-  useEffect(() => {
+  // sets the quote and picture
+  const setData = () => {
     const pictures: StaticImageData[] = [
       picture0,
       picture1,
@@ -31,8 +32,7 @@ const Main = () => {
     ];
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
     setPicture(pictures[Math.floor(Math.random() * pictures.length)]);
-    // setPicture(`/assets/me/memoji${Math.floor(Math.random() * 4)}.png`);
-  }, []);
+  };
   const animate = {
     hidden: {
       scale: 0.7,
@@ -52,6 +52,9 @@ const Main = () => {
       },
     },
   };
+  useEffect(() => {
+    setData();
+  }, []);
   return (
     <div id="home" className="w-full text-center md:h-screen dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
@@ -89,7 +92,7 @@ const Main = () => {
                   typewriter
                     .pauseFor(500)
                     .typeString("Hello,")
-                    .pauseFor(500)
+                    .pauseFor(300)
                     .typeString(
                       ' I&apos;m <span style="color: #ee2d2d;">Michael</span>'
                     )
