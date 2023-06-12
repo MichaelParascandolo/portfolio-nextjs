@@ -16,10 +16,10 @@ const ProjectPage = ({ project }) => {
 
     if (!IconComponent) {
       // returns default icon if icon not found
-      return <AiFillApi size={25} className="mr-2" />;
+      return <AiFillApi size={25} className="mx-2" />;
     }
     // returns icon if icon is found
-    return <IconComponent size={25} className="mr-2" />;
+    return <IconComponent size={25} className="mx-2" />;
   };
 
   return (
@@ -105,7 +105,7 @@ export const getStaticPaths = async () => {
     params: { slug: project.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps = async ({ params }) => {
