@@ -41,11 +41,6 @@ const resume = () => {
               </span>
               Technical Skills
             </h3>
-            {/* <a href="" target="_blank" rel="noreferrer">
-              <button className="px-8 py-1 mb-2 tracking-widest">
-                Contact Me
-              </button>
-            </a> */}
             <div className={styles.bar} />
             <p className={styles.skills}>
               HTML5 | CSS5 | JavaScript | TypeScript | jQuery |{" "}
@@ -78,9 +73,30 @@ const resume = () => {
               Professional Experience
             </h2>
             <h3 className={styles.section}>
+              <span className={styles.colored}>Junior Software Developer</span>{" "}
+              | LightSpeed Voice
+              <p className={styles.sub}>2023 - Current</p>
+            </h3>
+            <ul className={styles.list}>
+              <li className={styles.item}>
+                Developed Angular-Laravel web app, adding features and improving
+                UX.
+              </li>
+              <li className={styles.item}>
+                Enhanced Electron desktop app's functionality and cross-platform
+                performance.
+              </li>
+              <li className={styles.item}>
+                Optimized frontend and backend performance.
+              </li>
+              <li className={styles.item}>
+                Agile advocate, ensuring efficient sprints.
+              </li>
+            </ul>
+            <h3 className={styles.section}>
               <span className={styles.colored}>Verizon Store Manager</span> |{" "}
               R-Wireless
-              <p className={styles.sub}>2019 - Current</p>
+              <p className={styles.sub}>2019 - 2023</p>
             </h3>
             <ul className={styles.list}>
               <li className={styles.item}>
