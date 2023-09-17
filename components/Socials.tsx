@@ -1,4 +1,9 @@
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaXTwitter,
+  FaInstagram,
+} from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
@@ -12,8 +17,8 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
       link: "https://github.com/michaelparascandolo",
     },
     {
-      icon: <FaTwitter className="text-primary" size={size} />,
-      link: "https://twitter.com/mikejpara",
+      icon: <FaXTwitter className="text-primary" size={size} />,
+      link: "https://x.com/mikejpara",
     },
     {
       icon: <FaInstagram className="text-primary" size={size} />,
