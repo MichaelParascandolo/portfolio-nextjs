@@ -24,9 +24,6 @@ html {
   h2 {
     @apply text-3xl sm:text-4xl;
   }
-  li {
-    @apply cursor-pointer;
-  }
   button,
   button[type="submit"] {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-primary text-white dark:shadow-black;

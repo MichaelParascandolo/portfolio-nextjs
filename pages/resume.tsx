@@ -11,10 +11,10 @@ const resume = () => {
     sub: "text-sm text-gray-700 tracking-widest dark:text-white",
     item: "text-gray-700 dark:text-gray-300",
     skills: "text-gray-700 tracking-widest dark:text-gray-200",
-    colored: "text-primary", // different shade of red #D40000
+    colored: "text-primary",
     bar: "bg-gray-700 h-0.5 my-3 rounded-lg dark:bg-white",
     grid: "grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-8",
-    icons: "mr-1 mb-1 inline-flex",
+    icons: "mr-2 mb-1 inline-flex",
   };
   return (
     <>
@@ -26,7 +26,7 @@ const resume = () => {
             <h1 className="py-2 text-gray-700 text-[45px] tracking-wide dark:text-gray-200">
               Michael <p className={styles.colored}>Parascandolo</p>
             </h1>
-            <p className={styles.sub}>Tuckerton, New Jersey</p>
+            <p className={styles.sub}>Little Egg Harbor, New Jersey</p>
             <p className={styles.sub}>
               <a
                 href="mailto:michaelparascandolo@me.com"
@@ -73,8 +73,8 @@ const resume = () => {
               Professional Experience
             </h2>
             <h3 className={styles.section}>
-              <span className={styles.colored}>Junior Software Developer</span>{" "}
-              | LightSpeed Voice
+              <span className={styles.colored}>Software Developer</span> |
+              LightSpeed Voice
               <p className={styles.sub}>2023 - Current</p>
             </h3>
             <ul className={styles.list}>

@@ -23,7 +23,7 @@ const Skills = () => {
       },
     },
   };
-  const proficient: string[] = [
+  const skills: string[] = [
     "HTML",
     "CSS",
     "JavaScript",
@@ -36,35 +36,23 @@ const Skills = () => {
     "Python",
     "Flask",
     "Java",
-  ];
-  const familiar: string[] = [
     "Angular",
     "SQL",
     "PHP",
-    "Firebase",
-    "React Native",
+    "Laravel",
   ];
-  // other skills: electron, jQuery, GitHub
-  const styles = {
-    grid: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8", // gap 8 or 4
-    grid2: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8", // gap 8 or 4...
-  };
+
   return (
     <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
         <h2 className="py-4 dark:text-white">Proficient Technologies</h2>
         <motion.div variants={variants} initial="hidden" animate={controls}>
-          <div className={styles.grid} ref={ref}>
-            {proficient.map((item, index) => (
-              <SkillItem name={item} key={index} />
-            ))}
-          </div>
-        </motion.div>
-        <h2 className="py-4 mt-5 dark:text-white">Familiar Technologies</h2>
-        <motion.div variants={variants} initial="hidden" animate={controls}>
-          <div className={styles.grid2}>
-            {familiar.map((item, index) => (
+          <div
+            className={"grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8"} // Smaller gap maybe?
+            ref={ref}
+          >
+            {skills.map((item, index) => (
               <SkillItem name={item} key={index} />
             ))}
           </div>
