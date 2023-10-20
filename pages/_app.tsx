@@ -19,13 +19,13 @@ function MyApp({ Component, pageProps, router }) {
         disableTransitionOnChange
       >
         <Head>
-          <title>Michael Parascandolo | Front-End Web Developer</title>
+          <title>Michael Parascandolo | Full-Stack Developer</title>
           <meta charSet="UTF-8" />
           <meta
             name="description"
-            content="I'm a front-end web developer specializing in building and
-            designing exception digital experiences. I'm focused on building
-            responsive front-end web applications using modern technologies."
+            content="I'm a Full-Stack Developer with a
+            passion for technology and a dedication to developing high-quality
+            web applications."
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link

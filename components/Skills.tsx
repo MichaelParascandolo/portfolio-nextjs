@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SkillItem from "./SkillItem";
+import data from "../public/resume.json";
 
 const Skills = () => {
   const controls = useAnimation();
@@ -23,24 +24,6 @@ const Skills = () => {
       },
     },
   };
-  const skills: string[] = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Tailwind",
-    "Bootstrap",
-    "React JS",
-    "Next JS",
-    "Git",
-    "Python",
-    "Flask",
-    "Java",
-    "Angular",
-    "SQL",
-    "PHP",
-    "Laravel",
-  ];
 
   return (
     <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#1E1E1E]">
@@ -49,10 +32,10 @@ const Skills = () => {
         <h2 className="py-4 dark:text-white">Proficient Technologies</h2>
         <motion.div variants={variants} initial="hidden" animate={controls}>
           <div
-            className={"grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8"} // Smaller gap maybe?
+            className={"grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8"}
             ref={ref}
           >
-            {skills.map((item, index) => (
+            {data.skills.info.map((item, index) => (
               <SkillItem name={item} key={index} />
             ))}
           </div>

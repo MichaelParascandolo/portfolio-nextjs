@@ -1,0 +1,87 @@
+{
+  "skills": {
+    "icon": "MdComputer",
+    "info": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind",
+      "Bootstrap",
+      "React JS",
+      "Next JS",
+      "Git",
+      "Python",
+      "Flask",
+      "Java",
+      "Angular",
+      "SQL",
+      "PHP",
+      "Laravel"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Education",
+      "icon": "MdSchool",
+      "info": [
+        {
+          "school": "Stockton University",
+          "location": "Galloway, NJ",
+          "start": "2019",
+          "end": "2023",
+          "duration": "2019 - 2023",
+          "description": ["Bachelors Degree in Computing", "GPA: 3.4"]
+        }
+      ]
+    },
+    {
+      "title": "Experience",
+      "icon": "MdWork",
+      "info": [
+        {
+          "title": "Software Developer",
+          "company": "LightSpeed Voice",
+          "location": "",
+          "start": "MAY 2023",
+          "end": "",
+          "duration": "2023 - Current",
+          "description": [
+            "Developed Angular-Laravel web app, adding features and improving UX.",
+            "Enhanced Electron desktop app's functionality and cross-platform performance.",
+            "Optimized frontend and backend performance.",
+            "Agile advocate, ensuring efficient sprints."
+          ]
+        },
+        {
+          "title": "Verizon Store Manager",
+          "company": "R-Wireless",
+          "location": "",
+          "start": "AUG 2019",
+          "end": "MAY 2023",
+          "duration": "2019 - 2023",
+          "description": [
+            "Achieved top quartile performance across multiple sales KPIs",
+            "Maintained high inventory integrity and minimize shrink",
+            "Grew store profitability significantly year over year",
+            "Responsible for hiring, training, and developing a high-performance sales team"
+          ]
+        },
+        {
+          "title": "Mobile Sales Team Lead",
+          "company": "Best Buy",
+          "location": "",
+          "start": "MAY 2014",
+          "end": "AUG 2019",
+          "duration": "2014 - 2019",
+          "description": [
+            "Supported sales strategies to achieve operating results and department profitability",
+            "Ensured employees are getting to know their customers on a deeper level and providing complete solutions",
+            "Supported team members with coaching and training to help perfect their craft as sales professionals",
+            "Created a development plan with each employee to help achieve short/long term goals"
+          ]
+        }
+      ]
+    }
+  ]
+}

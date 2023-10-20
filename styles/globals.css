@@ -24,8 +24,17 @@ html {
   h2 {
     @apply text-3xl sm:text-4xl;
   }
+  hr {
+    @apply h-0.5 my-2 rounded-lg border-0 bg-primary;
+  }
+  label {
+    @apply uppercase text-sm py-2 dark:text-gray-200;
+  }
+  input {
+    @apply border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828];
+  }
   button,
   button[type="submit"] {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#f26969] to-primary text-white dark:shadow-black;
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-b from-[#BC4350] to-primary text-white dark:shadow-black;
   }
 }

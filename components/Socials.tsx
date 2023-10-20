@@ -7,20 +7,24 @@ import {
 import { motion } from "framer-motion";
 
 const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
-  const socialLinks: { icon: JSX.Element; link: string }[] = [
+  const socialLinks: { label: string; icon: JSX.Element; link: string }[] = [
     {
+      label: "Michael's LinkedIn",
       icon: <FaLinkedinIn className="text-primary" size={size} />,
       link: "https://www.linkedin.com/in/michael-parascandolo-774725226/",
     },
     {
+      label: "Michael's GitHub",
       icon: <FaGithub className="text-primary" size={size} />,
       link: "https://github.com/michaelparascandolo",
     },
     {
+      label: "Michael's X / Twitter",
       icon: <FaXTwitter className="text-primary" size={size} />,
       link: "https://x.com/mikejpara",
     },
     {
+      label: "Michael's Instagram",
       icon: <FaInstagram className="text-primary" size={size} />,
       link: "https://www.instagram.com/mikejpara/",
     },
@@ -41,7 +45,12 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
     <>
       {socialLinks.map((item, index) => (
         <motion.div whileHover={circleHover} whileTap={circleTap} key={index}>
-          <a href={item.link} target="_blank" rel="noreferrer">
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={item.label}
+          >
             <div
               className={
                 circles

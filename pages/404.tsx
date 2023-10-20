@@ -3,8 +3,9 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import { AiFillHome } from "react-icons/ai";
+import bear from "public/assets/me/bear.jpeg";
 
-const notFound = () => {
+const NotFound = () => {
   return (
     <>
       <Navbar background={true} />
@@ -12,7 +13,7 @@ const notFound = () => {
         <div className="max-w-[1240px] w-full mx-auto p-2 flex justify-center items-center">
           <div className="mt-[100px]">
             <h1 className="pb-4 text-gray-700 text-[70px]">
-              🤔 <span className="text-primary">Oops!</span>
+              🤔 <span className="text-primary">OOPS!</span>
             </h1>
             <h2 className="py-2 text-gray-700 dark:text-white">
               We can't find the page you're looking for.
@@ -29,7 +30,7 @@ const notFound = () => {
             </div>
             <div className="h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 max-w-[80%] dark:bg-[#282828] dark:shadow-black dark:border-black">
               <Image
-                src="/assets/me/Bear.jpeg"
+                src={bear}
                 alt="Bear"
                 width="756"
                 height="1008"
@@ -46,4 +47,4 @@ const notFound = () => {
   );
 };
 
-export default notFound;
+export default NotFound;

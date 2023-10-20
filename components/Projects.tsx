@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-import comingSoonImg from "/public/assets/projects/comingsoon-small-white.png";
+import comingSoonImg from "/public/assets/projects/comingsoon.png";
 import ProjectItem from "./ProjectItem";
 import Link from "next/link";
 import projectData from "../public/projects.json";
@@ -42,8 +42,8 @@ const Projects = () => {
           animate={controls}
           variants={variants}
         >
-          {/* gap 8 or 10?...... */}
-          <div className="grid md:grid-cols-2 gap-10">
+          {/* Display each project */}
+          <div className="grid md:grid-cols-2 gap-8">
             {projectData.map((project, index) =>
               project.name !== "Portfolio" ? (
                 <ProjectItem
@@ -60,16 +60,13 @@ const Projects = () => {
             <ProjectItem backgroundImg={comingSoonImg} />
           </div>
         </motion.div>
-        <p className="text-gray-600 dark:text-gray-300 text-center text-lg tracking-widest mt-8">
-          How is this site made?{" "}
-          <Link
-            href="/[slug]"
-            as="/portfolio"
-            className="text-primary cursor-pointer border-b-2 border-transparent hover:border-black dark:hover:border-white ease-in duration-200"
-          >
-            Learn More
+        <div className="flex justify-center mt-8">
+          <Link href="/[slug]" as="/portfolio">
+            <span className="border-b-2 uppercase text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
+              about this site
+            </span>
           </Link>
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-export interface ProjectItemData {
+interface ProjectItemData {
   title?: string;
   backgroundImg: StaticImageData | string;
   description?: string;
@@ -10,18 +10,7 @@ export interface ProjectItemData {
   projectUrl?: string;
 }
 
-const ProjectItem = ({
-  title,
-  projectUrl,
-  tech,
-  backgroundImg,
-}: ProjectItemData) => {
-  const styles = {
-    containerHover:
-      "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 group border-solid border-2 border-gray-200 hover:bg-gradient-to-t from-primary/20 to-primary dark:bg-[#282828] dark:shadow-black dark:border-black",
-    container:
-      "relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black",
-  };
+const ProjectItem = (props: ProjectItemData) => {
   return (
     <motion.div
       whileHover={{
@@ -37,32 +26,34 @@ const ProjectItem = ({
         },
       }}
     >
-      <div className={projectUrl ? styles.containerHover : styles.container}>
+      <div
+        className={`relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-0 border-solid border-2 border-gray-200 dark:bg-[#282828] dark:shadow-black dark:border-black ${
+          props.projectUrl
+            ? "group hover:bg-gradient-to-b from-[#BC4350] to-primary dark:bg-[#282828]"
+            : null
+        }`}
+      >
         <Image
           className="rounded-xl group-hover:opacity-10"
-          src={backgroundImg}
+          src={props.backgroundImg}
           draggable={false}
           width={1800}
           height={1760}
-          alt={title}
+          alt={props.title}
         />
         <div className="hidden group-hover:block w-[80%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <h3 className="text-xl md:text-4xl font-medium text-white tracking-wide text-center">
-            {title}
+          <h3 className="text-4xl font-semibold text-gray-200 tracking-wide text-center">
+            {props.title}
           </h3>
-          {/* <p className="text-[12px] text-gray-100  text-center md:text-lg tracking-wide">
-            {description}
-          </p> */}
-          <p className="mb-2 text-[10px] text-white font-thin text-sm md:text-[15px] text-center tracking-widest">
-            {tech}
+          <p className="mb-2 text-[12px] text-gray-300 font-light text-sm md:text-[15px] text-center tracking-widest">
+            {props.tech}
           </p>
-          {/* make this a button */}
-          {projectUrl ? (
+          {props.projectUrl ? (
             <div className="flex justify-center">
-              <Link href="/[slug]" as={`/${projectUrl}`}>
-                <button className="text-center p-2 text-sm md:text-lg cursor-pointer w-[250px] tracking-widest shadow-lg shadow-black/80 border-black border-2 hover:scale-105 ease-in-out duration-300 transition-all">
-                  More Info
-                </button>
+              <Link href="/[slug]" as={`/${props.projectUrl}`}>
+                <span className="border-b-2 uppercase text-sm text-white cursor-pointer border-transparent tracking-widest font-semibold hover:border-white ease-in duration-200">
+                  more info
+                </span>
               </Link>
             </div>
           ) : null}

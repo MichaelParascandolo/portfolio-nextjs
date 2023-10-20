@@ -1,26 +1,15 @@
 import { useEffect, useState } from "react";
-import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/legacy/image"; // issue with using next/image
+import Image from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import picture0 from "public/assets/me/memoji0.png";
-import picture1 from "public/assets/me/memoji1.png";
-import picture2 from "public/assets/me/memoji2.png";
-import picture3 from "public/assets/me/memoji3.png";
+import memoji from "public/assets/me/portfolio_memoji.png";
 
 const Main = () => {
   const [quote, setQuote] = useState<string>("");
-  const [picture, setPicture] = useState<StaticImageData>();
-  // sets the quote and picture
-  const setData = () => {
-    const pictures: StaticImageData[] = [
-      picture0,
-      picture1,
-      picture2,
-      picture3,
-    ];
+
+  useEffect(() => {
     const quotes: string[] = [
       "“Innovation distinguishes between a leader and a follower.” - Steve Jobs",
       "“Your time is limited, so don't waste it living someone else's life.” - Steve Jobs",
@@ -31,8 +20,8 @@ const Main = () => {
       "“Have the courage to follow your heart and intuition.” - Steve Jobs",
     ];
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-    setPicture(pictures[Math.floor(Math.random() * pictures.length)]);
-  };
+  }, []);
+
   const animate = {
     hidden: {
       scale: 0.7,
@@ -52,9 +41,7 @@ const Main = () => {
       },
     },
   };
-  useEffect(() => {
-    setData();
-  }, []);
+
   return (
     <div id="home" className="w-full text-center md:h-screen dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
@@ -68,57 +55,39 @@ const Main = () => {
               className="flex justify-center"
             >
               <Image
-                src={picture}
+                src={memoji}
                 alt="Michael's Emoji"
                 width="250"
                 height="250"
                 draggable={false}
               />
             </motion.div>
-            {/*<h1 className="pb-2 text-gray-700 tracking-wide dark:text-gray-200">
-              Hello👋, I'm {/* move the hand to the other side of hello? */}
-            {/* <span className="bg-gradient-to-r from-[#f26969] to-primary text-transparent bg-clip-text"> */}
-            {/* <span className="text-primary">Michael</span>
-            </h1>  */}
-            <h1 className="pb-1 text-gray-700 tracking-wide dark:text-gray-200">
+            <h1 className="pb-4 text-gray-700 tracking-wide dark:text-gray-200">
               <Typewriter
-                options={
-                  {
-                    // cursor: "",
-                    // loop: true,
-                  }
-                }
+                options={{
+                  cursor: "",
+                  // loop: true,
+                }}
                 onInit={(typewriter) => {
                   typewriter
                     .pauseFor(500)
                     .typeString("Hello,")
                     .pauseFor(300)
                     .typeString(
-                      ' I&apos;m <span style="color: #ee2d2d;">Michael</span>'
+                      ' I&apos;m <span style="color: #ee2d2d;">Michael</span>.'
                     )
                     .pauseFor(1000)
                     .typeString(
-                      '<br/>A <span style="color: #ee2d2d;">Front-End</span> Developer'
+                      '<br/>A <span style="color: #ee2d2d;">Full-Stack</span> Developer.'
                     )
                     .start();
                 }}
               />
             </h1>
-            {/* <h1 className="py-2 text-gray-700">A Front-End Web Developer</h1> */}
-            <p className="pt-4 text-gray-600 dark:text-gray-300">
-              I am a front-end developer, but am always looking to learn new
-              technologies and expand my skill set.
-            </p>
-            <p className="pb-4 text-gray-600 dark:text-gray-300">
-              My goal is to deliver high-quality, responsive designs that
-              provide an optimal user experience.
-            </p>
-
             <div className={"flex justify-center"}>
               <Link href="/#projects">
-                <span className="border-b-2 text-primary cursor-pointer flex border-transparent tracking-widest font-semibold hover:border-black dark:hover:border-white ease-in duration-200">
-                  Latest Projects{" "}
-                  <FiArrowRight size={20} className={"mt-[3px]"} />
+                <span className="border-b-2 uppercase text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
+                  Latest Projects
                 </span>
               </Link>
             </div>

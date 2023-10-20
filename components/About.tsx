@@ -2,13 +2,11 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import Link from "next/link";
-import profilePic from "/public/assets/me/me.jpeg";
+import profilePic from "/public/assets/me/portfolio_about.png";
 
 const About = () => {
   const styles = {
     p: "py-2 text-gray-600 dark:text-gray-300",
-    link: "text-primary cursor-pointer border-b-2 border-transparent hover:border-black dark:hover:border-white ease-in duration-200",
   };
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -43,62 +41,36 @@ const About = () => {
             <h2 className="py-4 dark:text-white">Who I Am</h2>
             <p className={styles.p}>
               Hello, I'm <span className="text-primary">Michael</span>, a{" "}
-              <span className="text-primary">front-end</span> developer with a
-              passion for developing high-quality web applications. I graduated
-              with a <span className="text-primary">Bachelor's degree</span> in
-              Computing from{" "}
-              <span className="text-primary">Stockton University</span>.
+              <span className="text-primary">full-stack developer</span> with a
+              passion for technology and a dedication to developing high-quality
+              web applications. I graduated with a{" "}
+              <span className="text-primary">bachelor's degree</span> in
+              Computing from Stockton University and have a strong foundation in
+              front-end development.
             </p>
+
             <p className={styles.p}>
-              Recently, I had the opportunity to work with a group of other
-              developers to create a{" "}
-              <span className="text-primary">full-stack</span> web application
-              for a <span className="text-primary">commercial client</span>. I
-              was responsible for developing and designing the user interface,
-              ensuring that the website was visually appealing and
-              user-friendly, as well as ensuring the{" "}
-              <span className="text-primary">front-end</span> and{" "}
-              <span className="text-primary">back-end</span> communicate
-              effectively.
+              I'm currently in the process of expanding my expertise in{" "}
+              <span className="text-primary">back-end development</span>,
+              including{" "}
+              <span className="text-primary">databases and REST APIs</span>.
+              While my background primarily lies in front-end development, I am
+              actively working on building a well-rounded skill set that
+              includes full-stack capabilities.
             </p>
+
             <p className={styles.p}>
-              Currently, I'm expanding my knowledge of{" "}
-              <span className="text-primary">back-end</span> development and{" "}
-              <span className="text-primary">database</span> design /
-              implementation. I believe that having a well-rounded skill set is
-              essential for building high-quality web applications.
-            </p>
-            <p className={styles.p}>
-              Reach out on social media or use the{" "}
-              <a href="#contact" className={styles.link}>
-                contact
+              Reach out to me on social media or use the{" "}
+              <a href="your_contact_form_link_here" className="text-primary">
+                contact form
               </a>{" "}
-              form below to get in touch.
+              below to get in touch.
             </p>
+
             <p className={styles.p}>
               Let's build something{" "}
-              <span className="text-primary">amazing</span> together!
+              <span className="text-primary">amazing together</span>!
             </p>
-            <motion.div
-              ref={ref}
-              initial="hidden"
-              animate={controls}
-              variants={animation}
-            >
-              <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
-                <Link href={"/resume"}>
-                  <span className={styles.link}>My resume</span>
-                </Link>
-              </p>
-              <p className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300">
-                <Link
-                  href="/#projects"
-                  className="text-gray-600 tracking-widest pt-3 capitalize dark:text-gray-300"
-                >
-                  <span className={styles.link}>Latest projects</span>
-                </Link>
-              </p>
-            </motion.div>
           </div>
           <motion.div
             ref={ref}
@@ -122,8 +94,6 @@ const About = () => {
                   <Image
                     src={profilePic}
                     alt="Michael Parascandolo"
-                    width="579"
-                    height="772"
                     draggable={false}
                     className="rounded-xl"
                   />

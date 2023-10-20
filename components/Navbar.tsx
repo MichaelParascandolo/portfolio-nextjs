@@ -69,6 +69,7 @@ const Navbar = ({ background }: { background: boolean }) => {
   return (
     <div
       className={
+        // This can definitely be cleaned up
         background && !shadow
           ? "fixed w-full h-20 z-[100] ease-in-out border-b-2 border-transparent duration-300 transition-all bg-[#ecf0f3] dark:bg-[#1E1E1E]"
           : background && shadow

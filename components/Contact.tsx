@@ -8,15 +8,9 @@ import Link from "next/link";
 import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
-import contactPic from "/public/assets/me/me2.jpg";
+import contactPic from "/public/assets/me/portfolio_contact.png";
 
 const Contact = () => {
-  const styles = {
-    label: "uppercase text-sm py-2 dark:text-gray-200",
-    textField:
-      "border-2 rounded-lg p-3 flex border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]",
-  };
-  // animations
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -37,7 +31,7 @@ const Contact = () => {
       },
     },
   };
-  // email form
+  // Email Form
   const [message, setMessage] = useState<string>("Send Message");
   const form = useRef();
   const sendEmail = (e: any) => {
@@ -73,7 +67,7 @@ const Contact = () => {
         </p>
         <h2 className="py-4 dark:text-white">Say Hello</h2>
         <div className="grid lg:grid-cols-5 gap-8">
-          {/* Left */}
+          {/* Left Column */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4 border-solid border-2 border-gray-200 dark:shadow-black dark:border-black">
             <motion.div
               ref={ref}
@@ -82,96 +76,67 @@ const Contact = () => {
               variants={animateIn}
             >
               <div className="lg:p-4 h-full">
+                <h2 className="text-gray-700 dark:text-gray-200">
+                  Michael Parascandolo
+                </h2>
+                <p className="tracking-widest text-primary mb-4">
+                  Full-Stack Developer
+                </p>
                 <motion.div
                   whileHover={{
                     position: "relative",
                     zIndex: 1,
-                    scale: [1, 1.1, 1],
-                    // rotate: [0, 1, -1, 0],
+                    // scale: [1, 1.1, 1],
+                    rotate: [0, 2, -2, 0],
                     transition: {
                       duration: 0.5,
                     },
                   }}
                 >
-                  <div className="flex text-center justify-center">
-                    <Image
-                      className="rounded-2xl"
-                      src={contactPic}
-                      width="500"
-                      height="559"
-                      alt="Michael Parascandolo"
-                      draggable={false}
-                    />
-                  </div>
+                  <Image
+                    className="rounded-2xl"
+                    src={contactPic}
+                    alt="Michael Parascandolo"
+                    draggable={false}
+                  />
                 </motion.div>
-                <div>
-                  <h2 className="text-primary mt-5">Michael Parascandolo</h2>
-                  <p className="tracking-widest dark:text-gray-200">
-                    Front-End Web Developer
-                  </p>
-                  <p className="pt-4 dark:text-gray-200">
-                    Contact me and let's chat! 😊
-                  </p>
-                </div>
-                <div>
-                  <p className="uppercase pt-8 tracking-widest text-primary">
-                    Connect With me
-                  </p>
-                  <div className="flex items-center justify-between py-4">
-                    <Socials size={23} circles={true} />
-                  </div>
+                {/* <p className="pt-4 text-center text-gray-600 dark:text-gray-300">
+                  Contact me and let's chat! 😊
+                </p> */}
+                <div className="flex items-center justify-between py-4">
+                  <Socials size={23} circles={true} />
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Right */}
+          {/* Right Column */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 border-solid border-2 border-gray-200 dark:shadow-black dark:border-black">
             <div className="p-4">
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
-                    <label className={styles.label}>Name:</label>
-                    <input
-                      className={styles.textField}
-                      type="text"
-                      name="name"
-                      required
-                    />
+                    <label>Name:</label>
+                    <input type="text" name="name" required />
                   </div>
                   <div className="flex flex-col py-2">
-                    <label className={styles.label}>Phone Number:</label>
-                    <input
-                      className={styles.textField}
-                      type="tel"
-                      name="phone"
-                      required
-                    />
+                    <label>Phone Number:</label>
+                    <input type="tel" name="phone" required />
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className={styles.label}>Email:</label>
-                  <input
-                    className={styles.textField}
-                    type="email"
-                    name="email"
-                    required
-                  />
+                  <label>Email:</label>
+                  <input type="email" name="email" required />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className={styles.label}>Subject:</label>
-                  <input
-                    className={styles.textField}
-                    type="text"
-                    name="subject"
-                    required
-                  />
+                  <label>Subject:</label>
+                  <input type="text" name="subject" required />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className={styles.label}>Message:</label>
+                  <label>Message:</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-500 dark:border-black dark:text-gray-100 dark:bg-[#282828]"
-                    rows={5}
+                    rows={7}
                     name="message"
                     required
                   ></textarea>
