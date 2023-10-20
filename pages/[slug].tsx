@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { AiFillApi } from "react-icons/ai";
-import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import * as Icons from "react-icons/si";
 import projectData from "../public/projects.json";
 import Navbar from "../components/Navbar";
-import Link from "next/link";
 import Footer from "../components/Footer";
+import ActionButton from "../components/ActionButton";
 
 const ProjectPage = ({ project }) => {
   const router = useRouter();
@@ -16,10 +15,10 @@ const ProjectPage = ({ project }) => {
 
     if (!IconComponent) {
       // returns default icon if icon not found
-      return <AiFillApi size={25} className="mx-2" />;
+      return <AiFillApi size={25} className="mx-2 text-primary" />;
     }
     // returns icon if icon is found
-    return <IconComponent size={25} className="mx-2" />;
+    return <IconComponent size={25} className="mx-2 text-primary" />;
   };
 
   return (
@@ -43,7 +42,7 @@ const ProjectPage = ({ project }) => {
         </div>
         <div className="max-w-[90%] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
           <div className="col-span-4">
-            <p className="text-primary">Project</p>
+            <p className="text-primary uppercase">Project</p>
             <h2 className="dark:text-white mb-2">Overview</h2>
             <p className="text-gray-700 dark:text-gray-300">
               {project.description}
@@ -73,7 +72,7 @@ const ProjectPage = ({ project }) => {
                   {project.icons.map((item, index) => {
                     return (
                       <p
-                        className="text-gray-600 py-2 flex items-center dark:text-gray-300"
+                        className="text-gray-600 py-2 flex tracking-wide items-center dark:text-gray-300"
                         key={index}
                       >
                         <DynamicSiIcon name={item.icon} />
@@ -86,13 +85,7 @@ const ProjectPage = ({ project }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center pt-10">
-          <Link href="/#projects">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
-              <HiOutlineChevronDoubleLeft size={30} className="text-primary" />
-            </div>
-          </Link>
-        </div>
+        <ActionButton link="/#projects" action="back" />
         <Footer />
         <div className="h-[20px]" />
       </div>

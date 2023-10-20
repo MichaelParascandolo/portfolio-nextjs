@@ -5,6 +5,7 @@ import comingSoonImg from "/public/assets/projects/comingsoon.png";
 import ProjectItem from "./ProjectItem";
 import Link from "next/link";
 import projectData from "../public/projects.json";
+import { FiArrowRight } from "react-icons/fi";
 
 const Projects = () => {
   const controls = useAnimation();
@@ -62,8 +63,9 @@ const Projects = () => {
         </motion.div>
         <div className="flex justify-center mt-8">
           <Link href="/[slug]" as="/portfolio">
-            <span className="border-b-2 uppercase text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
+            <span className="border-b-2 uppercase flex text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
               about this site
+              <FiArrowRight size={20} className={"my-auto"} />
             </span>
           </Link>
         </div>

@@ -1,9 +1,8 @@
-import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import * as Icons from "react-icons/md";
-import { HiOutlineChevronDoubleLeft } from "react-icons/hi";
 import data from "../public/resume.json";
+import ActionButton from "../components/ActionButton";
 
 const Resume = () => {
   const DynamicMdIcon = ({ iconName }: { iconName: string }) => {
@@ -86,13 +85,7 @@ const Resume = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-center pt-10">
-          <Link href="/#">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
-              <HiOutlineChevronDoubleLeft size={30} className="text-primary" />
-            </div>
-          </Link>
-        </div>
+        <ActionButton link="/#" action="back" />
         <Footer />
         <div className="h-[20px]" />
       </div>

@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { TbSend } from "react-icons/tb";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -9,6 +8,7 @@ import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
 import contactPic from "/public/assets/me/portfolio_contact.png";
+import ActionButton from "./ActionButton";
 
 const Contact = () => {
   const controls = useAnimation();
@@ -151,13 +151,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center pt-10">
-          <Link href="/">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
-              <HiOutlineChevronDoubleUp size={30} className="text-primary" />
-            </div>
-          </Link>
-        </div>
+        <ActionButton link={"/"} action="top" />
         <Footer />
       </div>
     </div>

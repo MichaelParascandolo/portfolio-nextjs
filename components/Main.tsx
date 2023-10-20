@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
@@ -74,11 +75,11 @@ const Main = () => {
                     .typeString("Hello,")
                     .pauseFor(300)
                     .typeString(
-                      ' I&apos;m <span style="color: #ee2d2d;">Michael</span>.'
+                      ' I&apos;m <span style="color: #ee2d2d;">Michael</span>'
                     )
                     .pauseFor(1000)
                     .typeString(
-                      '<br/>A <span style="color: #ee2d2d;">Full-Stack</span> Developer.'
+                      '<br/>a <span style="color: #ee2d2d;">Full-Stack</span> Developer.'
                     )
                     .start();
                 }}
@@ -86,8 +87,9 @@ const Main = () => {
             </h1>
             <div className={"flex justify-center"}>
               <Link href="/#projects">
-                <span className="border-b-2 uppercase text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
+                <span className="border-b-2 uppercase flex text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
                   Latest Projects
+                  <FiArrowRight size={20} className={"my-auto"} />
                 </span>
               </Link>
             </div>
@@ -103,7 +105,7 @@ const Main = () => {
             }}
           >
             <div className="flex items-center justify-between max-w-[430px] m-auto py-4">
-              <Socials size={23} circles={true} />
+              <Socials size={25} circles={true} />
             </div>
           </motion.div>
         </div>
