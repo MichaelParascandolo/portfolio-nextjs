@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
-import Link from "next/link";
 import memoji from "public/assets/me/portfolio_memoji.png";
+import InfoButton from "./InfoButton";
 
 const Main = () => {
   const [quote, setQuote] = useState<string>("");
@@ -85,14 +84,7 @@ const Main = () => {
                 }}
               />
             </h1>
-            <div className={"flex justify-center"}>
-              <Link href="/#projects">
-                <span className="border-b-2 uppercase flex text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
-                  Latest Projects
-                  <FiArrowRight size={20} className={"my-auto"} />
-                </span>
-              </Link>
-            </div>
+            <InfoButton text="latest projects" link="/#projects" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 200 }}

@@ -31,7 +31,6 @@ const NotFound = () => {
           </div>
         </div>
         <Footer />
-        <div className="h-[20px]" />
       </div>
     </>
   );

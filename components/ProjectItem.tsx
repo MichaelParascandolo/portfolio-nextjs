@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
+import InfoButton from "./InfoButton";
 
 interface ProjectItemData {
   title?: string;
@@ -50,14 +49,7 @@ const ProjectItem = (props: ProjectItemData) => {
             {props.tech}
           </p>
           {props.projectUrl ? (
-            <div className="flex justify-center">
-              <Link href="/[slug]" as={`/${props.projectUrl}`}>
-                <span className="border-b-2 uppercase flex text-sm text-white cursor-pointer border-transparent tracking-widest font-semibold hover:border-white ease-in duration-200">
-                  more info
-                  <FiArrowRight size={20} className={"my-auto"} />
-                </span>
-              </Link>
-            </div>
+            <InfoButton text={"more info"} link={`/${props.projectUrl}`} />
           ) : null}
         </div>
       </div>

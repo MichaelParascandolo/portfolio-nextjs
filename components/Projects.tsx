@@ -3,9 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import comingSoonImg from "/public/assets/projects/comingsoon.png";
 import ProjectItem from "./ProjectItem";
-import Link from "next/link";
 import projectData from "../public/projects.json";
-import { FiArrowRight } from "react-icons/fi";
+import InfoButton from "./InfoButton";
 
 const Projects = () => {
   const controls = useAnimation();
@@ -44,7 +43,7 @@ const Projects = () => {
           variants={variants}
         >
           {/* Display each project */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             {projectData.map((project, index) =>
               project.name !== "Portfolio" ? (
                 <ProjectItem
@@ -61,14 +60,7 @@ const Projects = () => {
             <ProjectItem backgroundImg={comingSoonImg} />
           </div>
         </motion.div>
-        <div className="flex justify-center mt-8">
-          <Link href="/[slug]" as="/portfolio">
-            <span className="border-b-2 uppercase flex text-gray-600 dark:text-gray-300 cursor-pointer border-transparent tracking-widest font-semibold hover:border-primary ease-in duration-200">
-              about this site
-              <FiArrowRight size={20} className={"my-auto"} />
-            </span>
-          </Link>
-        </div>
+        <InfoButton text={"about this site"} link={"/portfolio"} />
       </div>
     </div>
   );

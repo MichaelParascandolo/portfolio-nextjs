@@ -87,7 +87,6 @@ const ProjectPage = ({ project }) => {
         </div>
         <ActionButton link="/#projects" action="back" />
         <Footer />
-        <div className="h-[20px]" />
       </div>
     </>
   );

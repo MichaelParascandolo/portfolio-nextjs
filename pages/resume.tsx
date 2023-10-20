@@ -20,7 +20,7 @@ const Resume = () => {
             <h1 className="py-2 text-gray-700 dark:text-gray-200 text-[45px] tracking-wide">
               Michael <br /> Parascandolo
             </h1>
-            <p className="text-gray-700 dark:text-gray-200 tracking-wider text-sm">
+            <p className="text-gray-700 dark:text-gray-300 tracking-wider text-sm">
               Little Egg Harbor, New Jersey
             </p>
             {/* Technical Skills */}
@@ -35,7 +35,7 @@ const Resume = () => {
               {/* Each Skill */}
               {data.skills.info.map((skill, index) => (
                 <span
-                  className="text-gray-700 tracking-widest dark:text-gray-200 gap-8"
+                  className="text-gray-700 tracking-widest dark:text-gray-300 gap-8"
                   key={index}
                 >
                   {skill}
@@ -87,7 +87,6 @@ const Resume = () => {
         </div>
         <ActionButton link="/#" action="back" />
         <Footer />
-        <div className="h-[20px]" />
       </div>
     </>
   );
