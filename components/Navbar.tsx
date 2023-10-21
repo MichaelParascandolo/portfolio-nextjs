@@ -1,19 +1,13 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useTheme } from "next-themes";
-import {
-  MdOutlineDarkMode,
-  MdOutlineLightMode,
-  MdChevronRight,
-} from "react-icons/md";
+import { MdChevronRight } from "react-icons/md";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "./Logo";
 import Socials from "./Socials";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = ({ background }: { background: boolean }) => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState<boolean>();
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
   const navLinks: { title: string; path: string }[] = [
@@ -51,7 +45,6 @@ const Navbar = ({ background }: { background: boolean }) => {
       }
     };
     window.addEventListener("scroll", handleShadow);
-    setMounted(true); // prevents theme switcher button from being wrong
   }, []);
   const variants = {
     hidden: {
@@ -63,9 +56,7 @@ const Navbar = ({ background }: { background: boolean }) => {
       width: 300,
     },
   };
-  if (!mounted) {
-    return null;
-  }
+
   return (
     <div
       className={
@@ -86,26 +77,11 @@ const Navbar = ({ background }: { background: boolean }) => {
           }
         >
           <Logo />
-          {/* theme toggle */}
-          <div className="ml-3 mt-2">
-            {theme === "light" ? (
-              <MdOutlineDarkMode
-                size={25}
-                className={"cursor-pointer"}
-                onClick={() => setTheme("dark")}
-              />
-            ) : (
-              <MdOutlineLightMode
-                size={25}
-                className={"cursor-pointer"}
-                onClick={() => setTheme("light")}
-              />
-            )}
-          </div>
+          <ThemeToggle />
         </div>
 
         <div className={background || shadow ? null : "text-white"}>
-          {/* Navbar for larger screens */}
+          {/* DESKTOP NAVBAR */}
           <ul className="mr-2 hidden md:flex">
             {navLinks.map((item, index) => (
               <Link href={item.path} key={index}>
@@ -129,7 +105,7 @@ const Navbar = ({ background }: { background: boolean }) => {
           </div>
         </div>
       </div>
-      {/* open mobile navbar*/}
+      {/* MOBILE NAVBAR */}
       <div
         className={
           nav
