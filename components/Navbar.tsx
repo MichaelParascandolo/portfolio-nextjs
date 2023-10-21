@@ -10,6 +10,18 @@ import ThemeToggle from "./ThemeToggle";
 const Navbar = ({ background }: { background: boolean }) => {
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   const navLinks: { title: string; path: string }[] = [
     {
       title: "Home",
@@ -36,16 +48,7 @@ const Navbar = ({ background }: { background: boolean }) => {
       path: "/#contact",
     },
   ];
-  useEffect(() => {
-    const handleShadow = () => {
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
-    };
-    window.addEventListener("scroll", handleShadow);
-  }, []);
+
   const variants = {
     hidden: {
       opacity: 0,
@@ -57,18 +60,17 @@ const Navbar = ({ background }: { background: boolean }) => {
     },
   };
 
+  const styles = {
+    common: "fixed w-full h-20 z-[100] ease-in-out duration-300 transition-all",
+    background: "bg-[#ecf0f3] dark:bg-[#1E1E1E]",
+    shadow: `shadow-xl border-b-2 border-primary bg-[#ecf0f3] dark:bg-[#1E1E1E] dark:shadow-2xl`,
+  };
+
   return (
     <div
-      className={
-        // This can definitely be cleaned up
-        background && !shadow
-          ? "fixed w-full h-20 z-[100] ease-in-out border-b-2 border-transparent duration-300 transition-all bg-[#ecf0f3] dark:bg-[#1E1E1E]"
-          : background && shadow
-          ? "fixed w-full h-20 shadow-xl z-[100] border-b-2 border-primary ease-in-out duration-300 transition-all bg-[#ecf0f3] dark:bg-[#1E1E1E] dark:shadow-2xl"
-          : !background && shadow
-          ? "fixed w-full h-20 z-[100] shadow-xl ease-in-out duration-300 transition-all border-b-2 border-primary bg-[#ecf0f3] dark:bg-[#1E1E1E] dark:shadow-2xl"
-          : "fixed w-full h-20 z-[100] ease-in-out border-b-2 border-transparent duration-300 transition-all bg-transparent"
-      }
+      className={`${styles.common} ${background ? styles.background : ""} ${
+        shadow ? styles.shadow : "border-transparent"
+      }`}
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:text-gray-200">
         <div

@@ -7,11 +7,13 @@ import data from "../public/resume.json";
 const Skills = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
   }, [controls, inView]);
+
   const variants = {
     hidden: { opacity: 1, scale: 0 },
     visible: {

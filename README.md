@@ -1,4 +1,4 @@
-## My Front-End Developer Portfolio
+## My Portfolio
 
 # Michael Parascandolo
 

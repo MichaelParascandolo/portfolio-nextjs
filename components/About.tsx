@@ -5,16 +5,15 @@ import Image from "next/image";
 import profilePic from "/public/assets/me/portfolio_about.png";
 
 const About = () => {
-  const styles = {
-    p: "py-2 text-gray-600 dark:text-gray-300",
-  };
   const controls = useAnimation();
   const [ref, inView] = useInView();
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
   }, [controls, inView]);
+
   const animation = {
     hidden: {
       x: 100,
@@ -29,6 +28,11 @@ const About = () => {
       },
     },
   };
+
+  const styles = {
+    p: "py-2 text-gray-600 dark:text-gray-300",
+  };
+
   return (
     <div
       id="about"

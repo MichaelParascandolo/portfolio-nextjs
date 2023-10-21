@@ -12,27 +12,15 @@ import ActionButton from "./ActionButton";
 const Contact = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const [message, setMessage] = useState<string>("Send Message");
+  const form = useRef();
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
   }, [controls, inView]);
-  const animateIn = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.7,
-      },
-    },
-  };
-  // Email Form
-  const [message, setMessage] = useState<string>("Send Message");
-  const form = useRef();
+
   const sendEmail = (e: any) => {
     setMessage("Sending . . .");
     e.preventDefault();
@@ -58,6 +46,21 @@ const Contact = () => {
       setMessage("Something Went Wrong . . .");
     }
   };
+
+  const animateIn = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.7,
+      },
+    },
+  };
+
   return (
     <div id="contact" className="w-full dark:bg-[#1E1E1E]">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">

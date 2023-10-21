@@ -9,6 +9,7 @@ const SkillItem = ({ name }: { name: string }) => {
       opacity: 1,
     },
   };
+
   return (
     <motion.div
       variants={item}

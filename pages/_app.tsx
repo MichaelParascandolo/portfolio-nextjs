@@ -10,6 +10,7 @@ const pacifico = Pacifico({
   subsets: ["latin"],
   variable: "--font-pacifico",
 });
+
 function MyApp({ Component, pageProps, router }) {
   return (
     <>

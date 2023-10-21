@@ -29,18 +29,21 @@ const Socials = ({ size, circles }: { size: number; circles: boolean }) => {
       link: "https://www.instagram.com/mikejpara/",
     },
   ];
+
   const circleHover = {
     scale: 1.15,
     transition: {
       duration: 0.2,
     },
   };
+
   const circleTap = {
     scale: [1.15, 0.9, 1.15],
     transition: {
       duration: 0.4,
     },
   };
+
   return (
     <>
       {socialLinks.map((item, index) => (

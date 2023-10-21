@@ -16,6 +16,7 @@ const ThemeToggle = () => {
   if (!mounted) {
     return null;
   }
+
   return (
     <div className="ml-3 my-auto">
       {theme === "light" ? (
