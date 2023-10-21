@@ -1,6 +1,4 @@
-## My Portfolio
-
-# Michael Parascandolo
+## Michael Parascandolo's Portfolio Website
 
 ### https://michaelparascandolo.com
 
