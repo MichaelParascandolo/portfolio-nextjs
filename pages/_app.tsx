@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
-import { Pacifico } from "@next/font/google";
+import { Pacifico } from "next/font/google";
 
 const pacifico = Pacifico({
   weight: "400",
