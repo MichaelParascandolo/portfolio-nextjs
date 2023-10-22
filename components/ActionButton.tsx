@@ -22,7 +22,7 @@ const ActionButton = ({ link, action }: { link: string; action: string }) => {
 
   return (
     <div className="flex justify-center pt-10">
-      <Link href={link}>
+      <Link href={link} aria-label={`${action} button`}>
         <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-[#282828] dark:shadow-black dark:border-black">
           <IconComponent size={30} className="text-primary" />
         </div>
