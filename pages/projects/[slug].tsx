@@ -2,10 +2,10 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { AiFillApi } from "react-icons/ai";
 import * as Icons from "react-icons/si";
-import projectData from "../public/projects.json";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ActionButton from "../components/ActionButton";
+import projects from "../../public/projects.json";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import ActionButton from "../../components/ActionButton";
 
 const ProjectPage = ({ project }) => {
   const router = useRouter();
@@ -93,7 +93,7 @@ const ProjectPage = ({ project }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = projectData.map((project) => ({
+  const paths = projects.map((project) => ({
     params: { slug: project.slug },
   }));
 
@@ -101,7 +101,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const project = projectData.find((project) => project.slug === params.slug);
+  const project = projects.find((project) => project.slug === params.slug);
 
   return { props: { project } };
 };

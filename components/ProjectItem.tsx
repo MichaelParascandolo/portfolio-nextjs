@@ -49,7 +49,10 @@ const ProjectItem = (props: ProjectItemData) => {
             {props.tech}
           </p>
           {props.projectUrl ? (
-            <InfoButton text={"more info"} link={`/${props.projectUrl}`} />
+            <InfoButton
+              text={"more info"}
+              link={`/projects/${props.projectUrl}`}
+            />
           ) : null}
         </div>
       </div>
