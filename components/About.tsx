@@ -36,7 +36,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full md:h-screen p-2 flex items-center py-16 dark:bg-[#1E1E1E]"
+      className="w-full min-h-screen p-2 flex items-center py-16 dark:bg-[#1E1E1E]"
     >
       <div className="max-w-[1240px] m-auto">
         <p className="uppercase text-xl tracking-widest text-primary">About</p>

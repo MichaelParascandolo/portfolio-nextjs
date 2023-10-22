@@ -13,7 +13,7 @@ const Logo = () => {
         }}
       >
         <Link href="/">
-          <span className="font-logoMP text-primary text-4xl cursor-pointer select-none inline-flex">
+          <span className="font-logo text-primary text-4xl cursor-pointer select-none">
             MP
           </span>
         </Link>

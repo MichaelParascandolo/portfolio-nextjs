@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        logoMP: ["var(--font-pacifico)"], // google pacifico font
+        logo: ["var(--font-pacifico)"], // Google pacifico font
       },
       colors: {
-        primary: "#ee2d2d", // different shade of red #D40000
+        primary: "#ee2d2d", // Different shade of red #D40000
       },
     },
   },

@@ -32,7 +32,10 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects" className="w-full dark:bg-[#1E1E1E]">
+    <div
+      id="projects"
+      className="w-full min-h-screen scroll-mt-8 dark:bg-[#1E1E1E]"
+    >
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="text-xl tracking-widest uppercase text-primary">
           Projects

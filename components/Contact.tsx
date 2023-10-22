@@ -62,7 +62,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full dark:bg-[#1E1E1E]">
+    <div
+      id="contact"
+      className="w-full min-h-screen scroll-mt-8 dark:bg-[#1E1E1E]"
+    >
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-primary">
           Contact

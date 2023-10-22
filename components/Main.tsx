@@ -43,9 +43,12 @@ const Main = () => {
   };
 
   return (
-    <div id="home" className="w-full text-center md:h-screen dark:bg-[#1E1E1E]">
+    <div
+      id="home"
+      className="w-full min-h-screen text-center dark:bg-[#1E1E1E]"
+    >
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <div className="mt-20">
+        <div className="mt-[125px]">
           <motion.div initial="hidden" animate="visible" variants={animate}>
             <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
               {quote}

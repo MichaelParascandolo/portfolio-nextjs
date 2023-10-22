@@ -28,7 +28,10 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="w-full lg:h-screen p-2 dark:bg-[#1E1E1E]">
+    <div
+      id="skills"
+      className="w-full min-h-screen p-2 scroll-mt-24 dark:bg-[#1E1E1E]"
+    >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
         <h2 className="py-4 dark:text-white">Proficient Technologies</h2>
