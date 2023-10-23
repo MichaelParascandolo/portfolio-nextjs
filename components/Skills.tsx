@@ -34,11 +34,12 @@ const Skills = () => {
     >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
-        <h2 className="py-4 dark:text-white">Proficient Technologies</h2>
+        <h2 ref={ref} className="py-4 dark:text-white">
+          Proficient Technologies
+        </h2>
         <motion.div variants={variants} initial="hidden" animate={controls}>
           <div
             className={"grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8"}
-            ref={ref}
           >
             {data.skills.info.map((item, index) => (
               <SkillItem name={item} key={index} />
