@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import profilePic from "/public/assets/me/portfolio_about.png";
+import profilePic from "/public/assets/profile/portfolio_about.png";
 
 const About = () => {
   const controls = useAnimation();

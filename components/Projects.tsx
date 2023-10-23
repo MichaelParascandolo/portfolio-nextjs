@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import comingSoonImg from "/public/assets/projects/comingsoon.png";
 import ProjectItem from "./ProjectItem";
-import projectData from "../public/projects.json";
+import projectData from "../public/data/projects.json";
 import InfoButton from "./InfoButton";
 
 const Projects = () => {

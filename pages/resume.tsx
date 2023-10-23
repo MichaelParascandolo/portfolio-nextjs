@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import * as Icons from "react-icons/md";
-import data from "../public/resume.json";
+import data from "../public/data/resume.json";
 import ActionButton from "../components/ActionButton";
 
 const Resume = () => {

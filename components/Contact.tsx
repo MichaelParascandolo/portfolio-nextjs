@@ -6,7 +6,7 @@ import Image from "next/image";
 import Socials from "./Socials";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
-import contactPic from "/public/assets/me/portfolio_contact.png";
+import contactPic from "/public/assets/profile/portfolio_contact.png";
 import ActionButton from "./ActionButton";
 
 const Contact = () => {

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Socials from "./Socials";
 import Typewriter from "typewriter-effect";
-import memoji from "public/assets/me/portfolio_memoji.png";
+import memoji from "public/assets/profile/portfolio_memoji.png";
 import InfoButton from "./InfoButton";
 
 const Main = () => {
