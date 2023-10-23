@@ -2,6 +2,20 @@
   "extends": "next",
   "rules": {
     "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
+    "@next/next/no-page-custom-font": "off",
+    "eqeqeq": "warn",
+    "no-unused-vars": "warn",
+    "no-const-assign": "error",
+    "no-unreachable": "error",
+    "no-duplicate-imports": "error",
+    "no-var": "error",
+    "jsx-quotes": ["warn", "prefer-double"],
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ]
   }
 }
