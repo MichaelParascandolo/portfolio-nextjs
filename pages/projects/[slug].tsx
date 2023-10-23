@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { AiFillApi } from "react-icons/ai";
 import * as Icons from "react-icons/si";
-import projects from "../../public/projects.json";
+import projects from "../../public/data/projects.json";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ActionButton from "../../components/ActionButton";
