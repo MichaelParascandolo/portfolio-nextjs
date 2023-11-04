@@ -49,17 +49,6 @@ const Navbar = ({ background }: { background: boolean }) => {
     },
   ];
 
-  const variants = {
-    hidden: {
-      opacity: 0,
-      width: 0,
-    },
-    visible: {
-      opacity: 1,
-      width: 300,
-    },
-  };
-
   const styles = {
     common: "fixed w-full h-20 z-[100] ease-in-out duration-300 transition-all",
     background: "bg-[#ecf0f3] dark:bg-[#1E1E1E]",
@@ -116,8 +105,12 @@ const Navbar = ({ background }: { background: boolean }) => {
         }
       >
         {nav ? (
-          <motion.div animate={nav ? variants.visible : variants.hidden}>
-            <div className="h-screen bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E]">
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: nav ? 0 : "-100%" }}
+            transition={{ type: "tween", duration: 0.3 }}
+          >
+            <div className="h-screen w-[75%] max-w-[300px] bg-[#ecf0f3] p-10 border-r-2 border-primary dark:bg-[#1E1E1E]">
               <div className="flex w-full items-center justify-between">
                 <div onClick={() => setNav(!nav)}>
                   <Logo />
@@ -129,42 +122,34 @@ const Navbar = ({ background }: { background: boolean }) => {
                   <AiOutlineClose />
                 </div>
               </div>
-              <motion.div
-                animate={
-                  nav
-                    ? { opacity: [0, 1], transition: { duration: 1 } }
-                    : { opacity: 0 }
-                }
-              >
-                <div className="border-b border-primary my-4">
-                  <p className="w-[85%] md:w-[90%] py-4 dark:text-gray-200">
-                    Let's build something amazing together.
+              <div className="border-b border-primary my-4">
+                <p className="w-[85%] md:w-[90%] py-4 dark:text-gray-200">
+                  Let's build something amazing together.
+                </p>
+              </div>
+              <div className="py-4 flex flex-col">
+                <ul className="uppercase dark:text-gray-200">
+                  {navLinks.map((item, index) => (
+                    <Link href={item.path} key={index}>
+                      <li
+                        className={"py-4 text-sm flex justify-between"}
+                        onClick={() => setNav(false)}
+                      >
+                        {item.title}
+                        <MdChevronRight size={20} />
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+                <div className="pt-20">
+                  <p className="uppercase tracking-widest text-primary">
+                    Let's Connect
                   </p>
-                </div>
-                <div className="py-4 flex flex-col">
-                  <ul className="uppercase dark:text-gray-200">
-                    {navLinks.map((item, index) => (
-                      <Link href={item.path} key={index}>
-                        <li
-                          className={"py-4 text-sm flex justify-between"}
-                          onClick={() => setNav(false)}
-                        >
-                          {item.title}
-                          <MdChevronRight size={20} />
-                        </li>
-                      </Link>
-                    ))}
-                  </ul>
-                  <div className="pt-20">
-                    <p className="uppercase tracking-widest text-primary">
-                      Let's Connect
-                    </p>
-                    <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                      <Socials size={20} circles={false} />
-                    </div>
+                  <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                    <Socials size={20} circles={false} />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         ) : null}
