@@ -1,8 +1,10 @@
+"use client";
+
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SkillItem from "./SkillItem";
-import data from "../public/data/resume.json";
+import data from "../../public/data/resume.json";
 
 const Skills = () => {
   const controls = useAnimation();

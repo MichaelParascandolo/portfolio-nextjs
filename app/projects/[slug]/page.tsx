@@ -1,14 +1,29 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { AiFillApi } from "react-icons/ai";
+import { notFound } from "next/navigation";
 import * as Icons from "react-icons/si";
-import projects from "../../public/data/projects.json";
+import projectsData from "../../../public/data/projects.json";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ActionButton from "../../components/ActionButton";
 
-const ProjectPage = ({ project }) => {
-  const router = useRouter();
+export async function generateStaticParams() {
+  return projectsData.map((p) => ({
+    uniquepage: p.slug.toString(),
+  }));
+}
+
+export default function ProjectPage({
+  params: { uniquepage },
+}: {
+  params: { uniquepage: string };
+}) {
+  const project = projectsData.find((p) => p.slug.toString() === uniquepage);
+  if (!project) {
+    console.log(uniquepage);
+    notFound();
+  }
 
   const DynamicSiIcon = ({ name }: { name: string }) => {
     const IconComponent = Icons[name];
@@ -33,12 +48,12 @@ const ProjectPage = ({ project }) => {
             alt={project.name}
             className="object-cover"
           />
-          <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
+          {/* <div className="absolute top-[85%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
             <h2 className="py-2 uppercase">
               {router.isFallback ? "Loading..." : project.name}
             </h2>
             <h3>{project.tech}</h3>
-          </div>
+          </div> */}
         </div>
         <div className="max-w-[90%] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
           <div className="col-span-4">
@@ -90,20 +105,20 @@ const ProjectPage = ({ project }) => {
       </div>
     </>
   );
-};
+}
 
-export const getStaticPaths = async () => {
-  const paths = projects.map((project) => ({
-    params: { slug: project.slug },
-  }));
+// export const getStaticPaths = async () => {
+//   const paths = projects.map((project) => ({
+//     params: { slug: project.slug },
+//   }));
 
-  return { paths, fallback: false };
-};
+//   return { paths, fallback: false };
+// };
 
-export const getStaticProps = async ({ params }) => {
-  const project = projects.find((project) => project.slug === params.slug);
+// export const getStaticProps = async ({ params }) => {
+//   const project = projects.find((project) => project.slug === params.slug);
 
-  return { props: { project } };
-};
+//   return { props: { project } };
+// };
 
-export default ProjectPage;
+// export default ProjectPage;

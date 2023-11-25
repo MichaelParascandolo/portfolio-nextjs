@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, useEffect } from "react";
 import { TbSend } from "react-icons/tb";
 import { motion, useAnimation } from "framer-motion";

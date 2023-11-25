@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -63,7 +65,7 @@ const Main = () => {
                 width="250"
                 height="250"
                 draggable={false}
-                priority={true}
+                // priority={true}
               />
             </motion.div>
             <h1 className="pb-4 text-gray-700 tracking-wide dark:text-gray-200">

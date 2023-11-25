@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import bear from "public/assets/profile/bear.jpeg";
-import ActionButton from "../components/ActionButton";
+import ActionButton from "./components/ActionButton";
 
 const NotFound = () => {
   return (
